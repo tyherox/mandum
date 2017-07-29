@@ -1,0 +1,50 @@
+#navBar-background{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background: white;
+    width: 100%;
+    height: 75px;
+}
+
+#navBar{
+    padding-top: 2rem;
+    background-color: white;
+    width: 100%;
+    max-width: 1250px;
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 75px;
+}
+
+#navBar-logo,
+.navBar-elements,
+.navBar-elements:hover{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: black;
+    border-radius: 0;
+}
+
+.nav-selected{
+    padding-bottom: 10px;
+    border-bottom: #1E86F3 5px solid;
+}
+
+#navBar .btn{
+    background: transparent;
+    color: black;
+    border: none;
+    outline: none!important;
+}
+
+#navBar .btn:hover{
+    background: transparent;
+}
+
+#navBar .btn:active{
+    background: transparent;
+}

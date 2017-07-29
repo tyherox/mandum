@@ -1,0 +1,132 @@
+hr{
+    border: 1px #e7ebee solid;
+}
+
+.react-rotating-text-cursor {
+    font-size: 4rem;
+    color: #FB4473;
+    animation: blinking-cursor 1s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-cursor {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+#bootstrap-overrides .emptyButton,
+#bootstrap-overrides .emptyButton:hover,
+#bootstrap-overrides .emptyButton:active,
+#bootstrap-overrides .emptyButton:focus{
+    color: inherit;
+    background: inherit;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+#bootstrap-overrides .defaultBtn{
+    padding: .75rem 7rem;
+    background: #FB4473;
+    color: white;
+    border: none;
+    outline: none;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+#bootstrap-overrides .defaultBtn:hover{
+    background: #e53e69;
+}
+
+#bootstrap-overrides .defaultBtn:active{
+    background: #e53e69;
+}
+
+.banner-container .btn{
+    padding: .75rem 7rem;
+    background: #1F1F1F!important;
+    color: white!important;
+    border: none;
+    outline: none!important;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.banner-container .btn:hover{
+    background: #373737 !important;
+}
+
+.banner-container .btn:active{
+    background: #373737!important;
+}
+
+.label{
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#languageSelection{
+    text-align: right;
+    display: inline-block;
+    margin-top: 25px;
+}
+
+#languageSelection-button{
+    color: dodgerblue;
+}
+
+#languageSelection-button:hover{
+    color: #EA005E;
+}
+
+.category-button,
+.category-button:focus,
+.category-button:active{
+    color: white;
+    background: gray;
+}
+
+.category-button:hover{
+    color: white!important;;
+    background: #969696!important;;
+}
+
+.category-button-selected,
+.category-button-selected:focus,
+.category-button-selected:active{
+    color: white;
+    background: #EA005E;
+}
+
+.category-button-selected:hover{
+    color: white!important;
+    background: #c60050!important;;
+}
+
+.category-clear,
+.category-clear:active,
+.category-clear:focus{
+    color: black;
+    margin-right: 15px;
+    border: gray solid 1px!important;
+    background: white;
+}
+
+.category-clear:hover{
+    color: black!important;
+    border: gray solid 1px!important;
+    background: #f0f0f0 !important;;
+}
+
+
+@media (max-width: 750px){
+
+    #carrot{
+        display: none;
+    }
+}

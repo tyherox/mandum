@@ -1,0 +1,38 @@
+.itemContainer{
+    transition: all .5s;
+    background: #ffffff;
+    border: 1px solid transparent;
+    margin-bottom: 25px;
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
+}
+
+.itemContainer:hover{
+    transform: scale(1.05);
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.32), 0 0px 2px 0 rgba(0, 0, 0, 0.24);
+}
+
+.itemContainer-description{
+    padding: 25px 20px 20px;
+}
+
+.itemContainer-description-subTitle{
+    margin-bottom: 5px;
+    font-size: 1.0rem;
+    color: #9b9b9b;
+}
+
+.itemContainer-description-title{
+    transition: all .5s;
+    color: black;
+    font-size: 1.5rem;
+    margin-bottom: 5px;
+    font-weight: 600;
+}
+
+@media (max-width: 750px){
+
+    .itemContainer-description{
+        padding: 20px 15px 15px;
+    }
+
+}

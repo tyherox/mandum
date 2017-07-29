@@ -1,0 +1,62 @@
+#bootstrap-overrides h1{
+    font-size: 3rem;
+    font-weight: 300;
+}
+
+#bootstrap-overrides h2{
+    font-size: 2.0rem;
+    font-weight: 300;
+}
+
+#bootstrap-overrides h3{
+    font-size: 1.75rem;
+    color: darkgrey;
+    font-weight: 300;
+}
+
+#bootstrap-overrides p{
+    font-size: 1.25rem;
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+#bootstrap-overrides .small-text{
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+}
+
+.styled-header:before{
+    content: "____";
+    color: red;
+}
+
+@media (max-width: 750px){
+
+    .category-title {
+        margin-bottom: 20px;
+    }
+
+    .project-story{
+        padding-left: 0px;
+    }
+
+    p{
+        font-size: 1.25rem;
+    }
+
+    h1{
+        font-size: 2.0rem;
+        font-weight: 700;
+    }
+
+    h2{
+        position: relative;
+        font-size: 1.75rem;
+    }
+
+    h3{
+        font-size: 1.5rem;
+        color: darkgrey;
+    }
+
+}

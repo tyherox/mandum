@@ -1,0 +1,33 @@
+#footer{
+    height: 200px;
+    padding: 1rem 2rem 2rem;
+    width: 100%;
+    background: #1F1F1F;
+}
+
+i {
+    margin-left: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    animation: blinking-arrow 1.5s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-arrow {
+    0% {
+        transform:translateX(0) rotate(-45deg);
+    }
+    50% {
+        transform:translateX(10px) rotate(-45deg);
+    }
+    100% {
+        transform:translateX(0) rotate(-45deg);
+    }
+}
+
+.right {
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+}
