@@ -19,36 +19,20 @@
     height: 75px;
 }
 
-#navBar-logo,
-.navBar-elements,
-.navBar-elements:hover{
-    background: transparent;
+#bootstrap-overrides #navBar-logo,
+#bootstrap-overrides .navBar-elements,
+#bootstrap-overrides .navBar-elements:hover,
+#bootstrap-overrides .navBar-elements:active,
+#bootstrap-overrides .navBar-elements:focus{
+    color: black;
+    background: white;
     border: none;
     outline: none;
-    color: black;
-    border-radius: 0;
+    border-radius: 2px;
+    box-shadow: none;
 }
 
 .nav-selected{
     padding-bottom: 10px;
     border-bottom: #1E86F3 5px solid;
-}
-
-#navBar .btn{
-    background: transparent;
-    color: black;
-    border: none;
-    outline: none;
-}
-
-#navBar .btn:active{
-    background: transparent;
-}
-
-#navBar .btn:hover{
-    background: transparent;
-}
-
-#navBar .btn:active{
-    background: transparent;
 }
