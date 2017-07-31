@@ -44,15 +44,13 @@ export default class App extends Component {
                                 <div className="inner-container">
 
                                     <h1 style={{marginTop: "5rem"}}>
-                                        HEADER
+                                        Modern Website Building (some intro phrase)
                                     </h1>
 
                                     <br/>
 
                                     <p>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit. Proin dignissim est risus, non blandit
-                                        neque facilisis et. Proin quam eros, tempor.
+                                        (Further description about the intro phrase)
                                     </p>
 
                                     <br/>
@@ -75,13 +73,10 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
                                                 <div className="card-container">
-                                                    <h3>Landing Page</h3>
+                                                    <h3>Online Store</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
+                                                        (about online store *short*)
                                                     </p>
                                                     <br/>
                                                     <Button> Select </Button>
@@ -89,13 +84,10 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
                                                 <div className="card-container">
-                                                    <h3>Landing Page</h3>
+                                                    <h3>Portfolio</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
+                                                        (about portfolio *short*)
                                                     </p>
                                                     <br/>
                                                     <Button> Select </Button>
@@ -113,7 +105,7 @@ export default class App extends Component {
                     <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
                         <div style={{textAlign: "center", display: "block", border: "solid #8900FF 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            TESTING
+                            (Some intro phrase)
                         </p>
                     </div>
                 </div>
@@ -130,7 +122,7 @@ export default class App extends Component {
                                 <div className="inner-container">
 
                                     <h1 style={{marginTop: "5rem"}}>
-                                        HEADER
+                                        (Some phrase about our services)
                                     </h1>
 
                                     <br/>
@@ -147,13 +139,10 @@ export default class App extends Component {
                                         <Row className="show-grid">
                                             <Col xs={12} md={4} className="project-item-list">
                                                 <div className="card-container" style={{textAlign: "left"}}>
-                                                    <h3>Landing Page</h3>
+                                                    <h3>Developing</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
+                                                        (something to do with our development)
                                                     </p>
                                                     <br/>
                                                     <Button> Select </Button>
@@ -161,13 +150,10 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
                                                 <div className="card-container">
-                                                    <h3>Landing Page</h3>
+                                                    <h3>Designing</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
+                                                        (something to do with our designing)
                                                     </p>
                                                     <br/>
                                                     <Button> Select </Button>
@@ -175,13 +161,10 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
                                                 <div className="card-container">
-                                                    <h3>Landing Page</h3>
+                                                    <h3>Translating</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
+                                                        (something to do with our translating)
                                                     </p>
                                                     <br/>
                                                     <Button> Select </Button>
@@ -199,7 +182,7 @@ export default class App extends Component {
                     <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
                         <div style={{textAlign: "center", display: "block", border: "solid #F98115 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            TESTING
+                            Our services
                         </p>
                     </div>
                 </div>
@@ -216,15 +199,13 @@ export default class App extends Component {
                                 <div className="inner-container">
 
                                     <h1 style={{marginTop: "5rem"}}>
-                                        HEADER
+                                        No need to wait for a quote. (?)
                                     </h1>
 
                                     <br/>
 
                                     <p>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit. Proin dignissim est risus, non blandit
-                                        neque facilisis et. Proin quam eros, tempor.
+                                        (talk about using our price estimator (?) )
                                     </p>
 
                                     <br/> <br/> <br/> <br/> <br/> <br/>
@@ -243,7 +224,7 @@ export default class App extends Component {
                     <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
                         <div style={{textAlign: "center", display: "block", border: "solid #FB4473 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            TESTING
+                            Not sure yet?
                         </p>
                     </div>
                 </div>

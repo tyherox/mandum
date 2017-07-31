@@ -38,7 +38,11 @@
     background: transparent;
     color: black;
     border: none;
-    outline: none!important;
+    outline: none;
+}
+
+#navBar .btn:active{
+    background: transparent;
 }
 
 #navBar .btn:hover{
