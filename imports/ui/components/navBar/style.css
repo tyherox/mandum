@@ -19,6 +19,18 @@
     height: 75px;
 }
 
+#navBar-logo{
+    width: 125px;
+}
+
+#navBar-responsive{
+    float: right;
+}
+
+#navBar-responsive-button{
+    display: none;
+}
+
 #bootstrap-overrides #navBar-logo,
 #bootstrap-overrides .navBar-elements,
 #bootstrap-overrides .navBar-elements:hover,
@@ -35,4 +47,63 @@
 .nav-selected{
     padding-bottom: 10px;
     border-bottom: #1E86F3 5px solid;
+}
+
+.navBar-bar1, .navBar-bar2, .navBar-bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .navBar-bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .navBar-bar2 {opacity: 0;}
+
+.change .navBar-bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+    transform: rotate(45deg) translate(-8px, -8px) ;
+}
+
+@media (max-width: 750px){
+
+    #navBar-logo {
+        width: 75px;
+    }
+
+    #navBar-responsive{
+        position: relative;
+        overflow: hidden;
+        transition: all ease-in-out .5s;
+        float: none;
+        height: 0;
+        width: 100%;
+        background: white;
+    }
+
+    #navBar-responsive-button{
+        display: inline-block;
+        float: right;
+        cursor: pointer;
+    }
+
+    #navBar-responsive .navBar-elements,
+    #navBar-responsive .navBar-elements:hover,
+    #navBar-responsive .navBar-elements:active,
+    #navBar-responsive .navBar-elements:focus{
+        position: relative;
+        font-size: 1.5rem;
+        width: 100%;
+        background: white;
+        border-bottom: 1px solid gainsboro;
+        padding: 15px;
+    }
+
+    .change#navBar-responsive{
+        height: 225px;
+    }
 }

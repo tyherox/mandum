@@ -5,7 +5,8 @@
 import React, { Component }from 'react';
 import {Button, Grid, Row, Col} from 'react-bootstrap'
 import ReactRotatingText from 'react-rotating-text';
-import Center from '../components/center/main';
+import {NavLink} from 'react-router-dom';
+import Center from '../../components/center/main';
 
 export default class App extends Component {
 
@@ -27,9 +28,15 @@ export default class App extends Component {
 
                             <h3>In Korea.</h3>
                             <h3>Done the right way.</h3>
+
                             <br/>
                             <br/>
-                            <Button><b>Work with Us</b><i className="arrow right" /></Button>
+
+                            <NavLink to="/contact" activeClassName="nav-selected" exact>
+                                <Button >
+                                    <b>Work with Us</b><i className="arrow right" />
+                                </Button>
+                            </NavLink>
                         </div>
                     </Center>
                 </div>
@@ -53,7 +60,7 @@ export default class App extends Component {
                                         (Further description about the intro phrase)
                                     </p>
 
-                                    <br/>
+                                    <br/> <br/>
 
                                     <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
@@ -133,7 +140,7 @@ export default class App extends Component {
                                         neque facilisis et. Proin quam eros, tempor.
                                     </p>
 
-                                    <br/>
+                                    <br/> <br/>
 
                                     <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
