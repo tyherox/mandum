@@ -32,7 +32,7 @@ export default class App extends Component {
                             <br/>
                             <br/>
 
-                            <NavLink to="/contact" activeClassName="nav-selected" exact>
+                            <NavLink to="/contact" exact>
                                 <Button >
                                     <b>Work with Us</b><i className="arrow right" />
                                 </Button>
@@ -42,7 +42,7 @@ export default class App extends Component {
                 </div>
 
                 <div style={{position: "relative"}}>
-                    <div className="center-container" style={{background: "url('/assets/home-background-1.svg') no-repeat", backgroundSize: "100%", paddingTop: "15rem"}}>
+                    <div className="center-container staggered-container" style={{background: "url('/assets/home-background-1.svg') no-repeat", backgroundSize: "100%"}}>
 
                         <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
 
@@ -65,7 +65,7 @@ export default class App extends Component {
                                     <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
                                             <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container" style={{textAlign: "left"}}>
+                                                <div className="card-container">
                                                     <h3>Landing Page</h3>
                                                     <br/>
                                                     <p className="small-text">
@@ -78,7 +78,7 @@ export default class App extends Component {
                                                     <Button> Select </Button>
                                                 </div>
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
+                                            <Col xs={12} md={4} className="project-item-list">
                                                 <div className="card-container">
                                                     <h3>Online Store</h3>
                                                     <br/>
@@ -89,7 +89,7 @@ export default class App extends Component {
                                                     <Button> Select </Button>
                                                 </div>
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
+                                            <Col xs={12} md={4} className="project-item-list">
                                                 <div className="card-container">
                                                     <h3>Portfolio</h3>
                                                     <br/>
@@ -109,7 +109,7 @@ export default class App extends Component {
                         </div>
 
                     </div>
-                    <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
+                    <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #8900FF 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
                             (Some intro phrase)
@@ -120,7 +120,7 @@ export default class App extends Component {
                 <br/><br/><br/>
 
                 <div style={{position: "relative"}}>
-                    <div className="center-container" style={{background: "url('/assets/home-background-2.svg') no-repeat", backgroundSize: "100%", paddingTop: "15rem"}}>
+                    <div className="center-container staggered-container" style={{background: "url('/assets/home-background-2.svg') no-repeat", backgroundSize: "100%"}}>
 
                         <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0))"}}>
 
@@ -145,7 +145,7 @@ export default class App extends Component {
                                     <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
                                             <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container" style={{textAlign: "left"}}>
+                                                <div className="card-container">
                                                     <h3>Developing</h3>
                                                     <br/>
                                                     <p className="small-text">
@@ -155,7 +155,7 @@ export default class App extends Component {
                                                     <Button> Select </Button>
                                                 </div>
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
+                                            <Col xs={12} md={4} className="project-item-list">
                                                 <div className="card-container">
                                                     <h3>Designing</h3>
                                                     <br/>
@@ -166,7 +166,7 @@ export default class App extends Component {
                                                     <Button> Select </Button>
                                                 </div>
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list" style={{textAlign: "left"}}>
+                                            <Col xs={12} md={4} className="project-item-list">
                                                 <div className="card-container">
                                                     <h3>Translating</h3>
                                                     <br/>
@@ -186,7 +186,7 @@ export default class App extends Component {
                         </div>
 
                     </div>
-                    <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
+                    <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #F98115 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
                             Our services
@@ -197,7 +197,7 @@ export default class App extends Component {
                 <br/><br/><br/>
 
                 <div style={{position: "relative"}}>
-                    <div className="center-container" style={{background: "url('/assets/home-background-3.svg') no-repeat", backgroundSize: "100%", paddingTop: "15rem"}}>
+                    <div className="center-container staggered-container" style={{background: "url('/assets/home-background-3.svg') no-repeat", backgroundSize: "100%"}}>
 
                         <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
 
@@ -206,7 +206,7 @@ export default class App extends Component {
                                 <div className="inner-container">
 
                                     <h1 style={{marginTop: "5rem"}}>
-                                        No need to wait for a quote. (?)
+                                        <span style = {{textDecoration: "overline red"}}>No</span> need to wait for a quote. (?)
                                     </h1>
 
                                     <br/>
@@ -217,7 +217,7 @@ export default class App extends Component {
 
                                     <br/> <br/> <br/> <br/> <br/> <br/>
 
-                                    <Button className="defaultBtn"><b>Start your Estimation</b> <i className="arrow right" /></Button>
+                                    <Button className="emptyButton pinkButton bigButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
 
                                     <br/> <br/>
 
@@ -228,13 +228,15 @@ export default class App extends Component {
                         </div>
 
                     </div>
-                    <div style={{position: "absolute", top: "10rem", left: "0", background: "black", padding: "40px", paddingBottom: "10px", paddingTop: "60px", width: "250px", right: "0", margin: "0 auto"}}>
+                    <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #FB4473 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
                             Not sure yet?
                         </p>
                     </div>
                 </div>
+
+                <br/><br/><br/>
 
             </div>
         )

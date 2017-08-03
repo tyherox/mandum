@@ -1,5 +1,8 @@
 hr{
     border: 1px #e7ebee solid;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .react-rotating-text-cursor {
@@ -20,6 +23,65 @@ hr{
     }
 }
 
+i.arrow {
+    margin-left: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    animation: blinking-arrow 1.5s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes blinking-arrow {
+    0% {
+        transform:translateX(0) rotate(-45deg);
+    }
+    50% {
+        transform:translateX(10px) rotate(-45deg);
+    }
+    100% {
+        transform:translateX(0) rotate(-45deg);
+    }
+}
+
+i.pulse{
+    margin-left: 10px;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+
+    animation: pulse 1.5s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.25);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.sideIconL{
+    margin-top: 5rem;
+    position: absolute;
+    left: -15rem;
+    color: #FB4473;
+    font-size: 20rem;
+}
+
+.sideIconR{
+    margin-top: 5rem;
+    position: absolute;
+    right: -15rem;
+    color: dodgerblue;
+    font-size: 20rem;
+}
+
 #bootstrap-overrides .emptyButton,
 #bootstrap-overrides .emptyButton:hover,
 #bootstrap-overrides .emptyButton:active,
@@ -28,20 +90,20 @@ hr{
     background: inherit;
     border: none;
     outline: none;
-    border-radius: 2px;
+    padding: .75rem 3rem;
+    box-shadow: none;
 }
 
-#bootstrap-overrides .defaultBtn{
-    padding: .75rem 7rem;
+#bootstrap-overrides .pinkButton{
+    padding: .75rem 3rem;
     background: #FB4473;
     color: white;
-    border: none;
-    outline: none;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
-#bootstrap-overrides .defaultBtn:hover,
-#bootstrap-overrides .defaultBtn:active{
+#bootstrap-overrides .pinkButton:hover,
+#bootstrap-overrides .pinkButton:focus,
+#bootstrap-overrides .pinkButton:active{
+    color:white;
     background: #e53e69;
 }
 
@@ -59,10 +121,71 @@ hr{
     background: #373737;
 }
 
+#bootstrap-overrides .blueButton{
+    color: white;
+    padding: .75rem 3rem;
+    background: dodgerblue;
+}
+#bootstrap-overrides .blueButton:hover,
+#bootstrap-overrides .blueButton:focus,
+#bootstrap-overrides .blueButton:active{
+    color: white;
+    background: #1b80e3;
+}
+
+#bootstrap-overrides .blackButton{
+    color: white;
+    padding: .75rem 3rem;
+    background: #1F1F1F;
+}
+#bootstrap-overrides .blackButton:hover,
+#bootstrap-overrides .blackButton:focus,
+#bootstrap-overrides .blackButton:active{
+    color: white;
+    background: #373737;
+}
+
+#bootstrap-overrides .bigButton{
+    padding: .75rem 7rem!important;
+}
+
 .card-container {
     margin: 10px;
 }
 
+.rc-slider-tooltip-inner{
+    background: none!important;
+    box-shadow: none!important;;
+    color: #1E86F3!important;;
+    font-size: 1.5rem!important;;
+}
+
+.rc-slider-tooltip-arrow{
+    background: none!important;
+    border: none!important;
+}
+
+.inline{
+    display: inline;
+}
+
 @media (max-width: 750px){
+
+    .sideIconL{
+        position: relative;
+        left: 0;
+        margin: auto;
+        color: #FB4473;
+        font-size: 20rem;
+    }
+
+    .sideIconR{
+        position: relative;
+        right: 0;
+        margin: auto;
+        color: #1E86F3;
+        font-size: 20rem;
+    }
+
 
 }

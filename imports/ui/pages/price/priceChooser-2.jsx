@@ -119,13 +119,7 @@ export default class Main extends Component {
 
                                             <br/> <br/> <br/> <br/> <br/> <br/>
 
-                                            <NavLink to="/price/packages" exact>
-                                                <Button className="emptyButton pinkButton">
-                                                    <b>Explore our Packages</b>
-                                                    <i className="arrow right" />
-                                                </Button>
-                                            </NavLink>
-
+                                            <Button className="emptyButton pinkButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
                                         </Col>
 
                                     </Row>
@@ -177,19 +171,15 @@ export default class Main extends Component {
 
                                             <br/> <br/> <br/> <br/> <br/> <br/>
 
-                                            <NavLink to="/price/select-1" exact>
-                                                <Button className="emptyButton blueButton">
-                                                    <b>Start your Estimation</b>
-                                                    <i className="arrow right" />
-                                                </Button>
-                                            </NavLink>
-
+                                            <Button className="emptyButton blueButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
                                         </Col>
 
                                     </Row>
                                 </Grid>
 
                             </div>
+
+                            <br/> <br/>
 
                         </div>
 
