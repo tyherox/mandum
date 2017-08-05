@@ -206,7 +206,7 @@ export default class App extends Component {
                                 <div className="inner-container">
 
                                     <h1 style={{marginTop: "5rem"}}>
-                                        <span style = {{textDecoration: "overline red"}}>No</span> need to wait for a quote. (?)
+                                        No need to wait for a quote. (?)
                                     </h1>
 
                                     <br/>
