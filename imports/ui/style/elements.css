@@ -133,6 +133,30 @@ i.pulse{
     background: #1b80e3;
 }
 
+#bootstrap-overrides .purpleButton{
+    color: white;
+    padding: .75rem 3rem;
+    background: #8900FF;
+}
+#bootstrap-overrides .purpleButton:hover,
+#bootstrap-overrides .purpleButton:focus,
+#bootstrap-overrides .purpleButton:active{
+    color: white;
+    background: #8100f1;
+}
+
+#bootstrap-overrides .orangeButton{
+    color: white;
+    padding: .75rem 3rem;
+    background: #ED903D;
+}
+#bootstrap-overrides .orangeButton:hover,
+#bootstrap-overrides .orangeButton:focus,
+#bootstrap-overrides .orangeButton:active{
+    color: white;
+    background: #e0883a;
+}
+
 #bootstrap-overrides .blackButton{
     color: white;
     padding: .75rem 3rem;
@@ -167,6 +191,10 @@ i.pulse{
 
 .inline{
     display: inline;
+}
+
+input{
+    border: 1px solid #CBCBCB
 }
 
 @media (max-width: 750px){

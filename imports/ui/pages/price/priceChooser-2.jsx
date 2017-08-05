@@ -3,130 +3,242 @@
  */
 
 import React, { Component }from 'react';
-import Center from '../../components/center/main'
-import {Button, Grid, Row, Col} from 'react-bootstrap'
+import {Button, Grid, Row, Col, Label, FormGroup, Radio} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom';
+import 'rc-slider/assets/index.css';
+import Slider from 'rc-slider';;
+import * as Actions from "../../../actions/main";
+import {connectAdvanced} from "react-redux";
+import {bindActionCreators} from 'redux';
 
-export default class Main extends Component {
+const style = { width: 600, margin: 50 };
+
+function estimateCost(element){
+    var cost = 0;
+
+    this.props.
+
+    this.props.reduxActions.setValueC()
+}
+
+class Main extends Component {
+
 
     render() {
 
         return (
             <div>
-                <div className="banner-container">
-                    <Center>
-                        <div className="center-container">
-
-                            <h1>
-                                Simple, Transparent Pricing
-                            </h1>
-
-                            <br/>
-
-                            <h3>No Hidden Costs.</h3>
-
-                        </div>
-                    </Center>
-                </div>
 
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div className="default-container">
+                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
 
-                        <div className="inner-container">
+                        <div style={{padding: "10px"}}>
 
-                            <h1 style={{marginTop: "5rem"}}>
-                                A Price Range for Everyone
-                            </h1>
+                            <NavLink to="/price/select-1" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Content</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-2" exact>
+                                <Button className="emptyButton purple">
+                                    <b>Features</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-3" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Design</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-4" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Services</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
 
-                            <br/>
-
-                            <p>
-                                Stuff about how we offer pricing for everyone
-                            </p>
-
-                            <br/> <br/>
-
-                            <Grid style = {{width: "auto"}}>
-                                <Row className="show-grid">
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Refund Policy</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Stuff about refund
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Payout</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Stuff about how payment works
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Transparency</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Flexible and Transparent
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Grid>
                         </div>
-
-                    </div>
-
-                </div>
-
-                <br/><br/><br/>
-
-                <div className="center-container staggered-container" style={{background: "url('/assets/price-bg2.svg') no-repeat", backgroundSize: "100%"}}>
-
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0))"}}>
 
                         <div className="default-container">
 
                             <div className="inner-container">
 
-                                <Grid fluid>
-                                    <Row>
-                                        <Col  xs={12} md={4}>
-                                            <i className="fa fa-cubes fa-5x sideIconL" aria-hidden="true" />
-                                        </Col>
+                                <h2 style={{marginTop: "5rem"}} className="purple">
+                                    Features: Free
+                                </h2>
 
-                                        <Col  xs={12} md={8}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Find your price quickly
-                                            </h1>
+                                <br/>
 
-                                            <br/>
+                                <p>
+                                    Features we can do for you pro bono
+                                </p>
 
-                                            <p>
-                                                What packages are
-                                            </p>
+                                <br/> <br/> <br/>
 
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
-
-                                            <Button className="emptyButton pinkButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
-                                        </Col>
-
+                                <Grid style = {{width: "auto"}}>
+                                    <Row className="show-grid">
+                                        <div>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.free.get('opt1') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.free.get('opt1') ? "purple" : ""}>Free</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Responsive Design
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","free","opt1"], !this.props.free.get('opt1'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.free.get('opt2') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.free.get('opt2') ? "purple" : ""}>Free</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Search Engine Optimization
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","free","opt2"], !this.props.free.get('opt2'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.free.get('opt3') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.free.get('opt3') ? "purple" : ""}>Free</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Under Construction Page
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","free","opt3"], !this.props.free.get('opt3'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                        </div>
                                     </Row>
                                 </Grid>
 
+                                <hr/>
 
-                                <br/> <br/>
+                            </div>
+
+                            <div className="inner-container">
+
+                                <h2 style={{marginTop: "5rem"}} className="purple">
+                                    Features: Premium
+                                </h2>
+
+                                <br/>
+
+                                <p>
+                                    Features with a price tag.
+                                </p>
+
+                                <br/> <br/> <br/>
+
+                                <Grid style = {{width: "auto"}}>
+                                    <Row className="show-grid">
+                                        <div>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.premium.get('opt1') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.premium.get('opt1') ? "purple" : ""}>{this.props.premium.get("cost").get("opt1").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Admin Page
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","premium","opt1"], !this.props.premium.get('opt1'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.premium.get('opt2') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.premium.get('opt2') ? "purple" : ""}>{this.props.premium.get("cost").get("opt2").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Account System
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","premium","opt2"], !this.props.premium.get('opt2'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.premium.get('opt3') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.premium.get('opt3') ? "purple" : ""}>{this.props.premium.get("cost").get("opt3").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Transaction System
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","premium","opt3"], !this.props.premium.get('opt3'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4}>
+                                                <div className={this.props.premium.get('opt4') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.premium.get('opt4') ? "purple" : ""}>{this.props.premium.get("cost").get("opt4").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Email System
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","premium","opt4"], !this.props.premium.get('opt4'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4}>
+                                                <div className={this.props.premium.get('opt5') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.premium.get('opt5') ? "purple" : ""}>{this.props.premium.get("cost").get("opt5").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Upload / Download Functionality
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton purple"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["features","premium","opt5"], !this.props.premium.get('opt5'))
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                        </div>
+                                    </Row>
+                                </Grid>
+
+                                <hr/>
 
                             </div>
 
@@ -134,72 +246,20 @@ export default class Main extends Component {
 
                     </div>
 
-                </div>
+                    <div style={{textAlign: "center"}}>
 
-                <br/><br/><br/>
+                        <h1 className="gray">Your Current Total:</h1>
+                        <h1 className="purple"><b>{this.props.cost.toLocaleString()} KRW</b></h1>
+                        <br/>
 
-                <div className="center-container staggered-container" style={{background: "url('/assets/price-bg3.svg') no-repeat", backgroundSize: "100%"}}>
-
-                    <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
-
-                        <div className="default-container">
-
-                            <div className="inner-container">
-
-                                <Grid fluid>
-                                    <Row>
-                                        <Col  xs={12} md={4} mdPush={8}>
-                                            {/*
-                                             <img className="sideIconR"
-                                             width="250"
-                                             src="/assets/placeHolder.svg"/>
-                                            */}
-                                            <i className="fa fa-tasks fa-5x sideIconR" aria-hidden="true" />
-                                        </Col>
-
-                                        <Col  xs={12} md={8} mdPull={4}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Customize your experience
-                                            </h1>
-
-                                            <br/>
-
-                                            <p>
-                                                About advanced price estimator
-
-                                            </p>
-
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
-
-                                            <Button className="emptyButton blueButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
-                                        </Col>
-
-                                    </Row>
-                                </Grid>
-
-                            </div>
-
-                            <br/> <br/>
-
-                        </div>
-
+                        <NavLink to="/price/select-3" exact>
+                            <Button className="emptyButton purpleButton bigButton">
+                                <b>Next</b>
+                                <i className="arrow right" />
+                            </Button>
+                        </NavLink>
                     </div>
 
-                </div>
-
-                <br/><br/><br/>
-
-                <hr/>
-
-                <div style={{textAlign: "center"}}>
-
-                    <br/>
-
-                    <h2>Prefer to Just Talk to Us?</h2>
-
-                    <br/>
-
-                    <Button className="emptyButton blackButton bigButton"><b>Talk to Us</b> <i className="arrow right" /></Button>
                 </div>
 
                 <br/><br/><br/>
@@ -208,3 +268,24 @@ export default class Main extends Component {
         )
     }
 }
+
+function selectorFactory(dispatch) {
+    let result = {};
+    const actions = bindActionCreators(Actions, dispatch);
+    return (nextState, nextOwnProps) => {
+
+        const nextResult = {
+            reduxActions: actions,
+            free: nextState.get("features").get("free"),
+            premium: nextState.get("features").get("premium"),
+            content: nextState.get("features"),
+            cost: nextState.get("totalCost")
+        };
+        if(nextResult!=result){
+            result = nextResult;
+        }
+        return result
+    }
+}
+
+export default connectAdvanced(selectorFactory)(Main);

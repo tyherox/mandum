@@ -38,7 +38,7 @@ export default class NavBarProto extends Component{
                 <span id="overlay" className={this.state.expanded ? "on" : ""}/>
                 <div id="navBar-background" ref="navBar">
                     <div id="navBar">
-                        <NavLink to="/home">
+                        <NavLink to="/">
                             <img style={{verticalAlign: "middle"}}
                                  id="navBar-logo"
                                  src="/assets/logo.svg"/>
