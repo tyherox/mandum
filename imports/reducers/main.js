@@ -117,6 +117,16 @@ const DEFAULT_STATE = fromJS({
                 opt3: 50000
             }
         },
+        address: {
+            opt1: false,
+            opt2: false,
+            opt3: false,
+            cost: {
+                opt1: 0,
+                opt2: 20000,
+                opt3: 100000
+            }
+        },
         maintenance: {
             opt1: false,
             opt2: false,
@@ -128,7 +138,8 @@ const DEFAULT_STATE = fromJS({
             }
         }
     },
-    totalCost: 0
+    totalCost: 0,
+    monthlyCost: 0
 });
 
 function selection(state = DEFAULT_STATE, action) {
@@ -180,7 +191,7 @@ function calculateTotal(state, path, value){
     else{
         current += price;
     }
-    console.log(current);
+
     return current;
 }
 

@@ -2,131 +2,96 @@
  * Created by JohnBae on 7/27/17.
  */
 
-import React, { Component }from 'react';
-import Center from '../../components/center/main'
-import {Button, Grid, Row, Col} from 'react-bootstrap'
-import {NavLink} from 'react-router-dom';
 
-export default class Main extends Component {
+import React, { Component }from 'react';
+import {Button, Grid, Row, Col, Label, FormGroup, Radio} from 'react-bootstrap'
+import {NavLink} from 'react-router-dom';
+import 'rc-slider/assets/index.css';
+import Slider from 'rc-slider';;
+import * as Actions from "../../../actions/main";
+import {connectAdvanced} from "react-redux";
+import {bindActionCreators} from 'redux';
+
+const style = { width: 600, margin: 50 };
+
+function estimateCost(element){
+    var cost = 0;
+
+    this.props.
+
+    this.props.reduxActions.setValueC()
+}
+
+class Main extends Component {
+
 
     render() {
-
+        console.log(this.props.content);
         return (
             <div>
-                <div className="banner-container">
-                    <Center>
-                        <div className="center-container">
-
-                            <h1>
-                                Simple, Transparent Pricing
-                            </h1>
-
-                            <br/>
-
-                            <h3>No Hidden Costs.</h3>
-
-                        </div>
-                    </Center>
-                </div>
 
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div className="default-container">
+                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
 
-                        <div className="inner-container">
+                        <div style={{padding: "10px"}}>
 
-                            <h1 style={{marginTop: "5rem"}}>
-                                A Price Range for Everyone
-                            </h1>
+                            <NavLink to="/price/select-1" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Content</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-2" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Features</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-3" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Design</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
+                            <NavLink to="/price/select-4" exact>
+                                <Button className="emptyButton gray">
+                                    <b>Services</b>
+                                    <i className="arrow right" />
+                                </Button>
+                            </NavLink>
 
-                            <br/>
-
-                            <p>
-                                Stuff about how we offer pricing for everyone
-                            </p>
-
-                            <br/> <br/>
-
-                            <Grid style = {{width: "auto"}}>
-                                <Row className="show-grid">
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Refund Policy</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Stuff about refund
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Payout</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Stuff about how payment works
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Transparency</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Flexible and Transparent
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                </Row>
-                            </Grid>
                         </div>
-
-                    </div>
-
-                </div>
-
-                <br/><br/><br/>
-
-                <div className="center-container staggered-container" style={{background: "url('/assets/price-bg2.svg') no-repeat", backgroundSize: "100%"}}>
-
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0))"}}>
 
                         <div className="default-container">
 
                             <div className="inner-container">
 
-                                <Grid fluid>
-                                    <Row>
-                                        <Col  xs={12} md={4}>
-                                            <i className="fa fa-cubes fa-5x sideIconL" aria-hidden="true" />
-                                        </Col>
+                                <Grid style = {{width: "auto"}}>
+                                    <Row className="show-grid">
+                                        <div>
+                                            <Col xs={12} md={6}>
+                                                <h2>Content</h2>
+                                                {this.props.content[0] ? (this.props.content[0][0] + this.props.content[0][1].toLocaleString() + " KRW") : "Pages not selected"}
+                                                <br/>
+                                                {this.props.content[1] ? (this.props.content[1][0] + this.props.content[1][1].toLocaleString() + " KRW") : "Text not selected"}
+                                                <br/>
+                                                {this.props.content[2] ? (this.props.content[2][0] + this.props.content[2][1].toLocaleString() + " KRW") : "Translation not selected"}
+                                                <br/>
+                                                {this.props.content[3] ? (this.props.content[3][0] + this.props.content[3][1].toLocaleString() + " KRW") : "Media not selected"}
+                                                <br/>
+                                            </Col>
 
-                                        <Col  xs={12} md={8}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Find your price quickly
-                                            </h1>
+                                            <Col xs={12} md={6}>
+                                                <h2>Total:</h2>
+                                                <h3>***KRW</h3>
+                                            </Col>
 
-                                            <br/>
-
-                                            <p>
-                                                What packages are
-                                            </p>
-
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
-
-                                            <Button className="emptyButton pinkButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
-                                        </Col>
-
+                                        </div>
                                     </Row>
                                 </Grid>
 
-
-                                <br/> <br/>
+                                <hr/>
 
                             </div>
 
@@ -134,72 +99,20 @@ export default class Main extends Component {
 
                     </div>
 
-                </div>
+                    <div style={{textAlign: "center"}}>
 
-                <br/><br/><br/>
+                        <h1 className="gray">Your Total:</h1>
+                        <h1><b>{this.props.cost.toLocaleString()} KRW</b></h1>
+                        <br/>
 
-                <div className="center-container staggered-container" style={{background: "url('/assets/price-bg3.svg') no-repeat", backgroundSize: "100%"}}>
-
-                    <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
-
-                        <div className="default-container">
-
-                            <div className="inner-container">
-
-                                <Grid fluid>
-                                    <Row>
-                                        <Col  xs={12} md={4} mdPush={8}>
-                                            {/*
-                                             <img className="sideIconR"
-                                             width="250"
-                                             src="/assets/placeHolder.svg"/>
-                                            */}
-                                            <i className="fa fa-tasks fa-5x sideIconR" aria-hidden="true" />
-                                        </Col>
-
-                                        <Col  xs={12} md={8} mdPull={4}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Customize your experience
-                                            </h1>
-
-                                            <br/>
-
-                                            <p>
-                                                About advanced price estimator
-
-                                            </p>
-
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
-
-                                            <Button className="emptyButton blueButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
-                                        </Col>
-
-                                    </Row>
-                                </Grid>
-
-                            </div>
-
-                            <br/> <br/>
-
-                        </div>
-
+                        <NavLink to="/contact" exact>
+                            <Button className="emptyButton blackButton bigButton">
+                                <b>Work with Us</b>
+                                <i className="arrow right" />
+                            </Button>
+                        </NavLink>
                     </div>
 
-                </div>
-
-                <br/><br/><br/>
-
-                <hr/>
-
-                <div style={{textAlign: "center"}}>
-
-                    <br/>
-
-                    <h2>Prefer to Just Talk to Us?</h2>
-
-                    <br/>
-
-                    <Button className="emptyButton blackButton bigButton"><b>Talk to Us</b> <i className="arrow right" /></Button>
                 </div>
 
                 <br/><br/><br/>
@@ -208,3 +121,78 @@ export default class Main extends Component {
         )
     }
 }
+
+function selectorFactory(dispatch) {
+    let result = {};
+    const actions = bindActionCreators(Actions, dispatch);
+    return (nextState, nextOwnProps) => {
+
+        var totalCost = 0;
+        var monthlyCost = 0;
+
+        var content = nextState.get("content"),
+            pages,
+            text,
+            translation,
+            media;
+
+        if(!content.get('pages').get("opt2") && !content.get('pages').get("opt3")){
+            totalCost += content.get("pages").get("opt1") * content.get("pages").get("cost").get("opt1");
+            pages = [content.get("pages").get("opt1") + " pages: ", content.get("pages").get("opt1") * content.get("pages").get("cost").get("opt1")];
+        }
+        else if(content.get('pages').get("opt2")){
+            totalCost += 100000;
+            pages = ["Estimating needed pages: ", 100000]
+        }
+        else if(content.get('pages').get("opt3")){
+            totalCost += content.get("pages").get("cost").get("opt3");
+            pages = ["Dynamically generated pages: ", content.get("pages").get("cost").get("opt3")]
+        }
+
+        if(content.get('text').get('opt1')){
+            totalCost += 0;
+            text = ["Providing own text content: ", 0];
+        }
+        else if(content.get('text').get('opt2')){
+            totalCost += content.get('text').get('cost').get('opt2');
+            text = ["Will need text content: ", content.get('text').get('cost').get('opt2')];
+        }
+        else 
+
+        if(content.get('translation').get('opt1')){
+            totalCost += content.get('text').get('cost').get('opt2');
+            translation = ["Will not need translation: ", 0];
+        }
+        else if(content.get('translation').get('opt2')){
+            translation = ["Will need an English and Korean site: ", 0];
+        }
+
+        if(content.get('media').get('opt1')){
+            media = ["Will not need media content: ", 0];
+        }
+        else if(content.get('media').get('opt3') && content.get('media').get('opt2')){
+            media = ["Will need both pictures and illustrations: ", content.get('media').get('cost').get("opt3") + content.get('media').get('cost').get("opt2")];
+        }
+        else if(content.get('media').get('opt2')){
+            media = ["Will need pictures: ", content.get("media").get('cost').get('opt2')];
+        }
+        else if(content.get('media').get('opt3')){
+            media = ["Will need illustrations: ",  content.get("media").get('cost').get('opt3')];
+        }
+
+
+        const nextResult = {
+            content: [pages,text,translation,media],
+            features: "",
+            design: "",
+            services: "",
+            cost: nextState.get("totalCost")
+        };
+        if(nextResult!=result){
+            result = nextResult;
+        }
+        return result
+    }
+}
+
+export default connectAdvanced(selectorFactory)(Main);

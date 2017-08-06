@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb626132-c8f8-4fba-bf0c-3d27c59b0b98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/reducers/main.js" afterPath="$PROJECT_DIR$/imports/reducers/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx" />
     </list>
     <ignored path="mandum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,21 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/main.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="56" column="78" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+            <state relative-caret-position="365">
+              <caret line="207" column="68" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -87,8 +80,8 @@
       <file leaf-file-name="priceChooser-3.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="275">
-              <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
+            <state relative-caret-position="315">
+              <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#43#83#0" expanded="true" />
@@ -98,15 +91,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="priceChooser-2.jsx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-2.jsx">
+      <file leaf-file-name="priceChooser-4.jsx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="395">
-              <caret line="252" column="29" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
+            <state relative-caret-position="635">
+              <caret line="348" column="54" selection-start-line="3" selection-start-column="0" selection-end-line="348" selection-end-column="54" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
                 <element signature="e#43#83#0" expanded="true" />
                 <element signature="e#276#325#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="priceChooser-5.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="425">
+              <caret line="159" column="13" selection-start-line="159" selection-start-column="13" selection-end-line="159" selection-end-column="13" />
+              <folding>
+                <element signature="e#44#84#0" expanded="true" />
+                <element signature="e#277#326#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,8 +121,8 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/reducers/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
+            <state relative-caret-position="545">
+              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -176,13 +182,15 @@
         <option value="$PROJECT_DIR$/imports/ui/style/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/components/navBar/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/style/containers.css" />
-        <option value="$PROJECT_DIR$/imports/reducers/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/style/elements.css" />
         <option value="$PROJECT_DIR$/imports/ui/style/color.css" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-1.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-2.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx" />
+        <option value="$PROJECT_DIR$/imports/reducers/main.js" />
+        <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx" />
       </list>
     </option>
   </component>
@@ -326,12 +334,12 @@
       <option name="presentableId" value="Default" />
       <updated>1501135104162</updated>
       <workItem from="1501135108262" duration="29144000" />
-      <workItem from="1501303669829" duration="70240000" />
+      <workItem from="1501303669829" duration="76140000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="99384000" />
+    <option name="totallyTimeSpent" value="105284000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -505,22 +513,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/button/main.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -628,14 +620,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="56" column="78" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/style/elements.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -644,14 +628,6 @@
             <element signature="e#257#395#0" expanded="false" />
             <element signature="e#2341#2369#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/reducers/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="143" column="0" selection-start-line="143" selection-start-column="0" selection-end-line="143" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -680,21 +656,9 @@
         <state relative-caret-position="395">
           <caret line="252" column="29" selection-start-line="252" selection-start-column="29" selection-end-line="252" selection-end-column="29" />
           <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#43#83#0" expanded="true" />
-            <element signature="e#276#325#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="154" column="0" selection-start-line="154" selection-start-column="0" selection-end-line="154" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#43#83#0" expanded="true" />
-            <element signature="e#276#325#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#43#83#0" expanded="false" />
+            <element signature="e#276#325#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -709,11 +673,62 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="133" column="69" selection-start-line="133" selection-start-column="69" selection-end-line="133" selection-end-column="69" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#43#83#0" expanded="true" />
+            <element signature="e#276#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="440">
-          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+        <state relative-caret-position="365">
+          <caret line="207" column="68" selection-start-line="207" selection-start-column="68" selection-end-line="207" selection-end-column="68" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-4.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="348" column="54" selection-start-line="3" selection-start-column="0" selection-end-line="348" selection-end-column="54" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#43#83#0" expanded="true" />
+            <element signature="e#276#325#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="56" column="78" selection-start-line="56" selection-start-column="78" selection-end-line="56" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/reducers/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="545">
+          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="159" column="13" selection-start-line="159" selection-start-column="13" selection-end-line="159" selection-end-column="13" />
+          <folding>
+            <element signature="e#44#84#0" expanded="true" />
+            <element signature="e#277#326#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

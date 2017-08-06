@@ -143,6 +143,65 @@ class Main extends Component {
 
                             </div>
 
+                            <div className="inner-container">
+
+                                <h2 style={{marginTop: "5rem"}} className="orange">
+                                    Design: Logo
+                                </h2>
+
+                                <br/>
+
+                                <p>
+                                    Do you need a logo designed?
+                                </p>
+
+                                <br/> <br/> <br/>
+
+                                <Grid style = {{width: "auto"}}>
+                                    <Row className="show-grid">
+                                        <div>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.logo.get('opt1') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.logo.get('opt1') ? "orange" : ""}>Free</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Basic
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton orange"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["design","logo","opt1"], !this.props.logo.get('opt1'))
+                                                                if(this.props.logo.get("opt2"))  this.props.reduxActions.setValueC(["design","logo","opt2"], false)
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.logo.get('opt2') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.logo.get('opt2') ? "orange" : ""}>{this.props.logo.get("cost").get("opt2").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Advanced Design
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton orange"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["design","logo","opt2"], !this.props.logo.get('opt2'))
+                                                                if(this.props.logo.get("opt1"))  this.props.reduxActions.setValueC(["design","logo","opt1"], false)
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                        </div>
+                                    </Row>
+                                </Grid>
+
+                                <hr/>
+
+                            </div>
+
                         </div>
 
                     </div>
