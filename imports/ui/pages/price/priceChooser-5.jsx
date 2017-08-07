@@ -173,7 +173,8 @@ class Main extends Component {
                     <div style={{textAlign: "center"}}>
 
                         <h3 className="gray">Monthly Cost:</h3>
-                        <h3><b>{this.props.monthlyCost.toLocaleString()} KRW</b></h3>
+                        <h3 className="black"><b>{this.props.monthlyCost.toLocaleString()} KRW</b></h3>
+                        <hr style={{width: "25%", margin: "auto"}}/>
                         <h1 className="gray">Total Cost:</h1>
                         <h1><b>{this.props.price.toLocaleString()} KRW</b></h1>
                         <br/>

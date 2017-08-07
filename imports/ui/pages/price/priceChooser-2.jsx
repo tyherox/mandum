@@ -93,7 +93,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","free","opt1"], !this.props.free.get('opt1'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -109,7 +109,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","free","opt2"], !this.props.free.get('opt2'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -125,7 +125,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","free","opt3"], !this.props.free.get('opt3'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -166,7 +166,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","premium","opt1"], !this.props.premium.get('opt1'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -182,7 +182,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","premium","opt2"], !this.props.premium.get('opt2'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -198,7 +198,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","premium","opt3"], !this.props.premium.get('opt3'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -214,7 +214,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","premium","opt4"], !this.props.premium.get('opt4'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -230,7 +230,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["features","premium","opt5"], !this.props.premium.get('opt5'))
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>

@@ -110,4 +110,8 @@
     .staggered-container{
         padding-top: 8rem;
     }
+
+    .card-container{
+        min-height: 150px;
+    }
 }

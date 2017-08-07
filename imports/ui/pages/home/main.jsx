@@ -217,7 +217,11 @@ export default class App extends Component {
 
                                     <br/> <br/> <br/> <br/> <br/> <br/>
 
-                                    <Button className="emptyButton pinkButton bigButton"><b>Start your Estimation</b> <i className="arrow right" /></Button>
+                                    <NavLink to="/price" exact>
+                                        <Button className="emptyButton pinkButton bigButton">
+                                            <b>Start your Estimation</b> <i className="arrow right" />
+                                        </Button>
+                                    </NavLink>
 
                                     <br/> <br/>
 

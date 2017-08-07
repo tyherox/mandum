@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import { Meteor } from 'meteor/meteor';
 import { render } from 'react-dom';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
@@ -38,29 +38,31 @@ Meteor.startup(() => {
               <Route render={({location, history, match}) => {
                   console.log("MUHAHA LOADING!");
                   return (
-                      <Provider store={store}>
-                          <RouteTransition
-                              pathname={location.pathname}
-                              atEnter={{ opacity: 0 }}
-                              atLeave={{ opacity: 0 }}
-                              atActive={{ opacity: 1 }}
-                          >
-                              <Switch key={location.key} location={location}>
-                                  <Route exact path="/" component={Home}/>
-                                  <Route exact path="/price" component={Price}/>
-                                  <Route exact path="/price/packages" component={PricePackages}/>
-                                  <Route exact path="/price/select-1" component={PriceChooserA}/>
-                                  <Route exact path="/price/select-2" component={PriceChooserB}/>
-                                  <Route exact path="/price/select-3" component={PriceChooserC}/>
-                                  <Route exact path="/price/select-4" component={PriceChooserD}/>
-                                  <Route exact path="/price/select-5" component={PriceChooserE}/>
-                                  <Route exact path="/story" component={Story}/>
-                                  <Route exact path="/contact" component={Contact}/>
-                              </Switch>
-                          </RouteTransition>
-                      </Provider>
+                      <ScrollToTop location={location} history={history}>
+                          <Provider store={store}>
+                              <RouteTransition
+                                  pathname={location.pathname}
+                                  atEnter={{ opacity: 0 }}
+                                  atLeave={{ opacity: 0 }}
+                                  atActive={{ opacity: 1 }}
+                              >
+                                  <Switch key={location.key} location={location}>
+                                      <Route exact path="/" component={Home}/>
+                                      <Route exact path="/price" component={Price}/>
+                                      <Route exact path="/price/packages" component={PricePackages}/>
+                                      <Route exact path="/price/select-1" component={PriceChooserA}/>
+                                      <Route exact path="/price/select-2" component={PriceChooserB}/>
+                                      <Route exact path="/price/select-3" component={PriceChooserC}/>
+                                      <Route exact path="/price/select-4" component={PriceChooserD}/>
+                                      <Route exact path="/price/select-5" component={PriceChooserE}/>
+                                      <Route exact path="/story" component={Story}/>
+                                      <Route exact path="/contact" component={Contact}/>
+                                  </Switch>
+                              </RouteTransition>
+                          </Provider>
+                      </ScrollToTop>
                   );
-              }} />
+              }}/>
               <Footer />
               <NavBar />
           </div>
@@ -68,3 +70,19 @@ Meteor.startup(() => {
       ,document.getElementById('render-target')
   );
 });
+
+class ScrollToTop extends Component {
+
+    componentDidUpdate(prevProps) {
+        console.log(this.props.history, prevProps.history);
+        console.log(this.props.location, prevProps.location);
+        if (this.props.location.pathname !== prevProps.location.pathname && this.props.history.action!="pop") {
+            window.scrollTo(0, 0)
+        }
+    }
+
+    render() {
+        return this.props.children
+    }
+}
+

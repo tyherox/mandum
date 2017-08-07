@@ -342,7 +342,7 @@ class Main extends Component {
                                                                 if(this.props.media.get("opt1")) this.props.reduxActions.setValueC(["content","media","opt1"], false)
                                                                 if(this.props.media.get("opt4")) this.props.reduxActions.setValueC(["content","media","opt4"], false)
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
@@ -360,7 +360,7 @@ class Main extends Component {
                                                                 if(this.props.media.get("opt1")) this.props.reduxActions.setValueC(["content","media","opt1"], false)
                                                                 if(this.props.media.get("opt4")) this.props.reduxActions.setValueC(["content","media","opt4"], false)
                                                             }}>
-                                                        <p>Select</p>
+                                                        <p>Add</p>
                                                     </Button>
                                                 </div>
                                             </Col>
