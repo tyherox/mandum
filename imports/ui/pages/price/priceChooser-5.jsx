@@ -357,11 +357,11 @@ function selectorFactory(dispatch) {
             if(element && key!="price"){
                 var string = "";
                 switch(key){
-                    case "opt1" : string = "No: ";
+                    case "opt1" : string = "Hosting is not needed: ";
                         break;
-                    case "opt2" : string = "Basic server: ";
+                    case "opt2" : string = "A Basic server is needed: ";
                         break;
-                    case "opt3" : string = "Advanced server: ";
+                    case "opt3" : string = "A Advanced server is needed: ";
                         break;
                 }
 
@@ -375,9 +375,9 @@ function selectorFactory(dispatch) {
             if(element && key!="price"){
                 var string = "";
                 switch(key){
-                    case "opt1" : string = "No: ";
+                    case "opt1" : string = "An address is not needed: ";
                         break;
-                    case "opt2" : string = "Yes: ";
+                    case "opt2" : string = "An address is needed: ";
                         break;
                 }
 
@@ -410,8 +410,8 @@ function selectorFactory(dispatch) {
             features: [free, premium, featuresCost],
             design: [style, logo, designCost],
             services: [hosting, address, maintenance, servicesCost],
-            price: nextState.get("totalCost"),
-            monthlyCost : contentCost + featuresCost + servicesCost + designCost
+            price: contentCost + featuresCost + servicesCost + designCost,
+            monthlyCost : monthlyCost
         };
         if(nextResult!=result){
             result = nextResult;

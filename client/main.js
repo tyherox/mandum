@@ -36,6 +36,7 @@ Meteor.startup(() => {
           <div id="bootstrap-overrides">
 
               <Route render={({location, history, match}) => {
+                  console.log("MUHAHA LOADING!");
                   return (
                       <Provider store={store}>
                           <RouteTransition
