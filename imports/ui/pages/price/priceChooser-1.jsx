@@ -14,7 +14,7 @@ import {bindActionCreators} from 'redux';
 const style = { width: 600, margin: 50 };
 
 function estimateCost(element){
-    var cost = 0;
+    var price = 0;
 
     this.props.
 
@@ -31,12 +31,12 @@ class Main extends Component {
 
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                    <div style={{background: "white"}}>
 
                         <div style={{padding: "10px"}}>
 
                             <NavLink to="/price/select-1" exact>
-                                <Button className="emptyButton blue">
+                                <Button className="emptyButton smallButton blue">
                                     <b>Content</b>
                                     <i className="arrow right" />
                                 </Button>
@@ -64,9 +64,11 @@ class Main extends Component {
 
                         <div className="default-container">
 
-                            <div className="inner-container" style={{transition: "all .5s ease-in-out"}}>
+                            <div className="inner-container"
+                                 style={{transition: "all .5s ease-in-out"}}>
 
-                                <h2 style={{marginTop: "5rem"}} className="blue">
+                                <h2 style={{marginTop: "5rem"}}
+                                    className="blue">
                                     Content: Pages
                                 </h2>
 
@@ -87,6 +89,7 @@ class Main extends Component {
                                         disabled={this.props.pages.get("opt2") || this.props.pages.get("opt3")}
                                         onAfterChange={this.onAfterChange}
                                 />
+                                
                                 <br/>
 
                                 <input className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "small-text gray" : "small-text blue"}
@@ -95,10 +98,17 @@ class Main extends Component {
                                        value={this.props.pages.get("opt1") || 1}
                                        onClick={(event)=>event.target.setSelectionRange(0, event.target.value.length)}
                                        onChange={(event) => this.props.reduxActions.setValueC(["content","pages","opt1"], parseInt(event.target.value || 1))}/>
-                                <p className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "small-text gray" : "small-text blue"} style={{display: "inline", float: "right", lineHeight: "28px"}}>100</p>
+
+                                <p className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "small-text gray" : "small-text blue"}
+                                   style={{display: "inline", float: "right", lineHeight: "28px"}}>100</p>
+
                                 <br/>
-                                <h3 className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "gray" : "blue"} style={{display: "block", textAlign: "left"}}>
+
+                                <h3 className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "gray" : "blue"}
+                                    style={{display: "block", textAlign: "left"}}>
+
                                     <b>{this.props.pages.get("opt1") <= 5 ? "Free" : ((this.props.pages.get("opt1") - 5) * 25000).toLocaleString() + " KRW"}</b>
+
                                 </h3>
 
                                 <br/> <br/>
@@ -123,7 +133,7 @@ class Main extends Component {
                                                if(this.props.pages.get("opt2")) this.props.reduxActions.setValueC(["content","pages","opt2"], false)
                                                if(state) this.props.reduxActions.setValueC(["content","pages","opt1"], this.props.pages.get("opt1"))
                                            }}>
-                                        <p className="small-text inline blue"> It will by dynamically generated ({this.props.pages.get("cost").get("opt3").toLocaleString() + " KRW"})</p>
+                                        <p className="small-text inline blue"> It will by dynamically generated ({this.props.pages.get("price").get("opt3").toLocaleString() + " KRW"})</p>
                                     </Radio>
                                 </FormGroup>
 
@@ -226,7 +236,7 @@ class Main extends Component {
                                         <div>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.translation.get('opt1') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.text.get('opt2') ? "blue" : ""} >Free</h3>
+                                                    <h3  className={this.props.translation.get('opt2') ? "blue" : ""} >Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I do not require translation.
@@ -234,7 +244,6 @@ class Main extends Component {
                                                     <br/>
                                                     <Button className="emptyButton blue"
                                                             onClick={() => {
-                                                                console.log("Button 1")
                                                                 this.props.reduxActions.setValueC(["content","translation","opt1"], !this.props.translation.get('opt1'))
                                                                 if(this.props.translation.get("opt2")) this.props.reduxActions.setValueC(["content","translation","opt2"], false)
                                                             }}>
@@ -244,7 +253,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.translation.get('opt2') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.text.get('opt2') ? "blue" : ""} >Free</h3>
+                                                    <h3  className={this.props.translation.get('opt2') ? "blue" : ""} >Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I need an English and a Korean version
@@ -252,7 +261,6 @@ class Main extends Component {
                                                     <br/>
                                                     <Button className="emptyButton blue"
                                                             onClick={() => {
-                                                                console.log("Button 2")
                                                                 this.props.reduxActions.setValueC(["content","translation","opt2"], !this.props.translation.get('opt2'))
                                                                 if(this.props.translation.get("opt1")) this.props.reduxActions.setValueC(["content","translation","opt1"], false)
                                                             }}>
@@ -302,7 +310,7 @@ class Main extends Component {
                                         <div>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.media.get('opt1') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.text.get('opt2') ? "blue" : ""}>Free</h3>
+                                                    <h3  className={this.props.media.get('opt2') ? "blue" : ""}>Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I will be providing my own content
@@ -321,7 +329,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.media.get('opt2') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.text.get('opt2') ? "blue" : ""}>250,000 KRW</h3>
+                                                    <h3  className={this.props.media.get('opt2') ? "blue" : ""}>250,000 KRW</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I require illustrations
@@ -332,6 +340,7 @@ class Main extends Component {
                                                                 console.log("Button 2")
                                                                 this.props.reduxActions.setValueC(["content","media","opt2"], !this.props.media.get('opt2'))
                                                                 if(this.props.media.get("opt1")) this.props.reduxActions.setValueC(["content","media","opt1"], false)
+                                                                if(this.props.media.get("opt4")) this.props.reduxActions.setValueC(["content","media","opt4"], false)
                                                             }}>
                                                         <p>Select</p>
                                                     </Button>
@@ -339,7 +348,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.media.get('opt3') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.text.get('opt2') ? "blue" : ""}>250,000 KRW</h3>
+                                                    <h3  className={this.props.media.get('opt2') ? "blue" : ""}>250,000 KRW</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I require photographs
@@ -349,6 +358,7 @@ class Main extends Component {
                                                             onClick={() => {
                                                                 this.props.reduxActions.setValueC(["content","media","opt3"], !this.props.media.get('opt3'))
                                                                 if(this.props.media.get("opt1")) this.props.reduxActions.setValueC(["content","media","opt1"], false)
+                                                                if(this.props.media.get("opt4")) this.props.reduxActions.setValueC(["content","media","opt4"], false)
                                                             }}>
                                                         <p>Select</p>
                                                     </Button>
@@ -385,7 +395,7 @@ class Main extends Component {
                     <div style={{textAlign: "center"}}>
 
                         <h1 className="gray">Your Current Total:</h1>
-                        <h1 className="blue"><b>{this.props.cost.toLocaleString()} KRW</b></h1>
+                        <h1 className="blue"><b>{this.props.price.toLocaleString()} KRW</b></h1>
                         <br/>
 
                         <NavLink to="/price/select-2" exact>
@@ -420,21 +430,21 @@ function selectorFactory(dispatch) {
             mediaCost = 0;
 
         if(pages.get("opt3")){
-            pageCost = pages.get("cost").get("opt3");
+            pageCost = pages.get("price").get("opt3");
         }
         else if(!pages.get("opt2")){
-            pageCost = (pages.get("opt1") - 5) * pages.get("cost").get("opt1");
+            pageCost = (pages.get("opt1") - 5) * pages.get("price").get("opt1");
         }
 
         if(!text.get("opt1") && text.get("opt2")) {
-            textCost = text.get("cost").get("opt2");
+            textCost = text.get("price").get("opt2");
         }
 
         if(media.get("opt2")){
-            mediaCost = media.get("cost").get("opt2");
+            mediaCost = media.get("price").get("opt2");
         }
         if(media.get("opt3")){
-            mediaCost += media.get("cost").get("opt3");
+            mediaCost += media.get("price").get("opt3");
         }
 
 
@@ -446,7 +456,7 @@ function selectorFactory(dispatch) {
             translation: nextState.get("content").get("translation"),
             media: nextState.get("content").get("media"),
             content: nextState.get("content"),
-            cost: nextState.get("totalCost")
+            price: nextState.get("totalCost")
         };
         if(nextResult!=result){
             result = nextResult;

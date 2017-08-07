@@ -14,7 +14,7 @@ import {bindActionCreators} from 'redux';
 const style = { width: 600, margin: 50 };
 
 function estimateCost(element){
-    var cost = 0;
+    var price = 0;
 
     this.props.
 
@@ -31,7 +31,7 @@ class Main extends Component {
 
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                    <div style={{background: "white"}}>
 
                         <div style={{padding: "10px"}}>
 
@@ -73,7 +73,7 @@ class Main extends Component {
                                 <br/>
 
                                 <p>
-                                    What kind of design do you need?
+                                    Do you need us to host your website?
                                 </p>
 
                                 <br/> <br/> <br/>
@@ -101,7 +101,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.hosting.get('opt2') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.hosting.get('opt2') ? "pink" : ""}>{this.props.hosting.get("cost").get("opt2").toLocaleString() + " KRW / Month"}</h3>
+                                                    <h3 className={this.props.hosting.get('opt2') ? "pink" : ""}>{this.props.hosting.get("price").get("opt2").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Basic Server
@@ -119,7 +119,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.hosting.get('opt3') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.hosting.get('opt3') ? "pink" : ""}>{this.props.hosting.get("cost").get("opt3").toLocaleString() + " KRW / Month"}</h3>
+                                                    <h3 className={this.props.hosting.get('opt3') ? "pink" : ""}>{this.props.hosting.get("price").get("opt3").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Advanced Server
@@ -180,10 +180,10 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.address.get('opt2') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.address.get('opt2') ? "pink" : ""}>{this.props.address.get("cost").get("opt2").toLocaleString() + " KRW / Month"}</h3>
+                                                    <h3 className={this.props.address.get('opt2') ? "pink" : ""}>{this.props.address.get("price").get("opt2").toLocaleString() + " KRW / Year"}</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Basic Server
+                                                        Yes
                                                     </p>
                                                     <br/>
                                                     <Button className="emptyButton pink"
@@ -191,24 +191,6 @@ class Main extends Component {
                                                                 this.props.reduxActions.setValueC(["services","address","opt2"], !this.props.address.get('opt2'))
                                                                 if(this.props.address.get("opt3"))  this.props.reduxActions.setValueC(["services","address","opt3"], false)
                                                                 if(this.props.address.get("opt1"))  this.props.reduxActions.setValueC(["services","address","opt1"], false)
-                                                            }}>
-                                                        <p>Select</p>
-                                                    </Button>
-                                                </div>
-                                            </Col>
-                                            <Col xs={12} md={4} className="col-centered">
-                                                <div className={this.props.address.get('opt3') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.address.get('opt3') ? "pink" : ""}>{this.props.address.get("cost").get("opt3").toLocaleString() + " KRW / Month"}</h3>
-                                                    <br/>
-                                                    <p className="small-text">
-                                                        Advanced Server
-                                                    </p>
-                                                    <br/>
-                                                    <Button className="emptyButton pink"
-                                                            onClick={() => {
-                                                                this.props.reduxActions.setValueC(["services","address","opt3"], !this.props.address.get('opt3'))
-                                                                if(this.props.address.get("opt1"))  this.props.reduxActions.setValueC(["services","address","opt1"], false)
-                                                                if(this.props.address.get("opt2"))  this.props.reduxActions.setValueC(["services","address","opt2"], false)
                                                             }}>
                                                         <p>Select</p>
                                                     </Button>
@@ -259,7 +241,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.maintenance.get('opt2') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.maintenance.get('opt2') ? "pink" : ""}>{this.props.maintenance.get("cost").get("opt2").toLocaleString() + " KRW / Month"}</h3>
+                                                    <h3 className={this.props.maintenance.get('opt2') ? "pink" : ""}>{this.props.maintenance.get("price").get("opt2").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Analysis and advanced update
@@ -277,7 +259,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.maintenance.get('opt3') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.maintenance.get('opt3') ? "pink" : ""}>{this.props.maintenance.get("cost").get("opt3").toLocaleString() + " KRW / Month"}</h3>
+                                                    <h3 className={this.props.maintenance.get('opt3') ? "pink" : ""}>{this.props.maintenance.get("price").get("opt3").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Retainer
@@ -307,7 +289,7 @@ class Main extends Component {
                     <div style={{textAlign: "center"}}>
 
                         <h1 className="gray">Your Current Total:</h1>
-                        <h1 className="pink"><b>{this.props.cost.toLocaleString()} KRW</b></h1>
+                        <h1 className="pink"><b>{this.props.price.toLocaleString()} KRW</b></h1>
                         <br/>
 
                         <NavLink to="/price/select-5" exact>
@@ -337,7 +319,7 @@ function selectorFactory(dispatch) {
             hosting: nextState.get("services").get("hosting"),
             address: nextState.get("services").get("address"),
             maintenance: nextState.get("services").get("maintenance"),
-            cost: nextState.get("totalCost")
+            price: nextState.get("totalCost")
         };
         if(nextResult!=result){
             result = nextResult;

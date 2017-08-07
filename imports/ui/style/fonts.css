@@ -25,6 +25,12 @@
     line-height: 1.5rem;
 }
 
+#bootstrap-overrides .tiny-text{
+    margin: none;
+    font-size: 1.25rem;
+    line-height: 1.25rem;
+}
+
 #bootstrap-overrides .normal-text{
     font-size: 1.5rem;
     line-height: 1.75rem;

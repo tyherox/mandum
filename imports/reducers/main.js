@@ -11,7 +11,8 @@ const DEFAULT_STATE = fromJS({
             opt1: 5,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 25000,
                 opt2: "?",
                 opt3: 300000,
@@ -21,7 +22,8 @@ const DEFAULT_STATE = fromJS({
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 200000,
                 opt3: "?",
@@ -31,7 +33,8 @@ const DEFAULT_STATE = fromJS({
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 0,
                 opt3: "?",
@@ -42,20 +45,23 @@ const DEFAULT_STATE = fromJS({
             opt2: false,
             opt3: false,
             opt4: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 250000,
                 opt3: 250000,
                 opt4: "?",
             }
-        }
+        },
+        cost: 0
     },
     features: {
         free: {
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 0,
                 opt3: 0
@@ -67,21 +73,24 @@ const DEFAULT_STATE = fromJS({
             opt3: false,
             opt4: false,
             opt5: false,
-            cost: {
+            
+            price: {
                 opt1: 150000,
                 opt2: 250000,
                 opt3: 350000,
                 opt4: 200000,
                 opt5: 100000,
             }
-        }
+        },
+        cost: 0
     },
     design: {
         style: {
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 100000,
                 opt2: 250000,
                 opt3: 500000
@@ -90,7 +99,8 @@ const DEFAULT_STATE = fromJS({
         logo: {
             opt1: false,
             opt2: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 150000,
             }
@@ -99,19 +109,22 @@ const DEFAULT_STATE = fromJS({
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 200000,
                 opt3: 350000,
             }
-        }
+        },
+        cost: 0
     },
     services: {
         hosting: {
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 25000,
                 opt3: 50000
@@ -120,23 +133,24 @@ const DEFAULT_STATE = fromJS({
         address: {
             opt1: false,
             opt2: false,
-            opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 20000,
-                opt3: 100000
             }
         },
         maintenance: {
             opt1: false,
             opt2: false,
             opt3: false,
-            cost: {
+            
+            price: {
                 opt1: 0,
                 opt2: 75000,
                 opt3: 200000
             }
-        }
+        },
+        cost: 0
     },
     totalCost: 0,
     monthlyCost: 0
@@ -144,7 +158,7 @@ const DEFAULT_STATE = fromJS({
 
 function selection(state = DEFAULT_STATE, action) {
 
-    var newState;
+    var newState, array;
 
 
     switch (action.type) {
@@ -166,23 +180,21 @@ function selection(state = DEFAULT_STATE, action) {
 
 function calculateTotal(state, path, value){
     var name = path[path.length -1];
-    path[path.length -1] = "cost";
+    path[path.length -1] = "price";
     path.push(name);
     var current = state.get("totalCost");
     var price = state.getIn(path);
 
     if(price=="?") return current;
 
-    console.log(name, current, price, path);
-
     if(typeof value == "number"){
         var pages = state.get("content").get("pages");
         if(pages.get("opt3") || pages.get("opt2")){
-            current -= (pages.get("opt1") - 5) * pages.get("cost").get("opt1");
+            current -= (pages.get("opt1") - 5) * pages.get("price").get("opt1");
         }
         else {
-            current -= pages.get("opt1") > 5 ? (pages.get("opt1") - 5) * pages.get("cost").get("opt1") : 0;
-            current +=  value > 5 ? (value  - 5) * pages.get("cost").get("opt1") : 0;
+            current -= pages.get("opt1") > 5 ? (pages.get("opt1") - 5) * pages.get("price").get("opt1") : 0;
+            current +=  value > 5 ? (value  - 5) * pages.get("price").get("opt1") : 0;
         }
     }
     else if(!value){
@@ -191,7 +203,7 @@ function calculateTotal(state, path, value){
     else{
         current += price;
     }
-
+    
     return current;
 }
 

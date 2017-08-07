@@ -14,7 +14,7 @@ import {bindActionCreators} from 'redux';
 const style = { width: 600, margin: 50 };
 
 function estimateCost(element){
-    var cost = 0;
+    var price = 0;
 
     this.props.
 
@@ -31,7 +31,7 @@ class Main extends Component {
 
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                    <div style={{background: "white"}}>
 
                         <div style={{padding: "10px"}}>
 
@@ -156,7 +156,7 @@ class Main extends Component {
                                         <div>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.premium.get('opt1') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.premium.get('opt1') ? "purple" : ""}>{this.props.premium.get("cost").get("opt1").toLocaleString() + " KRW"}</h3>
+                                                    <h3 className={this.props.premium.get('opt1') ? "purple" : ""}>{this.props.premium.get("price").get("opt1").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Admin Page
@@ -172,7 +172,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.premium.get('opt2') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.premium.get('opt2') ? "purple" : ""}>{this.props.premium.get("cost").get("opt2").toLocaleString() + " KRW"}</h3>
+                                                    <h3 className={this.props.premium.get('opt2') ? "purple" : ""}>{this.props.premium.get("price").get("opt2").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Account System
@@ -188,7 +188,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.premium.get('opt3') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.premium.get('opt3') ? "purple" : ""}>{this.props.premium.get("cost").get("opt3").toLocaleString() + " KRW"}</h3>
+                                                    <h3 className={this.props.premium.get('opt3') ? "purple" : ""}>{this.props.premium.get("price").get("opt3").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Transaction System
@@ -204,7 +204,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.premium.get('opt4') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.premium.get('opt4') ? "purple" : ""}>{this.props.premium.get("cost").get("opt4").toLocaleString() + " KRW"}</h3>
+                                                    <h3 className={this.props.premium.get('opt4') ? "purple" : ""}>{this.props.premium.get("price").get("opt4").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Email System
@@ -220,7 +220,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.premium.get('opt5') ? "card-container selected-purple" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.premium.get('opt5') ? "purple" : ""}>{this.props.premium.get("cost").get("opt5").toLocaleString() + " KRW"}</h3>
+                                                    <h3 className={this.props.premium.get('opt5') ? "purple" : ""}>{this.props.premium.get("price").get("opt5").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Upload / Download Functionality
@@ -249,7 +249,7 @@ class Main extends Component {
                     <div style={{textAlign: "center"}}>
 
                         <h1 className="gray">Your Current Total:</h1>
-                        <h1 className="purple"><b>{this.props.cost.toLocaleString()} KRW</b></h1>
+                        <h1 className="purple"><b>{this.props.price.toLocaleString()} KRW</b></h1>
                         <br/>
 
                         <NavLink to="/price/select-3" exact>
@@ -279,7 +279,7 @@ function selectorFactory(dispatch) {
             free: nextState.get("features").get("free"),
             premium: nextState.get("features").get("premium"),
             content: nextState.get("features"),
-            cost: nextState.get("totalCost")
+            price: nextState.get("totalCost")
         };
         if(nextResult!=result){
             result = nextResult;

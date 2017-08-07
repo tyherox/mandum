@@ -1,3 +1,7 @@
+#bootstrap-overrides .red{
+    color: red!important;
+}
+
 #bootstrap-overrides .pink{
     color: #FB4473!important;
 }
