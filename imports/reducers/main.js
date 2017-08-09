@@ -185,7 +185,8 @@ function calculateTotal(state, path, value){
     var current = state.get("totalCost");
     var price = state.getIn(path);
 
-    if(price=="?") return current;
+    if(price=="?")price = 0;
+
 
     if(typeof value == "number"){
         var pages = state.get("content").get("pages");
@@ -198,6 +199,11 @@ function calculateTotal(state, path, value){
         }
     }
     else if(!value){
+        if(path[0]=="content" && path[1] == "pages"){
+            var pages = state.get("content").get("pages");
+            current +=  pages.get("opt1") > 5 ? (pages.get("opt1")  - 5) * pages.get("price").get("opt1") : 0;
+        }
+
         current -= price;
     }
     else{

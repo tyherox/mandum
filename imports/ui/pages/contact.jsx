@@ -19,16 +19,17 @@ class App extends Component {
 
                     <div className="default-container">
 
-                        <div className="default-container" style={{maxWidth: "500px", margin: "auto"}}>
+                        <div className="default-container" style={{maxWidth: "600px", margin: "auto"}}>
 
                             <h1>Ready for your quote?</h1>
 
                             <br/> <br/>
 
-                            <div style={{fontSize: "1.25rem", fontWeight: "300"}}>
-                                Hi! My name is <input className="minInput"/>, I would like to work with Mandum Studio!
-                                My budget is  <input className="minInput"/> KRW and I would like to have it done by  <input className="minInput"/>.
-                                My email is <input className="minInput"/>.
+                            <div style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "left"}}>
+                                Hi! My <span className="pink">name</span> is <input className="minInput"/>, I would like to work with Mandum Studio!
+                                My <span  className="pink">budget</span> is  <input className="minInput"/> KRW and I would like to
+                                have it <span  className="pink">done by</span>  <input className="minInput"/>.
+                                My <span  className="pink">email</span> is <input className="minInput"/>.
                             </div>
 
                             <br/><br/>
