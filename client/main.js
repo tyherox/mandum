@@ -15,7 +15,7 @@ import PriceChooserB from '../imports/ui/pages/price/priceChooser-2';
 import PriceChooserC from '../imports/ui/pages/price/priceChooser-3';
 import PriceChooserD from '../imports/ui/pages/price/priceChooser-4';
 import PriceChooserE from '../imports/ui/pages/price/priceChooser-5';
-import Story from '../imports/ui/pages/story';
+/*import Story from '../imports/ui/pages/story';*/
 import Contact from '../imports/ui/pages/contact';
 
 import reducer from '../imports/reducers/main';
@@ -55,7 +55,7 @@ Meteor.startup(() => {
                                       <Route exact path="/price/select-3" component={PriceChooserC}/>
                                       <Route exact path="/price/select-4" component={PriceChooserD}/>
                                       <Route exact path="/price/select-5" component={PriceChooserE}/>
-                                      <Route exact path="/story" component={Story}/>
+                                      {/*<Route exact path="/story" component={Story}*/}/>
                                       <Route exact path="/contact" component={Contact}/>
                                   </Switch>
                               </RouteTransition>

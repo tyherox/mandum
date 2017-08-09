@@ -58,9 +58,9 @@ export default class NavBarProto extends Component{
                             <NavLink to="/price"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Price</Button>
                             </NavLink>
-                            <NavLink to="/story"  activeClassName="nav-selected">
+                            {/*<NavLink to="/story"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Why Us?</Button>
-                            </NavLink>
+                            </NavLink>*/}
                             <NavLink to="/contact"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Contact Us</Button>
                             </NavLink>

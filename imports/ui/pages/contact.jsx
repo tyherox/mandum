@@ -21,11 +21,11 @@ class App extends Component {
 
                         <div className="default-container" style={{maxWidth: "500px", margin: "auto"}}>
 
-                            <h2>Ready for your quote?</h2>
+                            <h1>Ready for your quote?</h1>
 
-                            <br/>
+                            <br/> <br/>
 
-                            <div>
+                            <div style={{fontSize: "1.25rem", fontWeight: "300"}}>
                                 Hi! My name is <input className="minInput"/>, I would like to work with Mandum Studio!
                                 My budget is  <input className="minInput"/> KRW and I would like to have it done by  <input className="minInput"/>.
                                 My email is <input className="minInput"/>.
@@ -49,7 +49,10 @@ class App extends Component {
 
                             <hr/>
 
-                            <Button className="emptyButton blackButton bigButton">Or Just Give Us an Email!</Button>
+                            <Button className="emptyButton blackButton bigButton"
+                                    href="mailto:john.uhyb@gmail.com">
+                                Or Just Give Us an Email!
+                            </Button>
                         </div>
 
                     </div>

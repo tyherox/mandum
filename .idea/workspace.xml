@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb626132-c8f8-4fba-bf0c-3d27c59b0b98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.html" afterPath="$PROJECT_DIR$/client/main.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/footer/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/components/footer/main.jsx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/client/main.js" afterPath="$PROJECT_DIR$/client/main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/navBar/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/components/navBar/main.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/contact.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/contact.jsx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/price/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/price/main.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-1.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-1.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/style/containers.css" afterPath="$PROJECT_DIR$/imports/ui/style/containers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/style/elements.css" afterPath="$PROJECT_DIR$/imports/ui/style/elements.css" />
     </list>
     <ignored path="mandum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,9 +41,12 @@
       <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-              <folding />
+            <state relative-caret-position="375">
+              <caret line="56" column="83" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#897#947#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -56,8 +54,8 @@
       <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1065">
-              <caret line="77" column="41" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="41" />
+            <state relative-caret-position="425">
+              <caret line="160" column="47" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -110,15 +108,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="contact.jsx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="contact.jsx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/contact.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="277">
-              <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+            <state relative-caret-position="75">
+              <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
-                <element signature="e#43#83#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/imports/ui/components/navBar/main.jsx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="470">
+              <caret line="61" column="92" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -169,7 +176,6 @@
         <option value="$PROJECT_DIR$/imports/ui/components/navBar/style.css" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/packageChooser.jsx" />
         <option value="$PROJECT_DIR$/node_modules/rc-slider/assets/index.css" />
-        <option value="$PROJECT_DIR$/imports/ui/components/navBar/main.jsx" />
         <option value="$PROJECT_DIR$/imports/actions/main.js" />
         <option value="$PROJECT_DIR$/imports/constants/actionTypes.js" />
         <option value="$PROJECT_DIR$/imports/ui/style/fonts.css" />
@@ -179,16 +185,17 @@
         <option value="$PROJECT_DIR$/imports/ui/style/main.css" />
         <option value="$PROJECT_DIR$/imports/ui/style/color.css" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-5.jsx" />
-        <option value="$PROJECT_DIR$/client/main.js" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-2.jsx" />
         <option value="$PROJECT_DIR$/client/main.html" />
         <option value="$PROJECT_DIR$/imports/ui/style/containers.css" />
         <option value="$PROJECT_DIR$/imports/ui/components/footer/main.jsx" />
-        <option value="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/priceChooser-1.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/style/elements.css" />
         <option value="$PROJECT_DIR$/imports/ui/pages/contact.jsx" />
+        <option value="$PROJECT_DIR$/client/main.js" />
+        <option value="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
+        <option value="$PROJECT_DIR$/imports/ui/components/navBar/main.jsx" />
       </list>
     </option>
   </component>
@@ -333,12 +340,12 @@
       <updated>1501135104162</updated>
       <workItem from="1501135108262" duration="29144000" />
       <workItem from="1501303669829" duration="103334000" />
-      <workItem from="1502178249522" duration="8542000" />
+      <workItem from="1502178249522" duration="9032000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141020000" />
+    <option name="totallyTimeSpent" value="141510000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -412,7 +419,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="870">
           <caret line="58" column="64" selection-start-line="58" selection-start-column="64" selection-end-line="58" selection-end-column="64" />
-          <folding />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#897#947#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -663,14 +673,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/navBar/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="39" column="37" selection-start-line="39" selection-start-column="37" selection-end-line="39" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/style/containers.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="716">
@@ -695,26 +697,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/price/priceChooser-3.jsx">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="163" column="62" selection-start-line="163" selection-start-column="62" selection-end-line="163" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1065">
-          <caret line="77" column="41" selection-start-line="77" selection-start-column="36" selection-end-line="77" selection-end-column="41" />
           <folding />
         </state>
       </provider>
@@ -763,12 +749,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/contact.jsx">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="277">
-          <caret line="33" column="38" selection-start-line="33" selection-start-column="38" selection-end-line="33" selection-end-column="38" />
+        <state relative-caret-position="75">
+          <caret line="5" column="28" selection-start-line="5" selection-start-column="28" selection-end-line="5" selection-end-column="28" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
-            <element signature="e#43#83#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="56" column="83" selection-start-line="56" selection-start-column="83" selection-end-line="56" selection-end-column="83" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#897#947#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="160" column="47" selection-start-line="160" selection-start-column="47" selection-end-line="160" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/navBar/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="470">
+          <caret line="61" column="92" selection-start-line="61" selection-start-column="92" selection-end-line="61" selection-end-column="92" />
+          <folding />
         </state>
       </provider>
     </entry>

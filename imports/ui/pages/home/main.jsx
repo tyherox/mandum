@@ -158,14 +158,17 @@ export default class App extends Component {
                                             </Col>
                                         </Row>
                                     </Grid>
+                                    <br/> <br/>
+                                    {/*
+                                     <br/> <br/> <br/>
 
-                                    <br/> <br/> <br/>
+                                     <NavLink to="/story" exact>
+                                     <Button className="emptyButton orangeButton bigButton">
+                                     <b>Read More</b> <i className="arrow right" />
+                                     </Button>
+                                     </NavLink>
+                                    */}
 
-                                    <NavLink to="/story" exact>
-                                        <Button className="emptyButton orangeButton bigButton">
-                                            <b>Read More</b> <i className="arrow right" />
-                                        </Button>
-                                    </NavLink>
 
                                     <hr/>
 
