@@ -17,7 +17,7 @@ export default class TestNavBar extends Component{
                 <img style={{float: "left"}}
                      width="100"
                      src="/assets/logo-inverse.svg"/>
-                <Button style={{float: "right", color: "white", fontWeight: "300", fontSize: "1rem"}}
+                <Button style={{float: "right", color: "white", fontWeight: "300"}}
                         onClick={()=> Scroll.animateScroll.scrollToTop() }
                         className="emptyButton">Back to Top</Button>
             </div>

@@ -19,7 +19,7 @@ export default class App extends Component {
                     <Center>
                         <div className="center-container">
 
-                            <h1>
+                            <h1 style={{fontSize: "3.5rem"}}>
                                 Website
                                 <ReactRotatingText pause={2000} items={[' Development', ' Design', ' Consulting']} />
                             </h1>
@@ -32,6 +32,7 @@ export default class App extends Component {
                             <br/>
                             <br/>
 
+                            <p className="orange">Opening Discount: 50% Off! (5 left)</p>
                             <NavLink to="/contact" exact>
                                 <Button >
                                     <b>Work with Us</b><i className="arrow right" />
@@ -50,58 +51,32 @@ export default class App extends Component {
 
                                 <div className="inner-container">
 
-                                    <h1 style={{marginTop: "5rem"}}>
-                                        Modern Website Building (some intro phrase)
+                                    <h1 style={{marginTop: "7rem"}}>
+                                        A Story Behind Every Pixel
                                     </h1>
 
-                                    <br/>
+                                    <br/>  <br/>
 
                                     <p>
-                                        (Further description about the intro phrase)
+                                        The Internet is a massive, competitive arena.
+                                        There are more than <a href="http://www.internetlivestats.com/total-number-of-websites/" target="_blank">1 billion websites today</a>.
+                                        And with more than 100 being created every minute, creating a unique website gets harder everyday.
                                     </p>
 
-                                    <br/> <br/>
+                                    <br />
 
-                                    <Grid style = {{width: "auto"}}>
-                                        <Row className="show-grid">
-                                            <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Landing Page</h3>
-                                                    <br/>
-                                                    <p className="small-text">
-                                                        Build a beautiful
-                                                        responsive website to
-                                                        promote your business
-                                                        or organization
-                                                    </p>
-                                                    <br/>
-                                                    <Button> Select </Button>
-                                                </div>
-                                            </Col>
-                                            <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Online Store</h3>
-                                                    <br/>
-                                                    <p className="small-text">
-                                                        (about online store *short*)
-                                                    </p>
-                                                    <br/>
-                                                    <Button> Select </Button>
-                                                </div>
-                                            </Col>
-                                            <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Portfolio</h3>
-                                                    <br/>
-                                                    <p className="small-text">
-                                                        (about portfolio *short*)
-                                                    </p>
-                                                    <br/>
-                                                    <Button> Select </Button>
-                                                </div>
-                                            </Col>
-                                        </Row>
-                                    </Grid>
+                                    <p>
+                                        At Mandum Studio, we strive to create memorable, distinct websites with story telling.
+                                        Every detail of our websites has purpose, represents plot, and urges your web visitors to stay and hear your message.
+                                        Along with our purpose driven design principals, advanced technology, and dependable customer service, your website will be a
+                                        shining beacon admist the vast content of the Internet.
+
+                                    </p>
+
+                                    <br/><br/>
+
+                                    <hr/>
+
                                 </div>
 
                             </div>
@@ -109,15 +84,17 @@ export default class App extends Component {
                         </div>
 
                     </div>
+
+
                     <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #8900FF 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            (Some intro phrase)
+                            Mandum Studio
                         </p>
                     </div>
                 </div>
 
-                <br/><br/><br/>
+                <br/><jr/><br/>
 
                 <div style={{position: "relative"}}>
                     <div className="center-container staggered-container" style={{background: "url('/assets/home-background-2.svg') no-repeat", backgroundSize: "100%"}}>
@@ -128,57 +105,70 @@ export default class App extends Component {
 
                                 <div className="inner-container">
 
-                                    <h1 style={{marginTop: "5rem"}}>
-                                        (Some phrase about our services)
+                                    <h1 style={{marginTop: "7rem"}}>
+                                        From A to Z
                                     </h1>
 
-                                    <br/>
+                                    <br/> <br/>
 
                                     <p>
-                                        Lorem ipsum dolor sit amet,
-                                        consectetur adipiscing elit. Proin dignissim est risus, non blandit
-                                        neque facilisis et. Proin quam eros, tempor.
+                                        Creating a website is a multi-step process that is much more than just coding.
+                                        Mandum Studio understands the multi-disciplinary requirements of website building
+                                        and provides a wide range of services from design to translation as well as development.
                                     </p>
 
+
                                     <br/> <br/>
+
 
                                     <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
                                             <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Developing</h3>
+                                                <div className="center-container">
+                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <h3>Development</h3>
                                                     <br/>
-                                                    <p className="small-text">
-                                                        (something to do with our development)
+                                                    <p>
+                                                        We use advanced, modern technologies to build your websites.
                                                     </p>
                                                     <br/>
-                                                    <Button> Select </Button>
                                                 </div>
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Designing</h3>
+                                                <div className="center-container">
+                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <h3>Design</h3>
                                                     <br/>
-                                                    <p className="small-text">
-                                                        (something to do with our designing)
+                                                    <p>
+                                                        All our designs are mobile friendly and go through a rigorous planning phase.
                                                     </p>
                                                     <br/>
-                                                    <Button> Select </Button>
                                                 </div>
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list">
-                                                <div className="card-container">
-                                                    <h3>Translating</h3>
+                                                <div className="center-container">
+                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <h3>Translation</h3>
                                                     <br/>
-                                                    <p className="small-text">
-                                                        (something to do with our translating)
+                                                    <p>
+                                                        We provide free English and Korean versions of your website.
                                                     </p>
                                                     <br/>
-                                                    <Button> Select </Button>
                                                 </div>
                                             </Col>
                                         </Row>
                                     </Grid>
+
+                                    <br/> <br/> <br/>
+
+                                    <NavLink to="/story" exact>
+                                        <Button className="emptyButton orangeButton bigButton">
+                                            <b>Read More</b> <i className="arrow right" />
+                                        </Button>
+                                    </NavLink>
+
+                                    <hr/>
+
                                 </div>
 
                             </div>
@@ -189,7 +179,7 @@ export default class App extends Component {
                     <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #F98115 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            Our services
+                            Our Services
                         </p>
                     </div>
                 </div>
@@ -205,25 +195,24 @@ export default class App extends Component {
 
                                 <div className="inner-container">
 
-                                    <h1 style={{marginTop: "5rem"}}>
-                                        No need to wait for a quote. (?)
+                                    <h1 style={{marginTop: "7rem"}}>
+                                        No Need to Wait for a Quote
                                     </h1>
 
-                                    <br/>
+                                    <br/> <br/>
 
                                     <p>
-                                        (talk about using our price estimator (?) )
+                                        A budget is no fun but always important when creating a website.
+                                        Feel free to browse our packages or check out our price estimator to gauge our price range.
                                     </p>
 
-                                    <br/> <br/> <br/> <br/> <br/> <br/>
+                                    <br/> <br/> <br/>
 
                                     <NavLink to="/price" exact>
                                         <Button className="emptyButton pinkButton bigButton">
                                             <b>Start your Estimation</b> <i className="arrow right" />
                                         </Button>
                                     </NavLink>
-
-                                    <br/> <br/>
 
                                 </div>
 
@@ -235,7 +224,7 @@ export default class App extends Component {
                     <div className="staggered-container-title">
                         <div style={{textAlign: "center", display: "block", border: "solid #FB4473 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
                         <p style={{textAlign: "center", color: "white"}}>
-                            Not sure yet?
+                            Transparent Pricing
                         </p>
                     </div>
                 </div>

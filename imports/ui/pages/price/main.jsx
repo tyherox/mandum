@@ -25,6 +25,14 @@ export default class Main extends Component {
 
                             <h3>No Hidden Costs.</h3>
 
+                            <br/>
+
+                            <NavLink to="/price/select-1" exact>
+                                <Button >
+                                    <b>Start your Estimation</b><i className="arrow right" />
+                                </Button>
+                            </NavLink>
+
                         </div>
                     </Center>
                 </div>
@@ -42,48 +50,41 @@ export default class Main extends Component {
                             <br/>
 
                             <p>
-                                Stuff about how we offer pricing for everyone
+                                Whether you're a student creating a personal portfolio or a local business planning to sell your products online, we can work out a price range for your needs.
+                                Check out our package selections or customize your price estimation using our price estimator.
                             </p>
 
                             <br/> <br/>
 
                             <Grid style = {{width: "auto"}}>
                                 <Row className="show-grid">
-                                    <Col xs={12} md={4} className="project-item-list">
+                                    <Col xs={12} md={4} className="project-item-list col-centered">
                                         <div>
                                             <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
                                             <h3>Refund Policy</h3>
                                             <br/>
-                                            <p className="small-text">
-                                                Stuff about refund
+                                            <p>
+                                                We refund 100% of your money before the prototyping phase.
                                             </p>
                                             <br/>
                                         </div>
                                     </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
-                                        <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
-                                            <h3>Payout</h3>
-                                            <br/>
-                                            <p className="small-text">
-                                                Stuff about how payment works
-                                            </p>
-                                            <br/>
-                                        </div>
-                                    </Col>
-                                    <Col xs={12} md={4} className="project-item-list">
+                                    <Col xs={12} md={4} className="project-item-list col-centered">
                                         <div>
                                             <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
                                             <h3>Transparency</h3>
                                             <br/>
-                                            <p className="small-text">
-                                                Flexible and Transparent
+                                            <p>
+                                                Our price estimator provides transparency in our prices.
                                             </p>
                                             <br/>
                                         </div>
                                     </Col>
                                 </Row>
                             </Grid>
+
+                            <hr/>
+
                         </div>
 
                     </div>
@@ -114,10 +115,13 @@ export default class Main extends Component {
                                             <br/>
 
                                             <p>
-                                                What packages are
+                                                Packages are bundled features for common website usages.
+                                                Browse our offers to quickly gauge how much your website will cost.
                                             </p>
 
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
+                                            <br/> <br/> <br/>
+
+                                            <hr/>
 
                                             <NavLink to="/price/packages" exact>
                                                 <Button className="emptyButton pinkButton">
@@ -126,11 +130,12 @@ export default class Main extends Component {
                                                 </Button>
                                             </NavLink>
 
+                                            <br/>
+
                                         </Col>
 
                                     </Row>
                                 </Grid>
-
 
                                 <br/> <br/>
 
@@ -171,11 +176,13 @@ export default class Main extends Component {
                                             <br/>
 
                                             <p>
-                                                About advanced price estimator
-
+                                                Have eccentric or uncommon needs?
+                                                Use our price estimator to better gauge your website cost.
                                             </p>
 
-                                            <br/> <br/> <br/> <br/> <br/> <br/>
+                                            <br/> <br/> <br/>
+
+                                            <hr/>
 
                                             <NavLink to="/price/select-1" exact>
                                                 <Button className="emptyButton blueButton">
@@ -184,10 +191,13 @@ export default class Main extends Component {
                                                 </Button>
                                             </NavLink>
 
+                                            <br/>
+
                                         </Col>
 
                                     </Row>
                                 </Grid>
+
 
                             </div>
 
@@ -209,7 +219,13 @@ export default class Main extends Component {
 
                     <br/>
 
-                    <Button className="emptyButton blackButton bigButton"><b>Talk to Us</b> <i className="arrow right" /></Button>
+                    <NavLink to="/contact" exact>
+                        <Button className="emptyButton blackButton bigButton">
+                            <b>Talk to Us</b>
+                            <i className="arrow right" />
+                        </Button>
+                    </NavLink>
+
                 </div>
 
                 <br/><br/><br/>

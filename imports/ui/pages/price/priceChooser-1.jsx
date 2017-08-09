@@ -420,35 +420,6 @@ function selectorFactory(dispatch) {
     const actions = bindActionCreators(Actions, dispatch);
     return (nextState, nextOwnProps) => {
 
-        var pages = nextState.get("content").get("pages"),
-            text = nextState.get("content").get("text"),
-            translation = nextState.get("content").get("translation"),
-            media = nextState.get("content").get("media") ;
-        
-        var pageCost = 0,
-            textCost = 0,
-            mediaCost = 0;
-
-        if(pages.get("opt3")){
-            pageCost = pages.get("price").get("opt3");
-        }
-        else if(!pages.get("opt2")){
-            pageCost = (pages.get("opt1") - 5) * pages.get("price").get("opt1");
-        }
-
-        if(!text.get("opt1") && text.get("opt2")) {
-            textCost = text.get("price").get("opt2");
-        }
-
-        if(media.get("opt2")){
-            mediaCost = media.get("price").get("opt2");
-        }
-        if(media.get("opt3")){
-            mediaCost += media.get("price").get("opt3");
-        }
-
-
-
         const nextResult = {
             reduxActions: actions,
             pages: nextState.get("content").get("pages"),
