@@ -25,7 +25,7 @@ class App extends Component {
             name = this.refs.name.value,
             budget = this.refs.budget.value,
             deadline = this.refs.deadline.value,
-            estimator = this.refs.estimator ? this.refs.estimator.checked ? this.props.state : "" : "";
+            estimator = this.refs.estimator ? this.refs.estimator.checked ? this.props.state.toJSON() : "" : "";
 
         if(sender=="" || sender=="null"){
             this.refs.sender.style.borderColor="red";

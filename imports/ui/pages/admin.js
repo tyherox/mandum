@@ -138,12 +138,19 @@ class Sentry extends Component {
 class App extends Component {
     render() {
 
-        console.log(this.props.orders);
-
         var Orders = this.props.orders.map(function(order){
 
+            var details = deconstruct(order.details.estimator);
+
             return (
-                <Order order={order} key={order._id}/>
+                <Order order={order}
+                       key={order._id}
+                       content={details.content}
+                       features={details.features}
+                       design={details.design}
+                       services={details.services}
+                       price={details.price}
+                       monthlyCost={details.monthlyCost}/>
             )
         });
 
@@ -178,6 +185,7 @@ class App extends Component {
 }
 
 class Order extends Component{
+
     constructor(props){
         super(props);
         this.state={expanded: false}
@@ -196,8 +204,236 @@ class Order extends Component{
                         <p style={{display: "inline", marginRight: "1rem"}}>Estimator: </p>
                         <Button className="emptyButton blueButton"z style={{display: "inline", padding: ".6rem 3rem"}}
                                 onClick={()=> this.setState({expanded: !this.state.expanded})}>
-                            Used Estimator
+                            {this.state.expanded ? "Close" : "View"}
                         </Button>
+                        <br/>
+                        {this.state.expanded ?
+                            <div>
+                                <div className="default-container">
+
+                                    <div className="inner-container">
+
+                                        <Grid style = {{width: "auto"}}>
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Content</b></h2>
+                                                        <br/>
+                                                        {this.props.content[0] ? <p className="tiny-text">{this.props.content[0][0] + this.props.content[0][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Pages not selected</p>}
+                                                        {this.props.content[1] ? <p className="tiny-text">{this.props.content[1][0] + this.props.content[1][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Text not selected</p>}
+                                                        {this.props.content[2] ? <p className="tiny-text">{this.props.content[2][0] + this.props.content[2][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Translation not selected</p>}
+                                                        {this.props.content[3] ? <p className="tiny-text">{this.props.content[3][0] + this.props.content[3][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Media not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.content[4].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Features</b></h2>
+                                                        <br/>
+                                                        {this.props.features[0].length > 0 ? this.props.features[0].map(function(element){
+                                                            return <p className="tiny-text" key={element}>{element}</p>
+                                                        }) : <p className="red tiny-text">Free Features not selected</p>}
+                                                        {this.props.features[1].length > 0 ? this.props.features[1].map(function(element){
+                                                            return <p className="tiny-text" key={element}>{element}</p>
+                                                        }) : <p className="red tiny-text">Premium Features not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.features[2].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Design</b></h2>
+                                                        <br/>
+                                                        {this.props.design[0] ? <p className="tiny-text">{this.props.design[0]}</p>
+                                                            : <p className="red tiny-text">Design style not selected</p>}
+                                                        {this.props.design[1] ? <p className="tiny-text">{this.props.design[1]}</p>
+                                                            : <p className="red tiny-text">Logo design not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.design[2].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Services</b></h2>
+                                                        <br/>
+                                                        {this.props.services[0] ? <p className="tiny-text">{this.props.services[0]}</p>
+                                                            : <p className="red tiny-text">Hosting service not selected</p>}
+                                                        {this.props.services[1] ? <p className="tiny-text">{this.props.services[1]}</p>
+                                                            : <p className="red tiny-text">Address service not selected</p>}
+                                                        {this.props.services[2] ? <p className="tiny-text">{this.props.services[2]}</p>
+                                                            : <p className="red tiny-text">Maintenance service not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.services[3].toLocaleString() + " KRW / Month"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                        </Grid>
+
+                                    </div>
+
+                                </div>
+
+                                <div className="default-container">
+
+                                    <div className="inner-container">
+
+                                        <Grid style = {{width: "auto"}}>
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Content</b></h2>
+                                                        <br/>
+                                                        {this.props.content[0] ? <p className="tiny-text">{this.props.content[0][0] + this.props.content[0][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Pages not selected</p>}
+                                                        {this.props.content[1] ? <p className="tiny-text">{this.props.content[1][0] + this.props.content[1][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Text not selected</p>}
+                                                        {this.props.content[2] ? <p className="tiny-text">{this.props.content[2][0] + this.props.content[2][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Translation not selected</p>}
+                                                        {this.props.content[3] ? <p className="tiny-text">{this.props.content[3][0] + this.props.content[3][1].toLocaleString() + " KRW"}</p>
+                                                            : <p className="red tiny-text">Media not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.content[4].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Features</b></h2>
+                                                        <br/>
+                                                        {this.props.features[0].length > 0 ? this.props.features[0].map(function(element){
+                                                            return <p className="tiny-text" key={element}>{element}</p>
+                                                        }) : <p className="red tiny-text">Free Features not selected</p>}
+                                                        {this.props.features[1].length > 0 ? this.props.features[1].map(function(element){
+                                                            return <p className="tiny-text" key={element}>{element}</p>
+                                                        }) : <p className="red tiny-text">Premium Features not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.features[2].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Design</b></h2>
+                                                        <br/>
+                                                        {this.props.design[0] ? <p className="tiny-text">{this.props.design[0]}</p>
+                                                            : <p className="red tiny-text">Design style not selected</p>}
+                                                        {this.props.design[1] ? <p className="tiny-text">{this.props.design[1]}</p>
+                                                            : <p className="red tiny-text">Logo design not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.design[2].toLocaleString() + " KRW"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                            <hr/>
+
+                                            <Row className="show-grid">
+                                                <div>
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Services</b></h2>
+                                                        <br/>
+                                                        {this.props.services[0] ? <p className="tiny-text">{this.props.services[0]}</p>
+                                                            : <p className="red tiny-text">Hosting service not selected</p>}
+                                                        {this.props.services[1] ? <p className="tiny-text">{this.props.services[1]}</p>
+                                                            : <p className="red tiny-text">Address service not selected</p>}
+                                                        {this.props.services[2] ? <p className="tiny-text">{this.props.services[2]}</p>
+                                                            : <p className="red tiny-text">Maintenance service not selected</p>}
+                                                        <br/>
+                                                    </Col>
+
+                                                    <Col xs={12} md={6}>
+                                                        <h2><b>Total:</b></h2>
+                                                        <h3>{this.props.services[3].toLocaleString() + " KRW / Month"}</h3>
+                                                    </Col>
+
+                                                </div>
+                                            </Row>
+
+                                        </Grid>
+
+                                        <Button className="emptyButton blueButton"z style={{display: "inline", padding: ".6rem 3rem"}}
+                                                onClick={()=> this.setState({expanded: !this.state.expanded})}>
+                                            View
+                                        </Button>
+
+                                        <div style={{textAlign: "center"}}>
+
+                                            <h3 className="gray">Monthly Cost:</h3>
+                                            <h3 className="black"><b>{this.props.monthlyCost.toLocaleString()} KRW</b></h3>
+                                            <hr style={{width: "25%", margin: "auto"}}/>
+                                            <h1 className="gray">Total Cost:</h1>
+                                            <h1><b>{this.props.price.toLocaleString()} KRW</b></h1>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div> : ""}
                     </div> : ""}
                 <br/><br/>
                 <Button onClick={()=> Meteor.call("deleteOrder", this.props.order._id)}>Delete</Button>
@@ -208,8 +444,12 @@ class Order extends Component{
 
 var deconstruct = function(state){
 
-    console.log(state, function(key, value, path){
-        console.log(key, value, path);
+    console.log(state);
+
+    console.log(typeof state);
+
+    state = fromJS(state, function(key, value, path){
+        console.log("1:",key,"2:",value,"3:",path);
         return value;
     });
 
