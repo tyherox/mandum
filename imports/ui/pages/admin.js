@@ -18,7 +18,7 @@ class Main extends Component {
 
         console.log(this.props.orders, "!!");
 
-        var login = {background: "url('/assets/construction.svg') no-repeat",  backgroundSize: "110%", minHeight: "calc(100vh - 75px)", backgroundPosition: "center" },
+        var login = {background: "url('/assets/construction.svg') no-repeat",  backgroundSize: "contain", minHeight: "calc(100vh - 75px)", backgroundPosition: "center"},
             app = {background: "white" };
 
         return (
@@ -93,7 +93,7 @@ class Sentry extends Component {
                             <div style={{margin: "auto", maxWidth: "350px"}}>
                                 <label style={{float: "left"}}>Email</label>
                                 <br/>
-                                <input ref="email"
+                                <input className="bigInput" ref="email"
                                        style={{width: "100%", fontSize: "1.5rem"}}
                                        id="username"/>
                             </div>
@@ -101,7 +101,7 @@ class Sentry extends Component {
                             <div style={{margin: "auto", maxWidth: "350px"}}>
                                 <label style={{float: "left"}}>Password</label>
                                 <br/>
-                                <input type = "password"
+                                <input className="bigInput" type = "password"
                                        style={{width: "100%", fontSize: "1.5rem"}}
                                        ref="password"
                                        id="password"/>
@@ -142,6 +142,7 @@ class App extends Component {
 
             var details = deconstruct(order.details.estimator);
 
+            if(details)
             return (
                 <Order order={order}
                        key={order._id}
@@ -152,6 +153,10 @@ class App extends Component {
                        price={details.price}
                        monthlyCost={details.monthlyCost}/>
             )
+            else {
+                return  <Order order={order}
+                               key={order._id}/>
+            }
         });
 
         if(Orders.length == 0) Orders = ""
@@ -186,11 +191,11 @@ class App extends Component {
 
 class Order extends Component{
 
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state={expanded: false}
+        this.state = {expanded: false}
     }
-    
+
     render(){
 
         return(
@@ -417,7 +422,7 @@ class Order extends Component{
 
                                         <Button className="emptyButton blueButton"z style={{display: "inline", padding: ".6rem 3rem"}}
                                                 onClick={()=> this.setState({expanded: !this.state.expanded})}>
-                                            View
+                                            {this.state.expanded ? "Close" : "View"}
                                         </Button>
 
                                         <div style={{textAlign: "center"}}>
@@ -444,14 +449,11 @@ class Order extends Component{
 
 var deconstruct = function(state){
 
-    console.log(state);
+    console.log("?:", state);
 
-    console.log(typeof state);
+    state = fromJS(state);
 
-    state = fromJS(state, function(key, value, path){
-        console.log("1:",key,"2:",value,"3:",path);
-        return value;
-    });
+    if(!state) return false;
 
     var totalCost = 0;
     var monthlyCost = 0;

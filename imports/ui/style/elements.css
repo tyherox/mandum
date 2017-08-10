@@ -194,7 +194,6 @@ i.pulse{
 }
 
 input{
-    padding: 1rem;
     transition: all .3s ease-in-out;
     border: 1px solid #CBCBCB;
     outline: none;
@@ -208,6 +207,9 @@ input:disabled{
     color: #CBCBCB;
 }
 
+.bigInput{
+    padding: 1rem;
+}
 
 .minInput{
     padding: .2rem;
