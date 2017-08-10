@@ -11,6 +11,68 @@ import {bindActionCreators} from 'redux';
 
 class App extends Component {
 
+    constructor(props){
+        super(props);
+        this.state = {sent: false};
+        this.sendEmail = this.sendEmail.bind(this);
+    }
+
+    sendEmail(event){
+
+        console.log(this.refs);
+
+        var sender = this.refs.email.value,
+            name = this.refs.name.value,
+            budget = this.refs.budget.value,
+            deadline = this.refs.deadline.value,
+            estimator = this.refs.estimator ? this.refs.estimator.checked ? this.props.state : "" : "";
+
+        if(sender=="" || sender=="null"){
+            this.refs.sender.style.borderColor="red";
+            return false;
+        }
+
+        if(name=="" || name=="null"){
+            this.refs.name.style.borderColor="red";
+            return false;
+        }
+
+        if(budget=="" || budget=="null"){
+            this.refs.budget.style.borderColor="red";
+            return false;
+        }
+
+        if(deadline=="" || deadline=="null"){
+            this.refs.deadline.style.borderColor="red";
+            return false;
+        }
+
+        Meteor.call("sendOrder", sender, {name, budget, deadline, estimator})
+
+        console.log('huh...');
+
+        event.preventDefault();
+
+        this.setState({sent: true});
+    }
+
+    verifyBudget(event){
+
+        var budget = parseInt(event.target.value.replace(/,/gi, ""));
+
+        if(typeof budget == "number" && !isNaN(budget)){
+            console.log("1");
+            budget = budget.toLocaleString();
+            this.refs.budget.style.color = "black";
+            this.refs.budget.value = budget;
+        }
+        else {
+            console.log("2");
+            this.refs.budget.style.color = "red";
+            this.refs.budget.value = event.target.value;
+        }
+    }
+
     render() {
 
         return (
@@ -25,35 +87,40 @@ class App extends Component {
 
                             <br/> <br/>
 
-                            <div style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "left"}}>
-                                Hi! My <span className="pink">name</span> is <input className="minInput"/>, I would like to work with Mandum Studio!
-                                My <span  className="pink">budget</span> is  <input className="minInput"/> KRW and I would like to
-                                have it <span  className="pink">done by</span>  <input className="minInput"/>.
-                                My <span  className="pink">email</span> is <input className="minInput"/>.
-                            </div>
+                            <form onSubmit={this.sendEmail} style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "left"}}>
+                                Hi! My <span className="blue">name</span> is <input disabled = {this.state.sent} className="minInput" ref="name"/>, I would like to work with Mandum Studio!
+                                My <span  className="blue">budget</span> is  <input disabled = {this.state.sent} className="minInput" ref="budget" onChange={this.verifyBudget.bind(this)}/> KRW and I would like to
+                                have it <span  className="blue">done by</span>  <input disabled = {this.state.sent} className="minInput" ref="deadline"/>.
+                                My <span  className="blue">email</span> is <input disabled = {this.state.sent} className="minInput" ref="email"/>.
 
-                            <br/><br/>
+                                <br/><br/>
 
-                            {this.props.price != 0 ?
-                                <FormGroup>
-                                    <Checkbox inline
-                                           onClick={(event) => {
-                                           }}>
-                                        <p className="small-text inline blue"> Use Price Estimator Data</p>
-                                        <p>{this.props.price.toLocaleString() + " KRW"}</p>
-                                    </Checkbox>
-                                </FormGroup> : ""
-                            }
-                            <br/><br/>
+                                <div style={{textAlign: "center"}}>
+                                    {this.props.price != 0 ?
+                                        <div>
+                                            <input type="checkbox"
+                                                   ref="estimator" />
+                                                <p className="small-text inline blue"> Use Price Estimator Data</p>
+                                                <p>{this.props.price.toLocaleString() + " KRW"}</p>
+                                        </div> : ""
+                                    }
+                                    <br/><br/>
 
-                            <Button className="emptyButton blackButton">Submit</Button>
+                                    <Button className="emptyButton blackButton" type="submit">
+                                        { this.state.sent ? "Thank you!" : "Submit"}
+                                    </Button>
 
-                            <hr/>
+                                    <hr/>
 
-                            <Button className="emptyButton blackButton bigButton"
-                                    href="mailto:john.uhyb@gmail.com">
-                                Or Just Give Us an Email!
-                            </Button>
+                                    <h3>Or</h3>
+                                    <Button className="emptyButton blackButton bigButton"
+                                            href="mailto:john.uhyb@gmail.com">
+                                        Just Give Us an Email!
+                                    </Button>
+                                </div>
+
+                            </form>
+
                         </div>
 
                     </div>
@@ -71,6 +138,7 @@ function selectorFactory(dispatch) {
     return (nextState, nextOwnProps) => {
 
         const nextResult = {
+            state: nextState,
             price: nextState.get("totalCost")
         };
         if(nextResult!=result){

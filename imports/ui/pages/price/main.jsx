@@ -13,6 +13,7 @@ export default class Main extends Component {
 
         return (
             <div>
+
                 <div className="banner-container">
                     <Center>
                         <div className="center-container">
@@ -28,7 +29,7 @@ export default class Main extends Component {
                             <br/>
 
                             <NavLink to="/price/select-1" exact>
-                                <Button >
+                                <Button className="emptyButton blackButton bigButton">
                                     <b>Start your Estimation</b><i className="arrow right" />
                                 </Button>
                             </NavLink>

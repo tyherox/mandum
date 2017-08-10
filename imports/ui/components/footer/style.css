@@ -4,20 +4,3 @@
     width: 100%;
     background: #1F1F1F;
 }
-
-@keyframes blinking-arrow {
-    0% {
-        transform:translateX(0) rotate(-45deg);
-    }
-    50% {
-        transform:translateX(10px) rotate(-45deg);
-    }
-    100% {
-        transform:translateX(0) rotate(-45deg);
-    }
-}
-
-.right {
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-}

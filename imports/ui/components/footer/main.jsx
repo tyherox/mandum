@@ -11,15 +11,19 @@ import './style.css';
 
 export default class TestNavBar extends Component{
     render(){
+        var render = this.props.exception.indexOf(this.props.location.pathname)==-1;
 
         return(
-            <div id="footer">
-                <img style={{float: "left"}}
-                     width="100"
-                     src="/assets/logo-inverse.svg"/>
-                <Button style={{float: "right", color: "white", fontWeight: "300"}}
-                        onClick={()=> Scroll.animateScroll.scrollToTop() }
-                        className="emptyButton">Back to Top</Button>
+            <div>
+                {render  ?
+                    <div id="footer">
+                        <img style={{float: "left"}}
+                             width="100"
+                             src="/assets/logo-inverse.svg"/>
+                        <Button style={{float: "right", color: "white", fontWeight: "300"}}
+                                onClick={()=> Scroll.animateScroll.scrollToTop() }
+                                className="emptyButton">Back to Top</Button>
+                    </div> : ""}
             </div>
         )
     }

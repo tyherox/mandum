@@ -107,20 +107,6 @@ i.pulse{
     background: #e53e69;
 }
 
-#bootstrap-overrides .banner-container .btn{
-    padding: .75rem 7rem;
-    background: #1F1F1F;
-    color: white;
-    border: none;
-    outline: none;
-    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
-}
-
-#bootstrap-overrides .banner-container .btn:hover,
-#bootstrap-overrides .banner-container .btn:active{
-    background: #373737;
-}
-
 #bootstrap-overrides .blueButton{
     color: white;
     padding: .75rem 3rem;
@@ -194,15 +180,34 @@ i.pulse{
 }
 
 input{
-    border: 1px solid #CBCBCB
+    padding: 1rem;
+    transition: all .3s ease-in-out;
+    border: 1px solid #CBCBCB;
+    outline: none;
 }
 
+input:focus{
+    border: 1px solid #1E86F3;
+}
+
+input:disabled{
+    color: #d3d3d3;
+}
+
+
 .minInput{
+    padding: .2rem;
     border: none;
     outline: none;
     border-bottom: 1px solid #CBCBCB;
-    width: 100px;
+    width: 125px;
     display: inline;
+    text-align: center!important;
+}
+
+.minInput:focus{
+    border:none;
+    border-bottom: 1px solid #1E86F3;
 }
 
 @media (max-width: 750px){

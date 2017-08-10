@@ -17,6 +17,7 @@ import PriceChooserD from '../imports/ui/pages/price/priceChooser-4';
 import PriceChooserE from '../imports/ui/pages/price/priceChooser-5';
 /*import Story from '../imports/ui/pages/story';*/
 import Contact from '../imports/ui/pages/contact';
+import Admin from '../imports/ui/pages/admin';
 
 import reducer from '../imports/reducers/main';
 import NavBar from '../imports/ui/components/navBar/main';
@@ -36,7 +37,7 @@ Meteor.startup(() => {
           <div id="bootstrap-overrides">
 
               <Route render={({location, history, match}) => {
-                  console.log("MUHAHA LOADING!");
+
                   return (
                       <ScrollToTop location={location} history={history}>
                           <Provider store={store}>
@@ -44,8 +45,7 @@ Meteor.startup(() => {
                                   pathname={location.pathname}
                                   atEnter={{ opacity: 0 }}
                                   atLeave={{ opacity: 0 }}
-                                  atActive={{ opacity: 1 }}
-                              >
+                                  atActive={{ opacity: 1 }}>
                                   <Switch key={location.key} location={location}>
                                       <Route exact path="/" component={Home}/>
                                       <Route exact path="/price" component={Price}/>
@@ -56,6 +56,7 @@ Meteor.startup(() => {
                                       <Route exact path="/price/select-4" component={PriceChooserD}/>
                                       <Route exact path="/price/select-5" component={PriceChooserE}/>
                                       {/*<Route exact path="/story" component={Story}*/}/>
+                                      <Route exact path="/admin" component={Admin}/>
                                       <Route exact path="/contact" component={Contact}/>
                                   </Switch>
                               </RouteTransition>
@@ -63,8 +64,8 @@ Meteor.startup(() => {
                       </ScrollToTop>
                   );
               }}/>
-              <Footer />
-              <NavBar />
+              <Footer location={location} exception={["/admin"]}/>
+              <NavBar location={location}/>
           </div>
       </Router>
       ,document.getElementById('render-target')
@@ -74,8 +75,6 @@ Meteor.startup(() => {
 class ScrollToTop extends Component {
 
     componentDidUpdate(prevProps) {
-        console.log(this.props.history, prevProps.history);
-        console.log(this.props.location, prevProps.location);
         if (this.props.location.pathname !== prevProps.location.pathname && this.props.history.action!="pop") {
             window.scrollTo(0, 0)
         }

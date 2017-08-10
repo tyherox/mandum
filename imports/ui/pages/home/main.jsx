@@ -34,7 +34,7 @@ export default class App extends Component {
 
                             <p className="orange">Opening Discount: 50% Off! (5 left)</p>
                             <NavLink to="/contact" exact>
-                                <Button >
+                                <Button className="emptyButton blackButton bigButton">
                                     <b>Work with Us</b><i className="arrow right" />
                                 </Button>
                             </NavLink>
@@ -231,8 +231,6 @@ export default class App extends Component {
                         </p>
                     </div>
                 </div>
-
-                <br/><br/><br/>
 
             </div>
         )
