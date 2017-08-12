@@ -35,7 +35,7 @@ export default class NavBarProto extends Component{
 
         return(
             <div>
-                <span id="overlay" className={this.state.expanded ? "on" : ""}/>
+                <span id="overlay" className={this.state.expanded ? "on" : ""} onClick={()=> this.setState({expanded: false})}/>
                 <div id="navBar-background" ref="navBar">
                     <div id="navBar">
                         <NavLink to="/">

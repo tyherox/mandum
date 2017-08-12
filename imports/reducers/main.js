@@ -8,7 +8,7 @@ import {fromJS} from 'immutable';
 const DEFAULT_STATE = fromJS({
     content: {
         pages: {
-            opt1: 5,
+            opt1: 7,
             opt2: false,
             opt3: false,
             
@@ -96,15 +96,6 @@ const DEFAULT_STATE = fromJS({
                 opt3: 500000
             }
         },
-        logo: {
-            opt1: false,
-            opt2: false,
-            
-            price: {
-                opt1: 0,
-                opt2: 150000,
-            }
-        },
         branding: {
             opt1: false,
             opt2: false,
@@ -112,7 +103,7 @@ const DEFAULT_STATE = fromJS({
             
             price: {
                 opt1: 0,
-                opt2: 200000,
+                opt2: 150000,
                 opt3: 350000,
             }
         },
@@ -126,8 +117,8 @@ const DEFAULT_STATE = fromJS({
             
             price: {
                 opt1: 0,
-                opt2: 25000,
-                opt3: 50000
+                opt2: 12000,
+                opt3: 10000,
             }
         },
         address: {
@@ -136,7 +127,7 @@ const DEFAULT_STATE = fromJS({
             
             price: {
                 opt1: 0,
-                opt2: 20000,
+                opt2: 0,
             }
         },
         maintenance: {

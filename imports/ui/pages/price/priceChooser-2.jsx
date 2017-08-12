@@ -38,25 +38,21 @@ class Main extends Component {
                             <NavLink to="/price/select-1" exact>
                                 <Button className="emptyButton gray">
                                     <b>Content</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-2" exact>
                                 <Button className="emptyButton purple">
                                     <b>Features</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-3" exact>
                                 <Button className="emptyButton gray">
                                     <b>Design</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-4" exact>
                                 <Button className="emptyButton gray">
                                     <b>Services</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
 

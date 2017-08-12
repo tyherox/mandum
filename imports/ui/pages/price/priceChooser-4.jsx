@@ -38,25 +38,21 @@ class Main extends Component {
                             <NavLink to="/price/select-1" exact>
                                 <Button className="emptyButton gray">
                                     <b>Content</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-2" exact>
                                 <Button className="emptyButton gray">
                                     <b>Features</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-3" exact>
                                 <Button className="emptyButton gray">
                                     <b>Design</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-4" exact>
                                 <Button className="emptyButton pink">
                                     <b>Services</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
 
@@ -86,7 +82,9 @@ class Main extends Component {
                                                     <h3 className={this.props.hosting.get('opt1') ? "pink" : ""}>Free</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        No
+                                                        1 Year
+                                                        <br/><br/>
+                                                        Total : 0 KRW
                                                     </p>
                                                     <br/>
                                                     <Button className="emptyButton pink"
@@ -104,7 +102,9 @@ class Main extends Component {
                                                     <h3 className={this.props.hosting.get('opt2') ? "pink" : ""}>{this.props.hosting.get("price").get("opt2").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Basic Server
+                                                        +1 Year
+                                                        <br/><br/>
+                                                        Total : 144,000 KRW
                                                     </p>
                                                     <br/>
                                                     <Button className="emptyButton pink"
@@ -122,7 +122,9 @@ class Main extends Component {
                                                     <h3 className={this.props.hosting.get('opt3') ? "pink" : ""}>{this.props.hosting.get("price").get("opt3").toLocaleString() + " KRW / Month"}</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Advanced Server
+                                                        +2 Year
+                                                        <br/><br/>
+                                                        Total : 240,000 KRW
                                                     </p>
                                                     <br/>
                                                     <Button className="emptyButton pink"
@@ -180,7 +182,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.address.get('opt2') ? "card-container selected-pink" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.address.get('opt2') ? "pink" : ""}>{this.props.address.get("price").get("opt2").toLocaleString() + " KRW / Year"}</h3>
+                                                    <h3 className={this.props.address.get('opt2') ? "pink" : ""}>Free for 1 Year</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         Yes

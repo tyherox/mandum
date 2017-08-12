@@ -38,25 +38,21 @@ class Main extends Component {
                             <NavLink to="/price/select-1" exact>
                                 <Button className="emptyButton smallButton blue">
                                     <b>Content</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-2" exact>
                                 <Button className="emptyButton gray">
                                     <b>Features</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-3" exact>
                                 <Button className="emptyButton gray">
                                     <b>Design</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-4" exact>
                                 <Button className="emptyButton gray">
                                     <b>Services</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
 
@@ -75,7 +71,7 @@ class Main extends Component {
                                 <br/>
 
                                 <p>
-                                    How many pages will you be using? We provide up to 5 free pages and charge 25,000 KRW per page afterwards.
+                                    How many pages will you be using? We provide up to 7 free pages and charge 25,000 KRW per page afterwards.
                                 </p>
 
                                 <br/> <br/> <br/>
@@ -107,7 +103,7 @@ class Main extends Component {
                                 <h3 className={this.props.pages.get("opt2") || this.props.pages.get("opt3") ? "gray" : "blue"}
                                     style={{display: "block", textAlign: "left"}}>
 
-                                    <b>{this.props.pages.get("opt1") <= 5 ? "Free" : ((this.props.pages.get("opt1") - 5) * 25000).toLocaleString() + " KRW"}</b>
+                                    <b>{this.props.pages.get("opt1") <= 7 ? "Free" : ((this.props.pages.get("opt1") - 7) * 25000).toLocaleString() + " KRW"}</b>
 
                                 </h3>
 
@@ -236,7 +232,7 @@ class Main extends Component {
                                         <div>
                                             <Col xs={12} md={4} className="col-centered">
                                                 <div className={this.props.translation.get('opt1') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.translation.get('opt2') ? "blue" : ""} >Free</h3>
+                                                    <h3  className={this.props.translation.get('opt1') ? "blue" : ""} >Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I do not require translation.
@@ -310,7 +306,7 @@ class Main extends Component {
                                         <div>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.media.get('opt1') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.media.get('opt2') ? "blue" : ""}>Free</h3>
+                                                    <h3  className={this.props.media.get('opt1') ? "blue" : ""}>Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I will be providing my own content
@@ -348,7 +344,7 @@ class Main extends Component {
                                             </Col>
                                             <Col xs={12} md={4}>
                                                 <div className={this.props.media.get('opt3') ? "card-container selected-blue" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3  className={this.props.media.get('opt2') ? "blue" : ""}>250,000 KRW</h3>
+                                                    <h3  className={this.props.media.get('opt3') ? "blue" : ""}>250,000 KRW</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         I require photographs

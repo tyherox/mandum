@@ -61,7 +61,7 @@ export default class Main extends Component {
                                 <Row className="show-grid">
                                     <Col xs={12} md={4} className="project-item-list col-centered">
                                         <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
+                                            <i className='fa fa-retweet fa-3x' style={{color: "dodgerBlue"}}/>
                                             <h3>Refund Policy</h3>
                                             <br/>
                                             <p>
@@ -72,7 +72,7 @@ export default class Main extends Component {
                                     </Col>
                                     <Col xs={12} md={4} className="project-item-list col-centered">
                                         <div>
-                                            <i className='fa fa-heart fa-3x pulse' style={{color: "dodgerBlue"}}/>
+                                            <i className='fa fa-eye fa-3x' style={{color: "dodgerBlue"}}/>
                                             <h3>Transparency</h3>
                                             <br/>
                                             <p>

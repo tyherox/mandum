@@ -6,7 +6,12 @@ import { Accounts } from 'meteor/accounts-base';
 
 Meteor.methods({
     createAccount(email, pwd){
-        return Accounts.createUser({email: email, password:pwd});
+        if(Meteor.users.find().count()==1){
+            return Accounts.createUser({email: email, password:pwd})!=null;
+        }
+        else{
+            return false;
+        }
     }
 });
 

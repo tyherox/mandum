@@ -38,25 +38,21 @@ class Main extends Component {
                             <NavLink to="/price/select-1" exact>
                                 <Button className="emptyButton gray">
                                     <b>Content</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-2" exact>
                                 <Button className="emptyButton gray">
                                     <b>Features</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-3" exact>
                                 <Button className="emptyButton orange">
                                     <b>Design</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-4" exact>
                                 <Button className="emptyButton gray">
                                     <b>Services</b>
-                                    <i className="arrow right" />
                                 </Button>
                             </NavLink>
 
@@ -161,8 +157,8 @@ class Main extends Component {
                                     <Row className="show-grid">
                                         <div>
                                             <Col xs={12} md={4} className="col-centered">
-                                                <div className={this.props.logo.get('opt1') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.logo.get('opt1') ? "orange" : ""}>Free</h3>
+                                                <div className={this.props.branding.get('opt1') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.branding.get('opt1') ? "orange" : ""}>Free</h3>
                                                     <br/>
                                                     <p className="small-text">
                                                         No
@@ -170,25 +166,45 @@ class Main extends Component {
                                                     <br/>
                                                     <Button className="emptyButton orange"
                                                             onClick={() => {
-                                                                this.props.reduxActions.setValueC(["design","logo","opt1"], !this.props.logo.get('opt1'))
-                                                                if(this.props.logo.get("opt2"))  this.props.reduxActions.setValueC(["design","logo","opt2"], false)
+                                                                this.props.reduxActions.setValueC(["design","branding","opt1"], !this.props.branding.get('opt1'))
+                                                                if(this.props.branding.get("opt2"))  this.props.reduxActions.setValueC(["design","branding","opt2"], false)
+                                                                if(this.props.branding.get("opt3"))  this.props.reduxActions.setValueC(["design","branding","opt3"], false)
                                                             }}>
                                                         <p>Select</p>
                                                     </Button>
                                                 </div>
                                             </Col>
                                             <Col xs={12} md={4} className="col-centered">
-                                                <div className={this.props.logo.get('opt2') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
-                                                    <h3 className={this.props.logo.get('opt2') ? "orange" : ""}>{this.props.logo.get("price").get("opt2").toLocaleString() + " KRW"}</h3>
+                                                <div className={this.props.branding.get('opt2') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.branding.get('opt2') ? "orange" : ""}>{this.props.branding.get("price").get("opt2").toLocaleString() + " KRW"}</h3>
                                                     <br/>
                                                     <p className="small-text">
-                                                        Yes
+                                                        Basic Logo
                                                     </p>
                                                     <br/>
                                                     <Button className="emptyButton orange"
                                                             onClick={() => {
-                                                                this.props.reduxActions.setValueC(["design","logo","opt2"], !this.props.logo.get('opt2'))
-                                                                if(this.props.logo.get("opt1"))  this.props.reduxActions.setValueC(["design","logo","opt1"], false)
+                                                                this.props.reduxActions.setValueC(["design","branding","opt2"], !this.props.branding.get('opt2'))
+                                                                if(this.props.branding.get("opt1"))  this.props.reduxActions.setValueC(["design","branding","opt1"], false)
+                                                                if(this.props.branding.get("opt3"))  this.props.reduxActions.setValueC(["design","branding","opt3"], false)
+                                                            }}>
+                                                        <p>Select</p>
+                                                    </Button>
+                                                </div>
+                                            </Col>
+                                            <Col xs={12} md={4} className="col-centered">
+                                                <div className={this.props.branding.get('opt3') ? "card-container selected-orange" : "card-container"} style={{verticalAlign: "bottom"}}>
+                                                    <h3 className={this.props.branding.get('opt3') ? "orange" : ""}>{this.props.branding.get("price").get("opt3").toLocaleString() + " KRW"}</h3>
+                                                    <br/>
+                                                    <p className="small-text">
+                                                        Full Branding and Logo
+                                                    </p>
+                                                    <br/>
+                                                    <Button className="emptyButton orange"
+                                                            onClick={() => {
+                                                                this.props.reduxActions.setValueC(["design","branding","opt3"], !this.props.branding.get('opt3'))
+                                                                if(this.props.branding.get("opt1"))  this.props.reduxActions.setValueC(["design","branding","opt1"], false)
+                                                                if(this.props.branding.get("opt2"))  this.props.reduxActions.setValueC(["design","branding","opt2"], false)
                                                             }}>
                                                         <p>Select</p>
                                                     </Button>

@@ -125,7 +125,7 @@ export default class App extends Component {
                                         <Row className="show-grid">
                                             <Col xs={12} md={4} className="project-item-list">
                                                 <div className="center-container">
-                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <i className="fa fa-code fa-3x" aria-hidden="true" />
                                                     <h3>Development</h3>
                                                     <br/>
                                                     <p>
@@ -136,7 +136,7 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list">
                                                 <div className="center-container">
-                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <i className="fa fa-pencil fa-3x" aria-hidden="true" />
                                                     <h3>Design</h3>
                                                     <br/>
                                                     <p>
@@ -147,7 +147,7 @@ export default class App extends Component {
                                             </Col>
                                             <Col xs={12} md={4} className="project-item-list">
                                                 <div className="center-container">
-                                                    <i className="fa fa-heart fa-3x pulse" aria-hidden="true" />
+                                                    <i className="fa fa-language fa-3x" aria-hidden="true" />
                                                     <h3>Translation</h3>
                                                     <br/>
                                                     <p>
