@@ -1,21 +1,45 @@
 #bootstrap-overrides h1{
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 300;
 }
 
 #bootstrap-overrides h2{
-    font-size: 2.0rem;
+    font-size: 2.5rem;
     font-weight: 300;
 }
 
 #bootstrap-overrides h3{
-    font-size: 1.75rem;
+    font-size: 2.0rem;
     color: darkgrey;
+    font-weight: 300;
+}
+
+#bootstrap-overrides h4{
+    font-size: 1.7rem;
     font-weight: 300;
 }
 
 #bootstrap-overrides p{
     font-size: 1.5rem;
+    line-height: 1.75;
+    font-weight: 300;
+}
+
+#bootstrap-overrides p p{
+    color: inherit;
+}
+
+#bootstrap-overrides .contact-form p{
+    display: inline;
+}
+
+#bootstrap-overrides .contact-form b{
+    color: #1E86F3;
+    display: inline;
+}
+
+#bootstrap-overrides .small-text p{
+    font-size: 1.25rem;
     line-height: 1.75;
     font-weight: 300;
 }
@@ -26,7 +50,6 @@
 }
 
 #bootstrap-overrides .tiny-text{
-    margin: none;
     font-size: 1.25rem;
     line-height: 1.25rem;
 }

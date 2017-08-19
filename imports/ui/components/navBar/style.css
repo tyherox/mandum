@@ -13,6 +13,14 @@
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.16), 0 0px 2px 0 rgba(0, 0, 0, 0.12);
 }
 
+.navBar-language{
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 0;
+    padding-left: 2rem;
+    cursor: pointer;
+}
+
 #navBar{
     padding-top: 2rem;
     background-color: white;
@@ -99,7 +107,7 @@
     #navBar-responsive{
         position: relative;
         overflow: hidden;
-        transition: all ease-in-out .5s;
+        transition: all ease-in-out .2s;
         float: none;
         height: 0;
         width: 100%;
@@ -120,11 +128,18 @@
         font-size: 1.5rem;
         width: 100%;
         background: white;
-        border-bottom: 1px solid gainsboro;
+        border-bottom: 1px solid gainsboro!important;
         padding: 15px;
     }
 
     .change#navBar-responsive{
-        height: 156px;
+        height: 163px;
+    }
+
+    .navBar-language{
+        text-align: center;
+        display: block;
+        margin: auto;
+        padding-left: 0;
     }
 }

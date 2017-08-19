@@ -6,82 +6,124 @@ import React, { Component }from 'react';
 import Center from '../../components/center/main'
 import {Button, Grid, Row, Col} from 'react-bootstrap'
 import {NavLink} from 'react-router-dom';
+import {connectAdvanced} from "react-redux";
+import content from './content';
+import Remarkable from 'remarkable';
+import ScrollDown from '../../components/scrollDown/main';
 
-export default class Main extends Component {
+class Main extends Component {
+
+    getRawMarkup(content) {
+        var md = new Remarkable({linkTarget: "_blank"});
+        return { __html: md.render(content) };
+    }
 
     render() {
+
+        var text = content.get(this.props.language);
 
         return (
             <div>
 
                 <div className="banner-container">
+
                     <Center>
+
                         <div className="center-container">
 
-                            <h1>
-                                Simple, Transparent Pricing
+                            <h1 className="margin-1">
+                                {text.banner.title}
                             </h1>
 
-                            <br/>
-
-                            <h3>No Hidden Costs.</h3>
+                            <h3 className="margin-2">
+                                {text.banner.subTitle}
+                            </h3>
 
                             <br/>
 
                             <NavLink to="/price/select-1" exact>
-                                <Button className="emptyButton blackButton bigButton">
-                                    <b>Start your Estimation</b><i className="arrow right" />
+
+                                <Button className="blackButton bigButton">
+                                    <b>{text.banner.button}</b>
+                                    <i className="arrow right" />
                                 </Button>
+
                             </NavLink>
 
                         </div>
+
                     </Center>
+
                 </div>
 
-                <div className="center-container staggered-container" style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
+                <ScrollDown/>
 
-                    <div className="default-container">
+                <div className="center-container staggered-container"
+                     style={{background: "url('/assets/price-bg1.svg') no-repeat", backgroundSize: "100%"}}>
+
+                    <div className="category-container">
 
                         <div className="inner-container">
 
-                            <h1 style={{marginTop: "5rem"}}>
-                                A Price Range for Everyone
-                            </h1>
+                            <div className="stripe-top purple"/>
 
-                            <br/>
+                            <div className="tight-container">
+                                <h1 style={{marginTop: "5rem"}} className="margin-2">
+                                    A Price Range for Everyone
+                                </h1>
 
-                            <p>
-                                Whether you're a student creating a personal portfolio or a local business planning to sell your products online, we can work out a price range for your needs.
-                                Check out our package selections or customize your price estimation using our price estimator.
-                            </p>
-
-                            <br/> <br/>
+                                <p  className="margin-2">
+                                    Whether you're a student creating a personal portfolio or a local business planning to sell your products online, we can work out a price range for your needs.
+                                    Check out our package selections or customize your price estimation using our price estimator.
+                                </p>
+                            </div>
 
                             <Grid style = {{width: "auto"}}>
+
                                 <Row className="show-grid">
-                                    <Col xs={12} md={4} className="project-item-list col-centered">
-                                        <div>
-                                            <i className='fa fa-retweet fa-3x' style={{color: "dodgerBlue"}}/>
-                                            <h3>Refund Policy</h3>
-                                            <br/>
+
+                                    <Col xs={12} md={4} className="col-item-list">
+
+                                        <div className="center-container">
+
+                                            <i className='fa fa-retweet fa-3x purple'/>
+                                            <h3 className="margin-1">Early Refund</h3>
+
                                             <p>
                                                 We refund 100% of your money before the prototyping phase.
                                             </p>
-                                            <br/>
+
                                         </div>
                                     </Col>
-                                    <Col xs={12} md={4} className="project-item-list col-centered">
-                                        <div>
-                                            <i className='fa fa-eye fa-3x' style={{color: "dodgerBlue"}}/>
-                                            <h3>Transparency</h3>
-                                            <br/>
+
+                                    <Col xs={12} md={4} className="col-item-list">
+
+                                        <div className="center-container">
+
+                                            <i className='fa fa-eye fa-3x purple'/>
+                                            <h3 className="margin-1">Transparency</h3>
                                             <p>
                                                 Our price estimator provides transparency in our prices.
                                             </p>
-                                            <br/>
+
                                         </div>
                                     </Col>
+
+                                    <Col xs={12} md={4} className="col-item-list">
+
+                                        <div className="center-container">
+
+                                            <i className='fa fa-cogs fa-3x purple'/>
+                                            <h3 className="margin-1">Customizable</h3>
+                                            <p>
+                                                Fine tune your project to your exact specifications.
+                                            </p>
+
+                                        </div>
+                                    </Col>
+
                                 </Row>
+
                             </Grid>
 
                             <hr/>
@@ -92,53 +134,51 @@ export default class Main extends Component {
 
                 </div>
 
-                <br/><br/><br/>
-
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg2.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0))"}}>
+                    <div className="left-container">
 
-                        <div className="default-container">
+                        <div className="category-container">
 
                             <div className="inner-container">
 
                                 <Grid fluid>
+
                                     <Row>
                                         <Col  xs={12} md={4}>
                                             <i className="fa fa-cubes fa-5x sideIconL" aria-hidden="true" />
                                         </Col>
 
                                         <Col  xs={12} md={8}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Find your price quickly
-                                            </h1>
 
-                                            <br/>
+                                            <div className="margin-3">
+                                                <div className="stripe-top red"/>
 
-                                            <p>
-                                                Packages are bundled features for common website usages.
-                                                Browse our offers to quickly gauge how much your website will cost.
-                                            </p>
+                                                <h1 style={{marginTop: "5rem"}} className="margin-1">
+                                                    Find your price quickly
+                                                </h1>
 
-                                            <br/> <br/> <br/>
+                                                <p className="margin-3">
+                                                    Packages are bundled features for common website usages.
+                                                    Browse our offers to quickly gauge how much your website will cost.
+                                                </p>
 
-                                            <hr/>
+                                                <hr/>
 
-                                            <NavLink to="/price/packages" exact>
-                                                <Button className="emptyButton pinkButton">
-                                                    <b>Explore our Packages</b>
-                                                    <i className="arrow right" />
-                                                </Button>
-                                            </NavLink>
+                                                <NavLink to="/price/packages" exact  className="margin-1">
+                                                    <Button className="emptyButton pinkButton">
+                                                        <b>Explore our Packages</b>
+                                                        <i className="arrow right" />
+                                                    </Button>
+                                                </NavLink>
 
-                                            <br/>
+                                            </div>
 
                                         </Col>
 
                                     </Row>
-                                </Grid>
 
-                                <br/> <br/>
+                                </Grid>
 
                             </div>
 
@@ -148,57 +188,52 @@ export default class Main extends Component {
 
                 </div>
 
-                <br/><br/><br/>
-
                 <div className="center-container staggered-container" style={{background: "url('/assets/price-bg3.svg') no-repeat", backgroundSize: "100%"}}>
 
-                    <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                    <div className="right-container">
 
-                        <div className="default-container">
+                        <div className="category-container">
 
                             <div className="inner-container">
 
                                 <Grid fluid>
+
                                     <Row>
                                         <Col  xs={12} md={4} mdPush={8}>
-                                            {/*
-                                             <img className="sideIconR"
-                                             width="250"
-                                             src="/assets/placeHolder.svg"/>
-                                            */}
                                             <i className="fa fa-tasks fa-5x sideIconR" aria-hidden="true" />
                                         </Col>
 
                                         <Col  xs={12} md={8} mdPull={4}>
-                                            <h1 style={{marginTop: "5rem"}}>
-                                                Customize your experience
-                                            </h1>
 
-                                            <br/>
+                                            <div className="margin-3">
 
-                                            <p>
-                                                Have eccentric or uncommon needs?
-                                                Use our price estimator to better gauge your website cost.
-                                            </p>
+                                                <div className="stripe-top blue"/>
 
-                                            <br/> <br/> <br/>
+                                                <h1 style={{marginTop: "5rem"}}  className="margin-1">
+                                                    Customize your experience
+                                                </h1>
 
-                                            <hr/>
+                                                <p className="margin-3">
+                                                    Have eccentric or uncommon needs?
+                                                    Use our price estimator to better gauge your website cost.
+                                                </p>
 
-                                            <NavLink to="/price/select-1" exact>
-                                                <Button className="emptyButton blueButton">
-                                                    <b>Start your Estimation</b>
-                                                    <i className="arrow right" />
-                                                </Button>
-                                            </NavLink>
+                                                <hr/>
 
-                                            <br/>
+                                                <NavLink to="/price/select-1" exact  className="margin-1">
+                                                    <Button className="emptyButton blueButton">
+                                                        <b>Start your Estimation</b>
+                                                        <i className="arrow right" />
+                                                    </Button>
+                                                </NavLink>
+
+                                            </div>
 
                                         </Col>
 
                                     </Row>
-                                </Grid>
 
+                                </Grid>
 
                             </div>
 
@@ -208,20 +243,14 @@ export default class Main extends Component {
 
                 </div>
 
-                <br/><br/><br/>
-
                 <hr/>
 
-                <div style={{textAlign: "center"}}>
+                <div style={{textAlign: "center"}}  className="margin-3">
 
-                    <br/>
-
-                    <h2>Prefer to Just Talk to Us?</h2>
-
-                    <br/>
+                    <h2  className="margin-1">Prefer to Just Talk to Us?</h2>
 
                     <NavLink to="/contact" exact>
-                        <Button className="emptyButton blackButton bigButton">
+                        <Button className="blackButton bigButton">
                             <b>Talk to Us</b>
                             <i className="arrow right" />
                         </Button>
@@ -229,9 +258,25 @@ export default class Main extends Component {
 
                 </div>
 
-                <br/><br/><br/>
-
             </div>
         )
     }
+
+
 }
+
+function selectorFactory(dispatch) {
+    let result = {};
+    return (nextState, nextOwnProps) => {
+
+        const nextResult = {
+            language: nextState.settings.get("language"),
+        };
+        if(nextResult!=result){
+            result = nextResult;
+        }
+        return result
+    }
+}
+
+export default connectAdvanced(selectorFactory)(Main);

@@ -6,18 +6,17 @@ import { RouteTransition } from 'react-router-transition';
 import {createStore} from 'redux';
 import {Provider} from 'react-redux';
 
-
 import Home from '../imports/ui/pages/home/main';
 import Price from '../imports/ui/pages/price/main';
-import PricePackages from '../imports/ui/pages/price/packageChooser';
-import PriceChooserA from '../imports/ui/pages/price/priceChooser-1';
-import PriceChooserB from '../imports/ui/pages/price/priceChooser-2';
-import PriceChooserC from '../imports/ui/pages/price/priceChooser-3';
-import PriceChooserD from '../imports/ui/pages/price/priceChooser-4';
-import PriceChooserE from '../imports/ui/pages/price/priceChooser-5';
+import PricePackages from '../imports/ui/pages/price/package/main';
+import PriceChooserA from '../imports/ui/pages/price/step-1/main';
+import PriceChooserB from '../imports/ui/pages/price/step-2/main';
+import PriceChooserC from '../imports/ui/pages/price/step-3/main';
+import PriceChooserD from '../imports/ui/pages/price/step-4/main';
+import PriceChooserE from '../imports/ui/pages/price/step-5/main';
 /*import Story from '../imports/ui/pages/story';*/
-import Contact from '../imports/ui/pages/contact';
-import Admin from '../imports/ui/pages/admin';
+import Contact from '../imports/ui/pages/contact/main';
+import Admin from '../imports/ui/pages/admin/main';
 
 import reducer from '../imports/reducers/main';
 import NavBar from '../imports/ui/components/navBar/main';
@@ -28,19 +27,20 @@ import '../imports/ui/style/fonts.css';
 import '../imports/ui/style/containers.css';
 import '../imports/ui/style/elements.css';
 import '../imports/ui/style/color.css';
+import '../imports/ui/style/attributes.css';
 
 var store = createStore(reducer);
 
 Meteor.startup(() => {
   render(
       <Router>
-          <div id="bootstrap-overrides">
+          <Provider store={store}>
+              <div id="bootstrap-overrides">
 
-              <Route render={({location, history, match}) => {
+                  <Route render={({location, history, match}) => {
 
-                  return (
-                      <ScrollToTop location={location} history={history}>
-                          <Provider store={store}>
+                      return (
+                          <ScrollToTop location={location} history={history}>
                               <RouteTransition
                                   pathname={location.pathname}
                                   atEnter={{ opacity: 0 }}
@@ -60,13 +60,13 @@ Meteor.startup(() => {
                                       <Route exact path="/contact" component={Contact}/>
                                   </Switch>
                               </RouteTransition>
-                          </Provider>
-                      </ScrollToTop>
-                  );
-              }}/>
-              <Footer location={location} exception={["/admin"]}/>
-              <NavBar location={location}/>
-          </div>
+                          </ScrollToTop>
+                      );
+                  }}/>
+                  <Footer location={location} exception={["/admin"]}/>
+                  <NavBar location={location}/>
+              </div>
+          </Provider>
       </Router>
       ,document.getElementById('render-target')
   );

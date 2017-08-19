@@ -7,73 +7,89 @@ import {Button, Grid, Row, Col} from 'react-bootstrap'
 import ReactRotatingText from 'react-rotating-text';
 import {NavLink} from 'react-router-dom';
 import Center from '../../components/center/main';
+import {connectAdvanced} from "react-redux";
+import content from './content';
+import Remarkable from 'remarkable';
+import ScrollDown from '../../components/scrollDown/main';
 
-export default class App extends Component {
+var md = new Remarkable();
 
+class App extends Component {
+
+    renderItem(map){
+        return React.createElement(map.type, map.props);
+    }
+
+    getRawMarkup(content) {
+        var md = new Remarkable({linkTarget: "_blank"});
+        return { __html: md.render(content) };
+    }
 
     render() {
 
+        var text = content.get(this.props.language);
+
         return (
-            <div>
+
+            <div style={{position: "relative"}}>
+
                 <div className="banner-container">
+
                     <Center>
+
                         <div className="center-container">
 
-                            <h1 style={{fontSize: "3.5rem"}}>
-                                Website
-                                <ReactRotatingText pause={2000} items={[' Development', ' Design', ' Consulting']} />
+                            <h1 style={{fontSize: "3.5rem"}} className="margin-1">
+                                {text.banner.title[0] + " "}
+
+                                <ReactRotatingText pause={this.props.language == "EN" ? 2000 : 1500}
+                                                   typingInterval={this.props.language == "EN" ? 50 : 125}
+                                                   deletingInterval={this.props.language == "EN" ? 50 : 125}
+                                                   items={[text.banner.title[1], text.banner.title[2], text.banner.title[3]]}
+                                />
+
                             </h1>
 
-                            <br/>
+                            <h3>{text.banner.subTitleOne}</h3>
+                            <h3 className="margin-2">{text.banner.subTitleTwo}</h3>
 
-                            <h3>In Korea.</h3>
-                            <h3>Done the right way.</h3>
+                            <p className="orange">{text.banner.deal}</p>
 
-                            <br/>
-                            <br/>
-
-                            <p className="orange">Opening Discount: 50% Off! (5 left)</p>
                             <NavLink to="/contact" exact>
-                                <Button className="emptyButton blackButton bigButton">
-                                    <b>Work with Us</b><i className="arrow right" />
+
+                                <Button className="blackButton bigButton">
+                                    <b>{text.banner.button}</b>
+                                    <i className="arrow right" />
                                 </Button>
+
                             </NavLink>
+
                         </div>
+
                     </Center>
+
                 </div>
 
-                <div style={{position: "relative"}}>
-                    <div className="center-container staggered-container" style={{background: "url('/assets/home-background-1.svg') no-repeat", backgroundSize: "100%"}}>
+                <ScrollDown/>
 
-                        <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                <div style={{position: "relative"}} className="margin-2">
 
-                            <div className="default-container">
+                    <div className="center-container staggered-container"
+                         style={{background: "url('/assets/home-background-1.svg') no-repeat", backgroundSize: "100%"}}>
 
-                                <div className="inner-container">
+                        <div className="right-container">
 
-                                    <h1 style={{marginTop: "7rem"}}>
-                                        A Story Behind Every Pixel
+                            <div className="category-container">
+
+                                <div className="tight-container">
+
+                                    <h1 style={{marginTop: "7rem"}} className="margin-2">
+                                        {text.welcome.title}
                                     </h1>
 
-                                    <br/>  <br/>
+                                    <div className="margin-1" dangerouslySetInnerHTML={this.getRawMarkup(text.welcome.paragraphOne)}/>
 
-                                    <p>
-                                        The Internet is a massive, competitive arena.
-                                        There are more than <a href="http://www.internetlivestats.com/total-number-of-websites/" target="_blank">1 billion websites today</a>.
-                                        And with more than 100 being created every minute, creating a unique website gets harder everyday.
-                                    </p>
-
-                                    <br />
-
-                                    <p>
-                                        At Mandum Studio, we strive to create memorable, distinct websites with story telling.
-                                        Every detail of our websites has purpose, represents plot, and urges your web visitors to stay and hear your message.
-                                        Along with our purpose driven design principals, advanced technology, and dependable customer service, your website will be a
-                                        shining beacon admist the vast content of the Internet.
-
-                                    </p>
-
-                                    <br/><br/>
+                                    <div className="margin-1" dangerouslySetInnerHTML={this.getRawMarkup(text.welcome.paragraphTwo)}/>
 
                                     <hr/>
 
@@ -85,90 +101,91 @@ export default class App extends Component {
 
                     </div>
 
-
                     <div className="staggered-container-title">
-                        <div style={{textAlign: "center", display: "block", border: "solid #8900FF 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
+
+                        <div style={{border: "solid #8900FF 2px"}} className="stripe-top"/>
+
                         <p style={{textAlign: "center", color: "white"}}>
-                            Mandum Studio
+                            {text.welcome.subTitle}
                         </p>
+
                     </div>
+
                 </div>
 
-                <br/><jr/><br/>
+                <div style={{position: "relative"}} className="margin-2">
 
-                <div style={{position: "relative"}}>
                     <div className="center-container staggered-container" style={{background: "url('/assets/home-background-2.svg') no-repeat", backgroundSize: "100%"}}>
 
-                        <div style={{background: "linear-gradient(90deg, rgb(255, 255, 255) 0px, rgb(255, 255, 255) 50%, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0))"}}>
+                        <div className="left-container">
 
-                            <div className="default-container">
+                            <div className="category-container">
 
                                 <div className="inner-container">
 
-                                    <h1 style={{marginTop: "7rem"}}>
-                                        From A to Z
-                                    </h1>
+                                    <div className="tight-container">
+                                        <h1 style={{marginTop: "7rem"}}  className="margin-2">
+                                            {text.services.title}
+                                        </h1>
 
-                                    <br/> <br/>
+                                        <div className="margin-2" dangerouslySetInnerHTML={this.getRawMarkup(text.services.paragraph)}/>
+                                    </div>
 
-                                    <p>
-                                        Creating a website is a multi-step process that is much more than just coding.
-                                        Mandum Studio understands the multi-disciplinary requirements of website building
-                                        and provides a wide range of services from design to translation as well as development.
-                                    </p>
+                                    <Grid style = {{width: "auto"}} className="margin-1">
 
-
-                                    <br/> <br/>
-
-
-                                    <Grid style = {{width: "auto"}}>
                                         <Row className="show-grid">
-                                            <Col xs={12} md={4} className="project-item-list">
+
+                                            <Col xs={12} md={4} className="col-item-list">
+
                                                 <div className="center-container">
-                                                    <i className="fa fa-code fa-3x" aria-hidden="true" />
-                                                    <h3>Development</h3>
-                                                    <br/>
+
+                                                    <i className="fa fa-code fa-3x orange" aria-hidden="true" />
+
+                                                    <h3 className="margin-1">{text.services.cardOne.title}</h3>
+
                                                     <p>
-                                                        We use advanced, modern technologies to build your websites.
+                                                        {text.services.cardOne.content}
                                                     </p>
-                                                    <br/>
+
                                                 </div>
+
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list">
+
+                                            <Col xs={12} md={4} className="col-item-list">
+
                                                 <div className="center-container">
-                                                    <i className="fa fa-pencil fa-3x" aria-hidden="true" />
-                                                    <h3>Design</h3>
-                                                    <br/>
+
+                                                    <i className="fa fa-pencil fa-3x orange" aria-hidden="true" />
+
+                                                    <h3 className="margin-1">{text.services.cardTwo.title}</h3>
+
                                                     <p>
-                                                        All our designs are mobile friendly and go through a rigorous planning phase.
+                                                        {text.services.cardTwo.content}
                                                     </p>
-                                                    <br/>
+
                                                 </div>
+
                                             </Col>
-                                            <Col xs={12} md={4} className="project-item-list">
+
+                                            <Col xs={12} md={4} className="col-item-list">
+
                                                 <div className="center-container">
-                                                    <i className="fa fa-language fa-3x" aria-hidden="true" />
-                                                    <h3>Translation</h3>
-                                                    <br/>
+
+                                                    <i className="fa fa-language fa-3x orange" aria-hidden="true" />
+
+                                                    <h3 className="margin-1">{text.services.cardThree.title}</h3>
+
                                                     <p>
-                                                        We provide free English and Korean versions of your website.
+                                                        {text.services.cardThree.content}
                                                     </p>
-                                                    <br/>
+
                                                 </div>
+
                                             </Col>
+
                                         </Row>
+
                                     </Grid>
-                                    <br/> <br/>
-                                    {/*
-                                     <br/> <br/> <br/>
-
-                                     <NavLink to="/story" exact>
-                                     <Button className="emptyButton orangeButton bigButton">
-                                     <b>Read More</b> <i className="arrow right" />
-                                     </Button>
-                                     </NavLink>
-                                    */}
-
 
                                     <hr/>
 
@@ -179,42 +196,44 @@ export default class App extends Component {
                         </div>
 
                     </div>
+
                     <div className="staggered-container-title">
-                        <div style={{textAlign: "center", display: "block", border: "solid #F98115 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
+
+                        <div style={{border: "solid #F98115 2px"}} className="stripe-top"/>
+
                         <p style={{textAlign: "center", color: "white"}}>
-                            Our Services
+                            {text.services.subTitle}
                         </p>
+
                     </div>
                 </div>
 
-                <br/><br/><br/>
-
                 <div style={{position: "relative"}}>
+
                     <div className="center-container staggered-container" style={{background: "url('/assets/home-background-3.svg') no-repeat", backgroundSize: "100%"}}>
 
-                        <div style={{background: "linear-gradient(90deg, rgba(255, 255, 255, 0) 0px, rgba(255, 255, 255, 0) 50%, rgb(255, 255, 255) 0px, rgb(255, 255, 255))"}}>
+                        <div  className="right-container">
 
-                            <div className="default-container">
+                            <div className="category-container">
 
                                 <div className="inner-container">
 
-                                    <h1 style={{marginTop: "7rem"}}>
-                                        No Need to Wait for a Quote
-                                    </h1>
+                                    <div className="tight-container">
+                                        <h1 style={{marginTop: "7rem"}} className="margin-2">
+                                            {text.price.title}
+                                        </h1>
 
-                                    <br/> <br/>
-
-                                    <p>
-                                        A budget is no fun but always important when creating a website.
-                                        Feel free to browse our packages or check out our price estimator to gauge our price range.
-                                    </p>
-
-                                    <br/> <br/> <br/>
+                                        <div className="margin-2" dangerouslySetInnerHTML={this.getRawMarkup(text.price.paragraph)}/>
+                                    </div>
 
                                     <NavLink to="/price" exact>
+
                                         <Button className="emptyButton pinkButton bigButton">
-                                            <b>Start your Estimation</b> <i className="arrow right" />
+
+                                            <b>{text.price.button}</b> <i className="arrow right" />
+
                                         </Button>
+
                                     </NavLink>
 
                                 </div>
@@ -224,11 +243,15 @@ export default class App extends Component {
                         </div>
 
                     </div>
+
                     <div className="staggered-container-title">
-                        <div style={{textAlign: "center", display: "block", border: "solid #FB4473 2px", width: "75px", margin: "auto", marginBottom: "5px"}} />
+
+                        <div style={{border: "solid #FB4473 2px"}} className="stripe-top"/>
+
                         <p style={{textAlign: "center", color: "white"}}>
-                            Transparent Pricing
+                            {text.price.subTitle}
                         </p>
+
                     </div>
                 </div>
 
@@ -236,3 +259,19 @@ export default class App extends Component {
         )
     }
 }
+
+function selectorFactory(dispatch) {
+    let result = {};
+    return (nextState, nextOwnProps) => {
+
+        const nextResult = {
+            language: nextState.settings.get("language"),
+        };
+        if(nextResult!=result){
+            result = nextResult;
+        }
+        return result
+    }
+}
+
+export default connectAdvanced(selectorFactory)(App);

@@ -1,0 +1,8 @@
+/*-----Page Scroll Assistant/Signifier-----*/
+#bootstrap-overrides .scrollDown{
+    color: black!important;
+    position: relative;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+}

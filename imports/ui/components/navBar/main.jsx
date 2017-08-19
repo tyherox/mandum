@@ -5,10 +5,13 @@
 import React, { Component } from 'react';
 import {NavLink} from 'react-router-dom';
 import {Navbar, NavItem, Nav, NavDropdown, MenuItem, Button} from 'react-bootstrap'
+import * as Actions from "../../../actions/main";
+import {connectAdvanced} from "react-redux";
+import {bindActionCreators} from 'redux';
 
 import './style.css';
 
-export default class NavBarProto extends Component{
+class NavBar extends Component{
 
     constructor(props){
         super(props);
@@ -17,8 +20,7 @@ export default class NavBarProto extends Component{
 
     componentDidMount(){
 
-        var parent = this.refs.navBar.parentElement,
-            self = this;
+        var self = this;
 
         document.addEventListener("scroll", function(){
             var pos = document.body.scrollTop;
@@ -53,17 +55,23 @@ export default class NavBarProto extends Component{
                         </div>
                         <div id="navBar-responsive" className={this.state.expanded ? "change" : ""} >
                             <NavLink to="/" activeClassName="nav-selected" exact>
-                                <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Home</Button>
+                                <Button onClick={()=>this.setState({expanded: false})} className="emptyButton navBar-elements smallButton">Home</Button>
                             </NavLink>
                             <NavLink to="/price"  activeClassName="nav-selected">
-                                <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Price</Button>
+                                <Button onClick={()=>this.setState({expanded: false})} className="emptyButton navBar-elements smallButton">Price</Button>
                             </NavLink>
                             {/*<NavLink to="/story"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Why Us?</Button>
                             </NavLink>*/}
                             <NavLink to="/contact"  activeClassName="nav-selected">
-                                <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Contact Us</Button>
+                                <Button onClick={()=>this.setState({expanded: false})} className="emptyButton navBar-elements smallButton">Contact Us</Button>
                             </NavLink>
+                            <span onClick={()=>{
+                                this.setState({expanded: false});
+                                this.props.actions.setLanguage();
+                            }} className="navBar-elements navBar-language">
+                                <i className="fa fa-globe fa-1x" aria-hidden="true" /> {this.props.language}
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -71,3 +79,21 @@ export default class NavBarProto extends Component{
         )
     }
 }
+
+function selectorFactory(dispatch) {
+    let result = {};
+    const actions = bindActionCreators(Actions, dispatch);
+    return (nextState, nextOwnProps) => {
+
+        const nextResult = {
+            actions: actions,
+            language: nextState.settings.get("language")
+        };
+        if(nextResult!=result){
+            result = nextResult;
+        }
+        return result
+    }
+}
+
+export default connectAdvanced(selectorFactory)(NavBar);
