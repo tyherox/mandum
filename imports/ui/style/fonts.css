@@ -33,7 +33,7 @@
     display: inline;
 }
 
-#bootstrap-overrides .contact-form b{
+#bootstrap-overrides .contact-form p strong{
     color: #1E86F3;
     display: inline;
 }

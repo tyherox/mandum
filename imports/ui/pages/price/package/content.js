@@ -6,28 +6,39 @@ var content = {
             title: "Packages",
             paragraph: "Browse our packages to quickly find what you need.",
             cards: {
-                portfolio: "Small scale portfolio to promote yourself",
-                landing: "Simple landing page to promote your business",
-                blog: "Dynamic website capable of posting content",
-                app: "Interactive web application",
-                store: "Large website for selling products online"
+                portfolio: "Small scale portfolio to promote yourself. " +
+                "Example: [www.baework.com](http://www.baework.com/home)",
+                landing: "Simple landing page to promote your business. " +
+                "Example: [www.manimalkorea.com](http://manimalkorea.com/welcome)",
+                blog: "Dynamic website capable of posting content. " +
+                "Example: [www.afatgirlsfoodguide.com](http://www.afatgirlsfoodguide.com/)",
+                app: "Interactive web application. " +
+                "Example: [www.stackedit.com](https://stackedit.io/)",
+                store: "Website for selling products online. " +
+                "Example: [www.nelly.com](https://nelly.com/ww/womens-fashion/)",
             },
             action: "View Package",
             estimatorTitle: "Not what you're looking for?",
             toEstimator: "Customize your Experience"
         },
         KR: {
-            title: "Packages (KR)",
+            title: "Packages",
             paragraph: "Browse our packages to quickly find what you need.",
             cards: {
-                portfolio: "Small scale portfolio to promote yourself",
-                landing: "Simple landing page to promote your business",
-                blog: "Dynamic website capable of posting content",
-                app: "Interactive web application",
-                store: "Large website for selling products online"
+                portfolio: "Small scale portfolio to promote yourself. " +
+                "Example: [www.baework.com](http://www.baework.com/home)",
+                landing: "Simple landing page to promote your business." +
+                "Example: [www.manimalkorea.com](http://manimalkorea.com/welcome)",
+                blog: "Dynamic website capable of posting content." +
+                "Example: [www.afatgirlsfoodguide.com](http://www.afatgirlsfoodguide.com/)",
+                app: "Interactive web application." +
+                "Example: [www.stackedit.com](https://stackedit.io/)",
+                store: "Website for selling products online." +
+                "Example: [www.nelly.com](https://nelly.com/ww/womens-fashion/)",
             },
             action: "View Package",
-            estimator: "Customize your Experience"
+            estimatorTitle: "Not what you're looking for?",
+            toEstimator: "Customize your Experience"
         },
     }
 }

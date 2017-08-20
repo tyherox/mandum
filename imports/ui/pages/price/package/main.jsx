@@ -129,7 +129,10 @@ class Main extends Component {
 
                     <br/>
 
-                    <Button className="blackButton bigButton"><b>{text.packages.toEstimator}</b> <i className="arrow right" /></Button>
+                    <NavLink to="/price/select-1" exact>
+                        <Button className="blackButton bigButton"><b>{text.packages.toEstimator}</b> <i className="arrow right" /></Button>
+                    </NavLink>
+
                 </div>
 
                 <br/><br/><br/>

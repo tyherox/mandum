@@ -118,9 +118,10 @@ class App extends Component {
                                     {this.props.price != 0 ?
                                         <div>
                                             <input type="checkbox"
+                                                   id="use"
                                                    ref="estimator" />
-                                                <p className="inline blue"> {text.contact.useEstimator + " "}</p>
-                                                <p className="inline blue"> {(this.props.price * 1000).toLocaleString() + " KRW"}</p>
+                                                <label htmlFor="use" className="inline blue"> <p>{text.contact.useEstimator + " "}</p> </label>
+                                                <label htmlFor="use" className="inline blue"> <p>{(this.props.price * 1000).toLocaleString() + " KRW"}</p> </label>
                                         </div> : ""
                                     }
                                     <br/><br/>

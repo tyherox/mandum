@@ -9,8 +9,6 @@ export const Orders = new Mongo.Collection('orders');
 
 export const interpretOrder = function(state){
 
-    console.log(state);
-
     if(!state) return "Invalid State";
 
     state = fromJS(state);

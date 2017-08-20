@@ -69,12 +69,11 @@ class Main extends Component {
 
                             <div className="tight-container">
                                 <h1 style={{marginTop: "5rem"}} className="margin-2">
-                                    A Price Range for Everyone
+                                    {text.introduction.title}
                                 </h1>
 
                                 <p  className="margin-2">
-                                    Whether you're a student creating a personal portfolio or a local business planning to sell your products online, we can work out a price range for your needs.
-                                    Check out our package selections or customize your price estimation using our price estimator.
+                                    {text.introduction.paragraph}
                                 </p>
                             </div>
 
@@ -87,10 +86,10 @@ class Main extends Component {
                                         <div className="center-container">
 
                                             <i className='fa fa-retweet fa-3x purple'/>
-                                            <h3 className="margin-1">Early Refund</h3>
+                                            <h3 className="margin-1">{text.introduction.cards.cardOne.title}</h3>
 
                                             <p>
-                                                We refund 100% of your money before the prototyping phase.
+                                                {text.introduction.cards.cardOne.paragraph}
                                             </p>
 
                                         </div>
@@ -101,9 +100,9 @@ class Main extends Component {
                                         <div className="center-container">
 
                                             <i className='fa fa-eye fa-3x purple'/>
-                                            <h3 className="margin-1">Transparency</h3>
+                                            <h3 className="margin-1"> {text.introduction.cards.cardTwo.title}</h3>
                                             <p>
-                                                Our price estimator provides transparency in our prices.
+                                                {text.introduction.cards.cardTwo.paragraph}
                                             </p>
 
                                         </div>
@@ -114,9 +113,9 @@ class Main extends Component {
                                         <div className="center-container">
 
                                             <i className='fa fa-cogs fa-3x purple'/>
-                                            <h3 className="margin-1">Customizable</h3>
+                                            <h3 className="margin-1"> {text.introduction.cards.cardThree.title}</h3>
                                             <p>
-                                                Fine tune your project to your exact specifications.
+                                                {text.introduction.cards.cardThree.paragraph}
                                             </p>
 
                                         </div>
@@ -155,19 +154,18 @@ class Main extends Component {
                                                 <div className="stripe-top red"/>
 
                                                 <h1 style={{marginTop: "5rem"}} className="margin-1">
-                                                    Find your price quickly
+                                                    {text.packages.title}
                                                 </h1>
 
                                                 <p className="margin-3">
-                                                    Packages are bundled features for common website usages.
-                                                    Browse our offers to quickly gauge how much your website will cost.
+                                                    {text.packages.paragraph}
                                                 </p>
 
                                                 <hr/>
 
                                                 <NavLink to="/price/packages" exact  className="margin-1">
                                                     <Button className="emptyButton pinkButton">
-                                                        <b>Explore our Packages</b>
+                                                        <b>{text.packages.action}</b>
                                                         <i className="arrow right" />
                                                     </Button>
                                                 </NavLink>
@@ -210,19 +208,18 @@ class Main extends Component {
                                                 <div className="stripe-top blue"/>
 
                                                 <h1 style={{marginTop: "5rem"}}  className="margin-1">
-                                                    Customize your experience
+                                                    {text.estimator.title}
                                                 </h1>
 
                                                 <p className="margin-3">
-                                                    Have eccentric or uncommon needs?
-                                                    Use our price estimator to better gauge your website cost.
+                                                    {text.estimator.paragraph}
                                                 </p>
 
                                                 <hr/>
 
                                                 <NavLink to="/price/select-1" exact  className="margin-1">
                                                     <Button className="emptyButton blueButton">
-                                                        <b>Start your Estimation</b>
+                                                        <b>{text.estimator.action}</b>
                                                         <i className="arrow right" />
                                                     </Button>
                                                 </NavLink>

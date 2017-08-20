@@ -8,80 +8,79 @@ var content = {
             button: "Start your Estimation"
         },
         KR: {
-            title: "Simple, Transparent Pricing",
+            title: "Simple, Transparent Pricing (KR)",
             subTitle: "No Hidden Costs.",
             button: "Start your Estimation"
         }
     },
-    welcome: {
+    introduction: {
         EN: {
-            title: "A Story Behind Every Pixel",
+            title: "A Price Range for Everyone",
             subTitle: "Mandum Studio",
-            paragraphOne: "The Internet is a massive, competitive arena. " +
-            "There are more than [1 billion websites today](http://www.internetlivestats.com/total-number-of-websites). " +
-            "And with more than 100 being created every minute, creating a unique website gets harder everyday.",
-            paragraphTwo: "At Mandum Studio, we strive to create memorable, distinct websites with story telling. " +
-                "Every detail of our websites has purpose, represents plot, and urges your web visitors to stay and hear your message. " +
-                "Along with our purpose driven design principals, advanced technology, and dependable customer service, your website will be a " +
-                "shining beacon admist the vast content of the Internet."
+            paragraph: "Whether you're a student creating a personal portfolio or a local business planning to" +
+            " sell your products online, we can work out a price range for your needs. Check out our package selections" +
+            " or customize your price estimation using our price estimator.",
+            cards: {
+                cardOne: {
+                    title: "Early Refund",
+                    paragraph: "We refund 100% of your money before the prototyping phase."
+                },
+                cardTwo: {
+                    title: "Transparency",
+                    paragraph: "Our price estimator provides transparency in our prices."
+                },
+                cardThree: {
+                    title: "Customizable",
+                    paragraph: "Fine tune your project to your exact specifications."
+                }
+            }
         },
         KR: {
-            title: "A Story Behind Every Pixel (KR)",
+            title: "A Price Range for Everyone(KR)",
             subTitle: "Mandum Studio",
-            paragraphOne: "The Internet is a massive, competitive arena. " +
-            "There are more than [1 billion websites today](http://www.internetlivestats.com/total-number-of-websites). " +
-            "And with more than 100 being created every minute, creating a unique website gets harder everyday.",
-            paragraphTwo: "At Mandum Studio, we strive to create memorable, distinct websites with story telling. " +
-            "Every detail of our websites has purpose, represents plot, and urges your web visitors to stay and hear your message. " +
-            "Along with our purpose driven design principals, advanced technology, and dependable customer service, your website will be a " +
-            "shining beacon admist the vast content of the Internet."
+            paragraph: "Whether you're a student creating a personal portfolio or a local business planning to" +
+            " sell your products online, we can work out a price range for your needs. Check out our package selections" +
+            " or customize your price estimation using our price estimator.",
+            cards: {
+                cardOne: {
+                    title: "Early Refund",
+                    paragraph: "We refund 100% of your money before the prototyping phase."
+                },
+                cardTwo: {
+                    title: "Transparency",
+                    paragraph: "Our price estimator provides transparency in our prices."
+                },
+                cardThree: {
+                    title: "Customizable",
+                    paragraph: "Fine tune your project to your exact specifications."
+                }
+            }
         },
     },
-    services: {
+    packages: {
         EN: {
-            title: "From A to Z",
-            subTitle: "Our Services",
-            paragraph: "Creating a website is a multi-step process that is much more than just coding. " +
-            "Mandum Studio understands the multi-disciplinary requirements of website building " +
-            "and provides a wide range of services from design to translation as well as development.",
-            cardOne: {
-                title: "Development",
-                content: "We use advanced, modern technologies to build your websites."
-            },
-            cardTwo: {
-                title: "Design",
-                content: "All our designs are mobile friendly and go through a rigorous planning phase."
-            },
-            cardThree: {
-                title: "Translation",
-                content: "We provide free English and Korean versions of your website."
-            },
+            title: "Find your price quickly",
+            paragraph: "Packages are bundled features for common website usages. " +
+            "Browse our offers to quickly gauge how much your website will cost.",
+            action: "Explore our Packages",
         },
         KR: {
-            title: "From A to Z (KR)",
-            subTitle: "Our Services",
-            paragraph: "Creating a website is a multi-step process that is much more than just coding. " +
-            "Mandum Studio understands the multi-disciplinary requirements of website building " +
-            "and provides a wide range of services from design to translation as well as development.",
-            cardOne: "We use advanced, modern technologies to build your websites.",
-            cardTwo: "All our designs are mobile friendly and go through a rigorous planning phase.",
-            cardThree: "We provide free English and Korean versions of your website."
+            title: "Find your price quickly (KR)",
+            paragraph: "Packages are bundled features for common website usages. " +
+            "Browse our offers to quickly gauge how much your website will cost.",
+            action: "Explore our Packages",
         },
     },
-    price: {
+    estimator: {
         EN: {
-            title: "No Need to Wait for a Quote",
-            subTitle: "Transparent Pricing",
-            paragraph: "A budget is no fun but always important when creating a website. " +
-            "Feel free to browse our packages or check out our price estimator to gauge our price range.",
-            button: "Start your Estimation"
+            title: "Customize your experience",
+            paragraph: "Have eccentric or uncommon needs? Use our price estimator to better gauge your website cost.",
+            action: "Start your Estimation"
         },
         KR: {
-            title: "No Need to Wait for a Quote (KR)",
-            subTitle: "Transparent Pricing",
-            paragraph: "A budget is no fun but always important when creating a website. " +
-            "Feel free to browse our packages or check out our price estimator to gauge our price range.",
-            button: "Start your Estimation"
+            title: "Customize your experience (KR)",
+            paragraph: "Have eccentric or uncommon needs? Use our price estimator to better gauge your website cost.",
+            action: "Start your Estimation"
         },
     }
 }

@@ -55,7 +55,11 @@ class Main extends Component {
                                     <b>Services</b>
                                 </Button>
                             </NavLink>
-
+                            <NavLink to="/price/select-5" exact>
+                                <Button className="emptyButton smallButton gray">
+                                    <b>Estimation</b>
+                                </Button>
+                            </NavLink>
                         </div>
 
                         <div className="inner-container">

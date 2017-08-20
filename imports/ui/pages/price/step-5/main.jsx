@@ -103,26 +103,30 @@ class Main extends Component {
                         <div style={{padding: "10px"}}>
 
                             <NavLink to="/price/select-1" exact>
-                                <Button className="emptyButton gray">
+                                <Button className="emptyButton smallButton gray">
                                     <b>Content</b>
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-2" exact>
-                                <Button className="emptyButton gray">
+                                <Button className="emptyButton smallButton gray">
                                     <b>Features</b>
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-3" exact>
-                                <Button className="emptyButton gray">
+                                <Button className="emptyButton smallButton gray">
                                     <b>Design</b>
                                 </Button>
                             </NavLink>
                             <NavLink to="/price/select-4" exact>
-                                <Button className="emptyButton gray">
+                                <Button className="emptyButton smallButton gray">
                                     <b>Services</b>
                                 </Button>
                             </NavLink>
-
+                            <NavLink to="/price/select-5" exact>
+                                <Button className="emptyButton smallButton">
+                                    <b>Estimation</b>
+                                </Button>
+                            </NavLink>
                         </div>
 
                         <div className="category-container">
