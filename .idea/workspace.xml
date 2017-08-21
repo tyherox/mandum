@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fb626132-c8f8-4fba-bf0c-3d27c59b0b98" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/style/containers.css" afterPath="$PROJECT_DIR$/imports/ui/style/containers.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx" />
     </list>
     <ignored path="mandum.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="containers.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="containers.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/style/containers.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
@@ -68,11 +69,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="350">
-              <caret line="168" column="74" selection-start-line="168" selection-start-column="74" selection-end-line="168" selection-end-column="74" />
+            <state relative-caret-position="110">
+              <caret line="206" column="43" selection-start-line="206" selection-start-column="43" selection-end-line="206" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -154,8 +155,8 @@
         <option value="$PROJECT_DIR$/imports/ui/pages/price/package/content.js" />
         <option value="$PROJECT_DIR$/imports/ui/pages/price/package/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/components/navBar/style.css" />
-        <option value="$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx" />
         <option value="$PROJECT_DIR$/imports/ui/style/containers.css" />
+        <option value="$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx" />
       </list>
     </option>
   </component>
@@ -319,12 +320,12 @@
       <workItem from="1502797405592" duration="31238000" />
       <workItem from="1503043876895" duration="995000" />
       <workItem from="1503142268396" duration="20292000" />
-      <workItem from="1503230367171" duration="15994000" />
+      <workItem from="1503230367171" duration="16098000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="280143000" />
+    <option name="totallyTimeSpent" value="280247000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -765,14 +766,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="168" column="74" selection-start-line="168" selection-start-column="74" selection-end-line="168" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/components/navBar/style.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1995">
@@ -785,6 +778,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/components/priceComponent/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="206" column="43" selection-start-line="206" selection-start-column="43" selection-end-line="206" selection-end-column="43" />
           <folding />
         </state>
       </provider>
