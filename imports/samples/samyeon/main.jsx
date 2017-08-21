@@ -87,7 +87,7 @@ export default class App extends Component {
 
                                         <h1 className="margin-2" >정보 제목</h1>
 
-                                        <i className="fa fa-chevron-right white fa-3x border-white"/>
+                                        <i className="fa fa-chevron-right white fa-2x border-white"/>
                                     </div>
 
                                 </Col>
@@ -100,7 +100,7 @@ export default class App extends Component {
 
                                         <h1 className="margin-2">정보 제목</h1>
 
-                                        <i className="fa fa-chevron-right white fa-3x border-white"/>
+                                        <i className="fa fa-chevron-right white fa-2x border-white"/>
                                     </div>
 
                                 </Col>
@@ -113,7 +113,7 @@ export default class App extends Component {
 
                                         <h1 className="margin-2" >회사 뉴스 제목</h1>
 
-                                        <i className="fa fa-chevron-right black fa-3x border-black"/>
+                                        <i className="fa fa-chevron-right black fa-2x border-black"/>
                                     </div>
 
                                 </Col>
