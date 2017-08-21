@@ -204,7 +204,7 @@ class SliderItem extends Component{
         price = cPrice == 0 ? "Free" : (cPrice * 1000).toLocaleString() + " KRW"
 
         return(
-            <div>
+            <div className="category-container">
 
                 <Slider min={this.props.min}
                         max={this.props.max}
