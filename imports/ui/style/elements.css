@@ -111,6 +111,7 @@ i.pulse{
 #bootstrap-overrides .btn:focus,
 #bootstrap-overrides .btn:active{
     background: #373737;
+    color: inherit;
 }
 
 /*-----Empty Button-----*/
