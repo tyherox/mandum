@@ -95,7 +95,7 @@ class App extends Component {
 
                     <div className="category-container">
 
-                        <div className="category-container" style={{maxWidth: "700px", margin: "auto"}}>
+                        <div className="category-container" style={{maxWidth: "650px", margin: "auto"}}>
 
                             <h1>{text.contact.title}</h1>
 

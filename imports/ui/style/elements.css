@@ -119,13 +119,11 @@ i.pulse{
 #bootstrap-overrides .emptyButton:focus,
 #bootstrap-overrides .emptyButton:active{
     color: black;
-    padding: .75rem 3rem;
     background: transparent;
 }
 
 /*-----Pink Button-----*/
 #bootstrap-overrides .pinkButton{
-    padding: .75rem 3rem;
     background: #FB4473;
     color: white;
 }
@@ -133,46 +131,39 @@ i.pulse{
 #bootstrap-overrides .pinkButton:hover,
 #bootstrap-overrides .pinkButton:focus,
 #bootstrap-overrides .pinkButton:active{
-    color:white;
     background: #e53e69;
 }
 
 /*-----Blue Button-----*/
 #bootstrap-overrides .blueButton{
     color: white;
-    padding: .75rem 3rem;
     background: dodgerblue;
 }
 #bootstrap-overrides .blueButton:hover,
 #bootstrap-overrides .blueButton:focus,
 #bootstrap-overrides .blueButton:active{
-    color: white;
-    background: #1b80e3;
+    background: #1b84e9;
 }
 
 /*-----Purple Button-----*/
 #bootstrap-overrides .purpleButton{
     color: white;
-    padding: .75rem 3rem;
     background: #8900FF;
 }
 #bootstrap-overrides .purpleButton:hover,
 #bootstrap-overrides .purpleButton:focus,
 #bootstrap-overrides .purpleButton:active{
-    color: white;
     background: #8100f1;
 }
 
 /*-----Orange Button-----*/
 #bootstrap-overrides .orangeButton{
     color: white;
-    padding: .75rem 3rem;
     background: #ED903D;
 }
 #bootstrap-overrides .orangeButton:hover,
 #bootstrap-overrides .orangeButton:focus,
 #bootstrap-overrides .orangeButton:active{
-    color: white;
     background: #e0883a;
 }
 
@@ -258,6 +249,20 @@ input:disabled{
         margin: auto;
         color: #1E86F3;
         font-size: 20rem;
+    }
+
+    #bootstrap-overrides .btn{
+        padding: .5rem 2rem;
+    }
+
+    /*-----Big Button-----*/
+    #bootstrap-overrides .bigButton{
+        padding: .5rem 4rem!important;
+    }
+
+    /*-----Small Button-----*/
+    #bootstrap-overrides .smallButton{
+        padding: .5rem .75rem!important;
     }
 
 
