@@ -1,4 +1,5 @@
 #sample-samyeon #navBar-logo{
+    background: none!important;
     margin-top: -25px;
     margin-right: 10px;
     width: 75px;
@@ -70,7 +71,7 @@
     height: 200px;
     padding: 1rem 2rem 2rem;
     width: 100%;
-    background: #343434;
+    background: #000000;
 }
 
 .google-maps{

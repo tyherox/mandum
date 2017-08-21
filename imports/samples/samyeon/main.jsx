@@ -51,7 +51,7 @@ export default class App extends Component {
 
                             <div className="center-container">
 
-                                <div style={{textAlign:"left", width: "100%", maxWidth: "750px", margin:"auto"}}>
+                                <div style={{textAlign:"left", width: "100%", maxWidth: "750px", margin:"auto", paddingRight: "10px", paddingLeft: "10px"}}>
 
                                     <h1 style={{fontSize: "3.5rem", color: "white"}} className="margin-1">
                                         삼연기술 회사 소개
@@ -264,10 +264,10 @@ export default class App extends Component {
 
                 <div>
                     <div id="footer">
-                        <img style={{float: "left"}}
-                             width="100"
+                        <img style={{float: "left", marginTop: "-5px"}}
+                             id="navBar-logo"
                              src="/samyeon/logo.svg"/>
-                        <h2 className="inline"><b>삼연기술</b></h2>
+                        <h2 className="inline" style={{color: "white"}}><b>삼연기술</b></h2>
                         <div id="navBar-responsive" >
                             <Button className="emptyButton navBar-elements smallButton" style={{color: "white"}}>회사소개</Button>
                             <Button className="emptyButton navBar-elements smallButton" style={{color: "white"}}>제품소개</Button>
