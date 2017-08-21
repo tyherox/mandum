@@ -165,7 +165,7 @@ class Main extends Component {
                     <div style={{textAlign: "center"}} className="margin-3">
 
                         <h2 className="gray">Content Total:</h2>
-                        <h2 className="blue"><b>{this.props.price.toLocaleString()} KRW</b></h2>
+                        <h2 className="blue"><b>{this.props.price} KRW</b></h2>
                         <br/>
 
                         <NavLink to="/price/select-2" exact>
