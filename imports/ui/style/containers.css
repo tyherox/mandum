@@ -60,6 +60,8 @@
 
 .price-card{
     transition: all .3s ease-in-out;
+    max-width: 300px;
+    margin: auto;
 }
 
 #bootstrap-overrides .col-item-list {
