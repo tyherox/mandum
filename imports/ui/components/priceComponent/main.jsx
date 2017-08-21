@@ -204,7 +204,7 @@ class SliderItem extends Component{
         price = cPrice == 0 ? "Free" : (cPrice * 1000).toLocaleString() + " KRW"
 
         return(
-            <div className="tight-container">
+            <div style={{paddingLeft: "15px", paddingRight: "15px"}}>
 
                 <Slider min={this.props.min}
                         max={this.props.max}
@@ -219,7 +219,7 @@ class SliderItem extends Component{
                    <input type="number"
                           className={smallTextColor}
                           disabled={!selected}
-                          style={{display: "inline", float: "left", width: "3rem"}}
+                          style={{display: "inline", float: "left", width: "4.5rem"}}
                           value={value == "EMPTY" ? "" : value}
                           onChange={(event)=>this.props.handleAction(parseInt(event.target.value) || "EMPTY")}/>
 

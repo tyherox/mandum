@@ -2,6 +2,10 @@ html{
     font-size: 12px;
 }
 
+*{
+    font-family: 'Malgun Gothic', sans-serif;
+}
+
 #bootstrap-overrides h1{
     font-size: 3.5rem;
     font-weight: 300;
@@ -31,10 +35,6 @@ html{
 
 #bootstrap-overrides p p{
     color: inherit;
-}
-
-#bootstrap-overrides .contact-form p{
-    display: inline;
 }
 
 #bootstrap-overrides .contact-form p strong{

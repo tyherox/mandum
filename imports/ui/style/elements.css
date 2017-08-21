@@ -111,7 +111,7 @@ i.pulse{
 #bootstrap-overrides .btn:focus,
 #bootstrap-overrides .btn:active{
     background: #373737;
-    color: inherit;
+    color: white;
 }
 
 /*-----Empty Button-----*/
@@ -170,6 +170,7 @@ i.pulse{
 
 /*-----Big Button-----*/
 #bootstrap-overrides .bigButton{
+    color: white;
     padding: .75rem 7rem!important;
 }
 
@@ -180,11 +181,8 @@ i.pulse{
 
 
 /*-----Slider Component-----*/
-.rc-slider-tooltip-inner{
-    background: none!important;
-    box-shadow: none!important;;
-    color: #1E86F3!important;;
-    font-size: 1.5rem!important;;
+.rc-slider-track{
+    background-color: #1E86F3!important;
 }
 
 .rc-slider-tooltip-arrow{
@@ -223,14 +221,20 @@ input:disabled{
     border: none;
     outline: none;
     border-bottom: 1px solid #CBCBCB;
-    width: 125px;
+    width: 150px;
     display: inline;
     text-align: center!important;
+    margin-left: 10px;
 }
 
 .minInput:focus{
     border:none;
     border-bottom: 1px solid #1E86F3;
+}
+
+#bootstrap-overrides .contact-form .bigInput{
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 /*-----Responsive Settings-----*/

@@ -102,15 +102,20 @@ class App extends Component {
                             <br/> <br/>
 
                             <form onSubmit={this.sendEmail.bind(this)} style={{fontSize: "1.25rem", fontWeight: "300", textAlign: "left"}} className="contact-form">
-                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.name)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="name"/>
-                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.greetings)}/>
-                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.budget)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="budget" onChange={this.verifyBudget.bind(this)}/>
-                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.date)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="deadline"/>
-                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.email)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="email"/>{this.props.language=="KR" ? <p>입니다.</p> : "."}
+
+                                <div style={{maxWidth: "400px", margin: "auto"}}>
+                                    <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.name)}/>
+                                    <input disabled = {this.state.sent} className="bigInput" ref="name"/>
+                                    <br/>
+                                    <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.budget)}/>
+                                    <input disabled = {this.state.sent} className="bigInput" ref="budget" onChange={this.verifyBudget.bind(this)}/>
+                                    <br/>
+                                    <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.date)}/>
+                                    <input disabled = {this.state.sent} className="bigInput" ref="deadline"/>
+                                    <br/>
+                                    <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.email)}/>
+                                    <input disabled = {this.state.sent} className="bigInput" ref="email"/>
+                                </div>
 
                                 <br/><br/>
 
@@ -127,7 +132,7 @@ class App extends Component {
                                     <br/><br/>
 
                                     <Button className="blackButton" type="submit">
-                                        { this.state.sent ? "Thank you!" : "Submit"}
+                                        { this.state.sent ? text.contact.thank : text.contact.action}
                                     </Button>
 
                                     <hr/>
@@ -135,7 +140,7 @@ class App extends Component {
                                     <h3>Or</h3>
                                     <Button className="blackButton bigButton"
                                             href="mailto:john.uhyb@gmail.com">
-                                        Just Give Us an Email!
+                                        {text.contact.custom}
                                     </Button>
                                 </div>
 

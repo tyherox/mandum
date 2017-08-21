@@ -119,4 +119,10 @@
     .card-container{
         min-height: 0;
     }
+
+    .inner-container,
+    .tight-container{
+        padding-right: 15px;
+        padding-left: 15px;
+    }
 }

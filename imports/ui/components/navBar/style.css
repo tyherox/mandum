@@ -118,6 +118,11 @@
         background: white;
     }
 
+    .nav-selected{
+        border-bottom: none;
+        color: #1E86F3;
+    }
+
     #navBar-responsive-button{
         display: inline-block;
         float: right;

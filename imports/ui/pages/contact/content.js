@@ -4,21 +4,25 @@ var content = {
     contact: {
         EN: {
             title: "Ready for your quote?",
-            name: "Hi, my **name** is",
-            greetings: " and I would like to work with Mandum Studio! ",
-            budget: "My **budget** is",
-            date: " KRW and I would like to have it **done by**",
-            email: ". My **email** is",
-            useEstimator: "Use Price Estimator Data"
+            name: "**Name**",
+            budget: "**Budget**",
+            date: "**Deadline**",
+            email: "**Email**",
+            useEstimator: "Use Price Estimator Data",
+            action: "Submit",
+            thank: "Thank You!",
+            custom: "Give us an Email!"
         },
         KR: {
             title: "견적을 받아보시겠어요?",
-            name: "안녕하세요, 제 **이름은** ",
-            greetings: "이며 Mandum Studio와 일을 하고 싶습니다! ",
-            budget: " 제가 생각하고 있는 **예산은**",
-            date: " KRW이며 ",
-            email: "까지 완성했으면 합니다. 제 **이메일은**",
-            useEstimator: "가격 측정 시스템에서 산출한 금액 이용하기"
+            name: "**이름은**",
+            budget: "**예산**",
+            date: "**기한**",
+            email: "**이메일**",
+            useEstimator: "가격 측정 시스템에서 산출한 금액 이용하기",
+            action: "전송하기",
+            thank: "감사합니다",
+            custom: "직접 이메일을 보내주세요!"
         },
     }
 }
