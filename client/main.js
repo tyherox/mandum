@@ -17,6 +17,7 @@ import PriceChooserE from '../imports/ui/pages/price/step-5/main';
 /*import Story from '../imports/ui/pages/story';*/
 import Contact from '../imports/ui/pages/contact/main';
 import Admin from '../imports/ui/pages/admin/main';
+import Samyeon from '../imports/samples/samyeon/main';
 
 import reducer from '../imports/reducers/main';
 import NavBar from '../imports/ui/components/navBar/main';
@@ -58,13 +59,14 @@ Meteor.startup(() => {
                                       {/*<Route exact path="/story" component={Story}*/}/>
                                       <Route exact path="/admin" component={Admin}/>
                                       <Route exact path="/contact" component={Contact}/>
+                                      <Route exact path="/samples/samyeon" component={Samyeon}/>
                                   </Switch>
                               </RouteTransition>
                           </ScrollToTop>
                       );
                   }}/>
-                  <Footer location={location} exception={["/admin"]}/>
-                  <NavBar location={location}/>
+                  <Footer location={location} exception={["/admin","/:samples"]}/>
+                  <NavBar location={location} exception={["/:samples"]}/>
               </div>
           </Provider>
       </Router>

@@ -1,3 +1,7 @@
+#navBar-mother{
+    z-index: 100;
+}
+
 #navBar-background{
     transition: all .3s ease-in-out;
     position: fixed;
@@ -6,7 +10,7 @@
     background: white;
     width: 100%;
     height: 75px;
-    box-shadow: none;
+    box-shadow: none;;
 }
 
 #navBar-background.active{
@@ -21,7 +25,7 @@
     cursor: pointer;
 }
 
-#navBar{
+#navBar-content {
     padding-top: 2rem;
     background-color: white;
     width: 100%;

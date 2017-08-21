@@ -8,9 +8,9 @@ var content = {
             button: "Start your Estimation"
         },
         KR: {
-            title: "Simple, Transparent Pricing (KR)",
-            subTitle: "No Hidden Costs.",
-            button: "Start your Estimation"
+            title: "간편한 가격 측정 시스템",
+            subTitle: "숨은 비용이 없는 투명한 가격.",
+            button: "바로 견적을 받아보세요!"
         }
     },
     introduction: {
@@ -36,23 +36,24 @@ var content = {
             }
         },
         KR: {
-            title: "A Price Range for Everyone(KR)",
+            title: "누구나 만족할 수 있는 가격",
             subTitle: "Mandum Studio",
-            paragraph: "Whether you're a student creating a personal portfolio or a local business planning to" +
-            " sell your products online, we can work out a price range for your needs. Check out our package selections" +
-            " or customize your price estimation using our price estimator.",
+            paragraph: "취업 준비하는 과정에서 특색 있는 포트폴리오를 만들고 싶은 학생부터" +
+            " 온라인상에서 제품을 판매하고 싶은 비즈니까지." +
+            " Mandum Studio에서는 다양한 고객들의 예산 범위 내에서 맞춤형 웹사이트를 제작해드립니다."+
+            " Mandum Studio에서 제공하는 패키지를 보시거나 가격 측정 시스템을 이용해서 제작 비용을 확인해보세요!",
             cards: {
                 cardOne: {
-                    title: "Early Refund",
-                    paragraph: "We refund 100% of your money before the prototyping phase."
+                    title: "빠른 환불",
+                    paragraph: "실제 제작 과정 전까지는 100% 환불 보장합니다."
                 },
                 cardTwo: {
-                    title: "Transparency",
-                    paragraph: "Our price estimator provides transparency in our prices."
+                    title: "투명성",
+                    paragraph: "저희 홈페이지에서 제공하는 견적 산출 시스템을 통해 가격의 투명성을 보장합니다."
                 },
                 cardThree: {
-                    title: "Customizable",
-                    paragraph: "Fine tune your project to your exact specifications."
+                    title: "맞춤 제작",
+                    paragraph: "고객들의 요구사항을 반영한 맞춤형 홈페이지를 제작해드립니다."
                 }
             }
         },
@@ -65,10 +66,10 @@ var content = {
             action: "Explore our Packages",
         },
         KR: {
-            title: "Find your price quickly (KR)",
-            paragraph: "Packages are bundled features for common website usages. " +
+            title: "쉽고 빠르게 가격을 확인하세요.",
+            paragraph: "패키지를 통해 일반적으로 이용하는 웹사이트과 Packages are bundled features for common website usages. " +
             "Browse our offers to quickly gauge how much your website will cost.",
-            action: "Explore our Packages",
+            action: "패키지를 구경해보세요",
         },
     },
     estimator: {
@@ -78,9 +79,9 @@ var content = {
             action: "Start your Estimation"
         },
         KR: {
-            title: "Customize your experience (KR)",
-            paragraph: "Have eccentric or uncommon needs? Use our price estimator to better gauge your website cost.",
-            action: "Start your Estimation"
+            title: "맞춤 제작을 해보세요.",
+            paragraph: "조금 더 특별한 웹사이트를 원하시나요? 그렇다면, 저희 가격 측정 시스템을 이용해서 제작 비용을 파악해보세요.",
+            action: "예상 비용 산출하기"
         },
     }
 }

@@ -12,11 +12,11 @@ var content = {
             }
         },
         KR: {
-            title: "Features: Free (KR)",
-            paragraph: "Features we can do for you pro bono.",
+            title: "추가적인 기능: 무료",
+            paragraph: "Mandum에서 무료로 제공해드릴 수 있는 기능.",
             cards: {
-                opt1: "Responsive Design",
-                opt2: "Search Engine Optimization",
+                opt1: "반응형 웹디자인",
+                opt2: "검색 엔진 최적화",
                 opt3: "Under Construction Page"
             }
         },
@@ -35,14 +35,14 @@ var content = {
             }
         },
         KR: {
-            title: "Features: Premium (KR)",
-            paragraph: "Features with a price tag.",
+            title: "추가적인 기능: 프리미엄",
+            paragraph: "합리적인 비용으로 추가할 수 있는 프리미엄 기능.",
             cards: {
-                opt1: "Admin Page",
-                opt2: "Account System",
-                opt3: "Transaction System",
-                opt4: "Email System",
-                opt5: "Upload / Download Functionality",
+                opt1: "관리자 전용 페이지",
+                opt2: "계정 시스템",
+                opt3: "온라인 결제 시스템",
+                opt4: "이메일 시스템",
+                opt5: "자료 업로드 / 다운로드 기능",
                 opt6: "Interactive Component"
             }
         },

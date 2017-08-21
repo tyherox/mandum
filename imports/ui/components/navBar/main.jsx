@@ -22,24 +22,41 @@ class NavBar extends Component{
 
         var self = this;
 
-        document.addEventListener("scroll", function(){
-            var pos = document.body.scrollTop;
-            if(pos==0){
-                self.refs.navBar.className = "";
-            }
-            else if(self.refs.navBar.className!="active"){
-                self.refs.navBar.className = "active";
-            }
-        })
+        if(self.refs.navBar){
+            document.addEventListener("scroll", function(){
+                var pos = document.body.scrollTop;
+                if(pos==0){
+                    self.refs.navBar.className = "";
+                }
+                else if(self.refs.navBar.className!= "active"){
+                    self.refs.navBar.className = "active";
+                }
+            })
+        }
     }
 
     render(){
 
-        return(
-            <div>
+        var path = this.props.location.pathname,
+            exceptions = this.props.exception;
+
+        var render = true;
+
+        exceptions.forEach(function(elem){
+            console.log(elem, path);
+            if(elem==path) {
+                render = false;
+            }
+            else if(elem.includes("/:")) {
+                if(path.split("/").length > 0  && path.split("/")[1] == elem.replace("/:","")) render = false;
+            }
+        });
+
+        if(render) return(
+            <div id="navBar">
                 <span id="overlay" className={this.state.expanded ? "on" : ""} onClick={()=> this.setState({expanded: false})}/>
                 <div id="navBar-background" ref="navBar">
-                    <div id="navBar">
+                    <div id="navBar-content">
                         <NavLink to="/">
                             <img style={{verticalAlign: "middle"}}
                                  id="navBar-logo"
@@ -77,6 +94,7 @@ class NavBar extends Component{
                 </div>
             </div>
         )
+        else return <div></div>
     }
 }
 
@@ -87,7 +105,8 @@ function selectorFactory(dispatch) {
 
         const nextResult = {
             actions: actions,
-            language: nextState.settings.get("language")
+            language: nextState.settings.get("language"),
+            ...nextOwnProps,
         };
         if(nextResult!=result){
             result = nextResult;

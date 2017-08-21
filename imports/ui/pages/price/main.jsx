@@ -145,7 +145,7 @@ class Main extends Component {
 
                                     <Row>
                                         <Col  xs={12} md={4}>
-                                            <i className="fa fa-cubes fa-5x sideIconL" aria-hidden="true" />
+                                            <i className="fa fa-cubes fa-5x sideIconL margin-1" aria-hidden="true" />
                                         </Col>
 
                                         <Col  xs={12} md={8}>
@@ -198,7 +198,7 @@ class Main extends Component {
 
                                     <Row>
                                         <Col  xs={12} md={4} mdPush={8}>
-                                            <i className="fa fa-tasks fa-5x sideIconR" aria-hidden="true" />
+                                            <i className="fa fa-tasks fa-5x sideIconR margin-1" aria-hidden="true" />
                                         </Col>
 
                                         <Col  xs={12} md={8} mdPull={4}>

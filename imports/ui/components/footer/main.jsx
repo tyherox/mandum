@@ -9,22 +9,36 @@ import Scroll from 'react-scroll';
 
 import './style.css';
 
-export default class TestNavBar extends Component{
+export default class Footer extends Component{
     render(){
-        var render = this.props.exception.indexOf(this.props.location.pathname)==-1;
 
-        return(
+        var path = this.props.location.pathname,
+            exceptions = this.props.exception;
+
+        var render = true;
+
+        exceptions.forEach(function(elem){
+            console.log(elem, path);
+            if(elem==path) {
+                render = false;
+            }
+            else if(elem.includes("/:")) {
+                if(path.split("/").length > 0  && path.split("/")[1] == elem.replace("/:","")) render = false;
+            }
+        });
+
+        if(render) return(
             <div>
-                {render  ?
-                    <div id="footer">
-                        <img style={{float: "left"}}
-                             width="100"
-                             src="/assets/logo-inverse.svg"/>
-                        <Button style={{float: "right", color: "white", fontWeight: "300"}}
-                                onClick={()=> Scroll.animateScroll.scrollToTop() }
-                                className="emptyButton">Back to Top</Button>
-                    </div> : ""}
+                <div id="footer">
+                    <img style={{float: "left"}}
+                         width="100"
+                         src="/assets/logo-inverse.svg"/>
+                    <Button style={{float: "right", color: "white", fontWeight: "300"}}
+                            onClick={()=> Scroll.animateScroll.scrollToTop() }
+                            className="emptyButton">Back to Top</Button>
+                </div>
             </div>
         )
+        else return <div></div>
     }
 }
