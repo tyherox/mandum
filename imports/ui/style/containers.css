@@ -62,6 +62,7 @@
     transition: all .3s ease-in-out;
     max-width: 300px;
     margin: auto;
+    margin-bottom: 15px;
 }
 
 #bootstrap-overrides .col-item-list {
