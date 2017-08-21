@@ -17,7 +17,7 @@ var content = {
             cards: {
                 opt1: "반응형 웹디자인",
                 opt2: "검색 엔진 최적화",
-                opt3: "Under Construction Page"
+                opt3: "제작하는 동안 방문 고객들이 볼 수 있는 웹사이트 사전 예고 페이지"
             }
         },
     },
@@ -43,7 +43,7 @@ var content = {
                 opt3: "온라인 결제 시스템",
                 opt4: "이메일 시스템",
                 opt5: "자료 업로드 / 다운로드 기능",
-                opt6: "Interactive Component"
+                opt6: "고객들과 소통할 수 있는 기능"
             }
         },
     }

@@ -95,22 +95,22 @@ class App extends Component {
 
                     <div className="category-container">
 
-                        <div className="category-container" style={{maxWidth: "600px", margin: "auto"}}>
+                        <div className="category-container" style={{maxWidth: "700px", margin: "auto"}}>
 
                             <h1>{text.contact.title}</h1>
 
                             <br/> <br/>
 
-                            <form onSubmit={this.sendEmail.bind(this)} style={{fontSize: "1.5rem", fontWeight: "300", textAlign: "left"}} className="contact-form">
+                            <form onSubmit={this.sendEmail.bind(this)} style={{fontSize: "1.25rem", fontWeight: "300", textAlign: "left"}} className="contact-form">
                                 <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.name)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="name"/>, I would like to work with
-                                Mandum Studio! <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.budget)}/>
+                                <input disabled = {this.state.sent} className="minInput" ref="name"/>
+                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.greetings)}/>
+                                <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.budget)}/>
                                 <input disabled = {this.state.sent} className="minInput" ref="budget" onChange={this.verifyBudget.bind(this)}/>
                                 <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.date)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="deadline"/>.
-                                {" "}
+                                <input disabled = {this.state.sent} className="minInput" ref="deadline"/>
                                 <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.email)}/>
-                                <input disabled = {this.state.sent} className="minInput" ref="email"/>.
+                                <input disabled = {this.state.sent} className="minInput" ref="email"/>{this.props.language=="KR" ? <p>입니다.</p> : "."}
 
                                 <br/><br/>
 

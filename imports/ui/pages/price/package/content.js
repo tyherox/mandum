@@ -27,13 +27,13 @@ var content = {
             cards: {
                 portfolio: "자신을 홍보하는 용도로 사용할 수 있는 포트폴리오. " +
                 "예시: [www.baework.com](http://www.baework.com/home)",
-                landing: "비즈니스를 홍보하기 위한 간단한 랜딩 페이지." +
+                landing: "비즈니스를 홍보하기 위한 간단한 랜딩 페이지. " +
                 "예시: [www.manimalkorea.com](http://manimalkorea.com/welcome)",
-                blog: "새로운 컨텐츠를 지속적으로 올릴 수 있는 블로그형 웹사이트." +
+                blog: "새로운 컨텐츠를 지속적으로 올릴 수 있는 블로그형 웹사이트. " +
                 "예시: [www.afatgirlsfoodguide.com](http://www.afatgirlsfoodguide.com/)",
-                app: "사용자들과 소통할 수 있는 웹 어플리케이션." +
+                app: "사용자들과 소통할 수 있는 웹 어플리케이션. " +
                 "예시: [www.stackedit.com](https://stackedit.io/)",
-                store: "온라인상에서 귀사의 제품을 판매할 수 있는 웹사이트." +
+                store: "온라인상에서 귀사의 제품을 판매할 수 있는 웹사이트. " +
                 "예시: [www.nelly.com](https://nelly.com/ww/womens-fashion/)",
             },
             action: "패키지 구경하기",
@@ -41,10 +41,6 @@ var content = {
             toEstimator: "맞춤 제작해보세요"
         },
     }
-}
-
-var k = {
-    kok: "1"
 }
 
 export default {

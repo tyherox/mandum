@@ -4,12 +4,12 @@ var content = {
     banner: {
         EN: {
             title: "Simple, Transparent Pricing",
-            subTitle: "No Hidden Costs.",
+            subTitle: "Reasonable Prices.",
             button: "Start your Estimation"
         },
         KR: {
-            title: "간편한 가격 측정 시스템",
-            subTitle: "숨은 비용이 없는 투명한 가격.",
+            title: "간편하고 투명한 가격 측정 시스템",
+            subTitle: "합리적인 가격.",
             button: "바로 견적을 받아보세요!"
         }
     },
@@ -39,7 +39,7 @@ var content = {
             title: "누구나 만족할 수 있는 가격",
             subTitle: "Mandum Studio",
             paragraph: "취업 준비하는 과정에서 특색 있는 포트폴리오를 만들고 싶은 학생부터" +
-            " 온라인상에서 제품을 판매하고 싶은 비즈니까지." +
+            " 온라인상에서 제품을 판매하고 싶은 비즈니스까지." +
             " Mandum Studio에서는 다양한 고객들의 예산 범위 내에서 맞춤형 웹사이트를 제작해드립니다."+
             " Mandum Studio에서 제공하는 패키지를 보시거나 가격 측정 시스템을 이용해서 제작 비용을 확인해보세요!",
             cards: {
@@ -49,7 +49,7 @@ var content = {
                 },
                 cardTwo: {
                     title: "투명성",
-                    paragraph: "저희 홈페이지에서 제공하는 견적 산출 시스템을 통해 가격의 투명성을 보장합니다."
+                    paragraph: "저희 홈페이지에서 제공하는 가격 측정 시스템을 통해 가격의 투명성을 보장합니다."
                 },
                 cardThree: {
                     title: "맞춤 제작",
@@ -67,9 +67,9 @@ var content = {
         },
         KR: {
             title: "쉽고 빠르게 가격을 확인하세요.",
-            paragraph: "패키지를 통해 일반적으로 이용하는 웹사이트과 Packages are bundled features for common website usages. " +
-            "Browse our offers to quickly gauge how much your website will cost.",
-            action: "패키지를 구경해보세요",
+            paragraph: "원하시는 유형의 웹사이트를 고르시면 제작하는 데 필요한 기능을 선택해서 보여드립니다. " +
+            "Mandum에서 제공하는 패키지를 확인해보시고 예상 비용을 손쉽게 확인해보세요.",
+            action: "패키지 구경하기",
         },
     },
     estimator: {
