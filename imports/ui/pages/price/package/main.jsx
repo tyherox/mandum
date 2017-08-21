@@ -102,6 +102,7 @@ class Main extends Component {
                                                 <h3>1,650,000 KRW</h3>
                                                 <br/>
                                                 <p className="small-text" dangerouslySetInnerHTML={this.getRawMarkup(text.packages.cards.store)}/>
+                                                <br/>
                                                 <NavLink to="/price/select-5" exact>
                                                     <Button className="emptyButton blue"
                                                             onClick = {()=>this.props.reduxActions.setPackage('store')}> {text.packages.action} </Button>
