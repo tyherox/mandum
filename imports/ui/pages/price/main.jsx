@@ -244,11 +244,11 @@ class Main extends Component {
 
                 <div style={{textAlign: "center"}}  className="margin-3">
 
-                    <h2  className="margin-1">Prefer to Just Talk to Us?</h2>
+                    <h2  className="margin-1">{text.alt.title}</h2>
 
                     <NavLink to="/contact" exact>
                         <Button className="blackButton bigButton">
-                            <b>Talk to Us</b>
+                            <b>{text.alt.action}</b>
                             <i className="arrow right" />
                         </Button>
                     </NavLink>

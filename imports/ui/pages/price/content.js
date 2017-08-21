@@ -83,6 +83,16 @@ var content = {
             paragraph: "조금 더 특별한 웹사이트를 원하시나요? 그렇다면, 저희 가격 측정 시스템을 이용해서 제작 비용을 파악해보세요.",
             action: "예상 비용 산출하기"
         },
+    },
+    alt:{
+        EN: {
+            title: "Prefer to Just Talk to Us?",
+            action: "Talk to Us"
+        },
+        KR: {
+            title: "직접 저희랑 이야기하는 것이 편하신가요?",
+            action: "직접 문의하기"
+        }
     }
 }
 

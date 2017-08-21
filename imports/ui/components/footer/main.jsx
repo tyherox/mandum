@@ -18,7 +18,6 @@ export default class Footer extends Component{
         var render = true;
 
         exceptions.forEach(function(elem){
-            console.log(elem, path);
             if(elem==path) {
                 render = false;
             }
