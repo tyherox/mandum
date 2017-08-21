@@ -70,6 +70,8 @@
 }
 
 .center-container{
+    padding-left: 10px;
+    padding-right: 10px;
     text-align: center;
 }
 
@@ -118,11 +120,5 @@
 
     .card-container{
         min-height: 0;
-    }
-
-    .inner-container,
-    .tight-container{
-        padding-right: 15px;
-        padding-left: 15px;
     }
 }

@@ -3,6 +3,7 @@ html{
 }
 
 *{
+    word-wrap: break-word;
     font-family: 'Malgun Gothic', sans-serif;
 }
 

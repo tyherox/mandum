@@ -242,7 +242,7 @@ class Main extends Component {
 
                 <hr/>
 
-                <div style={{textAlign: "center"}}  className="margin-3">
+                <div style={{textAlign: "center"}}  className="category-container margin-3">
 
                     <h2  className="margin-1">{text.alt.title}</h2>
 
