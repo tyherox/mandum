@@ -132,6 +132,7 @@ i.pulse{
 #bootstrap-overrides .pinkButton:hover,
 #bootstrap-overrides .pinkButton:focus,
 #bootstrap-overrides .pinkButton:active{
+    color: white;
     background: #e53e69;
 }
 
@@ -143,6 +144,7 @@ i.pulse{
 #bootstrap-overrides .blueButton:hover,
 #bootstrap-overrides .blueButton:focus,
 #bootstrap-overrides .blueButton:active{
+    color: white;
     background: #1b84e9;
 }
 
@@ -154,6 +156,7 @@ i.pulse{
 #bootstrap-overrides .purpleButton:hover,
 #bootstrap-overrides .purpleButton:focus,
 #bootstrap-overrides .purpleButton:active{
+    color: white;
     background: #8100f1;
 }
 
@@ -165,6 +168,7 @@ i.pulse{
 #bootstrap-overrides .orangeButton:hover,
 #bootstrap-overrides .orangeButton:focus,
 #bootstrap-overrides .orangeButton:active{
+    color: white;
     background: #e0883a;
 }
 
