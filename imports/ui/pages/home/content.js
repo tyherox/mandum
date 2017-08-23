@@ -3,14 +3,14 @@ import React from 'react';
 var content = {
     banner: {
         EN: {
-            title: ["Website", " Consulting", "Design", 'Development'],
+            title: ["Website", "Development", "Design", "Consulting"],
             subTitleOne: "In Korea.",
             subTitleTwo: "Done the right way.",
             button: "Work with us",
             deal: "Opening Discount: 50% Off! (5 left)"
         },
         KR: {
-            title: ["웹사이트", "컨설팅", "디자인", "개발"],
+            title: ["웹사이트", "개발", "디자인", "컨설팅"],
             subTitleOne: "한국에서.",
             subTitleTwo: "단번에 확실하게.",
             button: "같이 만들어보세요",
