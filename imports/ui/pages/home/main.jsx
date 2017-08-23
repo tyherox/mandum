@@ -37,7 +37,7 @@ class App extends Component {
 
                     <Center>
 
-                        <div className="center-container">
+                        <div className="center-container inner-container">
 
                             <h1 style={{fontSize: "3.5rem"}} className="margin-1">
                                 {text.banner.title[0] + " "}
