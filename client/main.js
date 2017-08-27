@@ -49,14 +49,14 @@ Meteor.startup(() => {
                                   atActive={{ opacity: 1 }}>
                                   <Switch key={location.key} location={location}>
                                       <Route exact path="/" component={Home}/>
-                                      <Route exact path="/price" component={Price}/>
+                                      {/*<Route exact path="/price" component={Price}/>
                                       <Route exact path="/price/packages" component={PricePackages}/>
                                       <Route exact path="/price/select-1" component={PriceChooserA}/>
                                       <Route exact path="/price/select-2" component={PriceChooserB}/>
                                       <Route exact path="/price/select-3" component={PriceChooserC}/>
                                       <Route exact path="/price/select-4" component={PriceChooserD}/>
                                       <Route exact path="/price/select-5" component={PriceChooserE}/>
-                                      {/*<Route exact path="/story" component={Story}*/}/>
+                                      <Route exact path="/story" component={Story}*/}/>
                                       <Route exact path="/admin" component={Admin}/>
                                       <Route exact path="/contact" component={Contact}/>
                                       <Route exact path="/samples/samyeon" component={Samyeon}/>

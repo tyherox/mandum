@@ -73,10 +73,10 @@ class NavBar extends Component{
                             <NavLink to="/" activeClassName="nav-selected" exact>
                                 <Button onClick={()=>this.setState({expanded: false})} className="emptyButton navBar-elements smallButton">Home</Button>
                             </NavLink>
-                            <NavLink to="/price"  activeClassName="nav-selected">
+                            {/*<NavLink to="/price"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="emptyButton navBar-elements smallButton">Price</Button>
                             </NavLink>
-                            {/*<NavLink to="/story"  activeClassName="nav-selected">
+                            <NavLink to="/story"  activeClassName="nav-selected">
                                 <Button onClick={()=>this.setState({expanded: false})} className="navBar-elements">Why Us?</Button>
                             </NavLink>*/}
                             <NavLink to="/contact"  activeClassName="nav-selected">
