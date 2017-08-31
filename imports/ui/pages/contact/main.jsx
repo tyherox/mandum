@@ -33,7 +33,7 @@ class App extends Component {
             name = this.refs.name.value,
             budget = this.refs.budget.value,
             deadline = this.refs.deadline.value,
-            estimator = this.refs.estimator ? this.refs.estimator.checked ? this.props.state.toJSON() : "" : "",
+            description = this.refs.description.value,
             error = false;
 
         if(email=="" || email==null){
@@ -61,9 +61,16 @@ class App extends Component {
         }
         else this.refs.deadline.style.borderColor="black";
 
+
+        if(description=="" || description==null){
+            this.refs.description.style.borderColor="red";
+            error = true;
+        }
+        else this.refs.description.style.borderColor="black";
+
         if(error) return false;
 
-        Meteor.call("sendOrder", email, {name, budget, deadline, estimator})
+        Meteor.call("sendOrder", email, {name, budget, deadline, description})
 
         this.setState({sent: true});
     }
@@ -115,21 +122,13 @@ class App extends Component {
                                     <br/>
                                     <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.email)}/>
                                     <input disabled = {this.state.sent} className="bigInput" ref="email"/>
+                                    <p dangerouslySetInnerHTML={this.getRawMarkup(text.contact.description)}/>
+                                    <input disabled = {this.state.sent} className="bigInput" ref="description"/>
                                 </div>
 
-                                <br/><br/>
+                                <br/>
 
                                 <div style={{textAlign: "center"}}>
-                                    {this.props.price != 0 ?
-                                        <div>
-                                            <input type="checkbox"
-                                                   id="use"
-                                                   ref="estimator" />
-                                                <label htmlFor="use" className="inline blue"> <p>{text.contact.useEstimator + " "}</p> </label>
-                                                <label htmlFor="use" className="inline blue"> <p>{(this.props.price * 1000).toLocaleString() + " KRW"}</p> </label>
-                                        </div> : ""
-                                    }
-                                    <br/><br/>
 
                                     <Button className="blackButton" type="submit">
                                         { this.state.sent ? text.contact.thank : text.contact.action}
