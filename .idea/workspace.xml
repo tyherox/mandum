@@ -1,25 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb626132-c8f8-4fba-bf0c-3d27c59b0b98" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-1-analysis.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-1-seo.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-1-translation.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-2-branding.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-2-mobile.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-2-ux.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-3-cloud.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-3-speed.svg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/assets/home-3-test.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/components/scrollDown/style.css" afterPath="$PROJECT_DIR$/imports/ui/components/scrollDown/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/contact/content.js" afterPath="$PROJECT_DIR$/imports/ui/pages/contact/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/contact/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/contact/main.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/home/content.js" afterPath="$PROJECT_DIR$/imports/ui/pages/home/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" afterPath="$PROJECT_DIR$/imports/ui/pages/home/main.jsx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/style/containers.css" afterPath="$PROJECT_DIR$/imports/ui/style/containers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/imports/ui/style/elements.css" afterPath="$PROJECT_DIR$/imports/ui/style/elements.css" />
-    </list>
+    <list default="true" id="fb626132-c8f8-4fba-bf0c-3d27c59b0b98" name="Default" comment="" />
     <ignored path="mandum.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -41,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.jsx" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
+            <state relative-caret-position="-1795">
               <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
@@ -54,7 +36,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/content.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="605">
@@ -361,12 +343,12 @@
       <workItem from="1503577284301" duration="11881000" />
       <workItem from="1503985877113" duration="1630000" />
       <workItem from="1503993329748" duration="4365000" />
-      <workItem from="1504170499008" duration="27000" />
+      <workItem from="1504170499008" duration="111000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="311871000" />
+    <option name="totallyTimeSpent" value="311955000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="800" extended-state="0" />
@@ -769,22 +751,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <element signature="e#42#82#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/content.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="605">
           <caret line="148" column="5" selection-start-line="148" selection-start-column="5" selection-end-line="148" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/imports/ui/pages/home/main.jsx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1795">
+          <caret line="58" column="44" selection-start-line="58" selection-start-column="44" selection-end-line="58" selection-end-column="44" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+            <element signature="e#42#82#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
